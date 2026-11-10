@@ -1,0 +1,53 @@
+{
+  "account": "A01",
+  "expected": [
+    {
+      "taxonomy_id": "U01",
+      "manifested": true,
+      "note": "SOV extra location vs application"
+    },
+    {
+      "taxonomy_id": "U03",
+      "manifested": true,
+      "note": "WC payroll mismatch"
+    },
+    {
+      "taxonomy_id": "U04",
+      "manifested": true,
+      "note": "experience mod mismatch"
+    },
+    {
+      "taxonomy_id": "U05",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U08",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U09",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U11",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U12",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U13",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U07",
+      "manifested": false
+    }
+  ],
+  "excluded": [
+    "U02",
+    "U14",
+    "U06"
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "ruleset_id": "default",
+  "version": "1.0.0",
+  "description": "Spectra default deterministic ruleset. Tolerances and severity are configuration; carrier-specific values must be supplied by the carrier before production use.",
+  "rules": [
+    {
+      "rule_id": "DOC-INVENTORY-001", "version": "1.0.0", "taxonomy_id": "DOC",
+      "handler": "doc_inventory",
+      "title": "Document inventory and completeness",
+      "description": "Compares supplied documents against the configured required-document profile; detects missing, unsupported, empty, and duplicate documents.",
+      "rationale": "Checks that depend on absent evidence cannot be completed.",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {},
+      "action_template": "Request missing documents or mark requirements not applicable."
+    },
+    {
+      "rule_id": "P1-DRIVER-ROSTER-001", "version": "1.0.0", "taxonomy_id": "P1",
+      "handler": "p1_driver_roster",
+      "title": "Missing current driver roster / MVR review evidence",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["fleet_schedule", "submission_checklist", "quote"]},
+      "action_template": "Request current driver roster and MVR evidence."
+    },
+    {
+      "rule_id": "P2-LOCATION-001", "version": "1.0.0", "taxonomy_id": "P2",
+      "handler": "p2_location_reconciliation",
+      "title": "Application/SOV/property location-count or value conflict",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_125", "acord_140", "sov"]},
+      "tolerance": {"absolute": 0, "percent": 1.0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "P3-FLEET-COUNT-001", "version": "1.0.0", "taxonomy_id": "P3-FLEET-COUNT",
+      "handler": "p3_fleet_count",
+      "title": "Declared power units vs active fleet units",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["fleet_schedule"]},
+      "tolerance": {"absolute": 0, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "P3-WC-PAYROLL-001", "version": "1.0.0", "taxonomy_id": "P3-WC-PAYROLL",
+      "handler": "p3_wc_payroll",
+      "title": "Declared payroll vs supporting class/location payroll",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_130", "wc_rating_workbook", "quote"]},
+      "tolerance": {"absolute": 0, "percent": 1.0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "P4-VERSION-001", "version": "1.0.0", "taxonomy_id": "P4",
+      "handler": "p4_version_discrepancy",
+      "title": "Unexplained document-version discrepancy",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {}
+    },
+    {
+      "rule_id": "P5-CLAIMS-001", "version": "1.0.0", "taxonomy_id": "P5",
+      "handler": "p5_claims_reconciliation",
+      "title": "Claims/loss-history reconciliation",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["loss_run"]},
+      "tolerance": {"absolute": 1.0, "percent": 0.5, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "P6-EMOD-001", "version": "1.0.0", "taxonomy_id": "P6",
+      "handler": "p6_experience_mod",
+      "title": "Experience modification factor mismatch",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_130", "wc_rating_workbook", "quote"]},
+      "tolerance": {"absolute": 0.0001, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "P7-OPERATIONS-001", "version": "1.0.0", "taxonomy_id": "P7",
+      "handler": "p7_operations_context",
+      "title": "Declared operations vs external/public context",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["external_records"]}
+    },
+    {
+      "rule_id": "P11-EXPOSURE-LIMIT-001", "version": "1.0.0", "taxonomy_id": "P11",
+      "handler": "p11_exposure_vs_limit",
+      "title": "Exposure may exceed quoted limit",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["quote"]},
+      "tolerance": {"absolute": 0, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "N3-WC-STATE-001", "version": "1.0.0", "taxonomy_id": "N3",
+      "handler": "n3_wc_state_allocation",
+      "title": "WC state allocation conflict / incomplete ACORD 130 schedule",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_130", "wc_rating_workbook"]}
+    },
+    {
+      "rule_id": "N4-EMP-COUNT-001", "version": "1.0.0", "taxonomy_id": "N4",
+      "handler": "n4_employee_counts",
+      "title": "WC employee counts differ across forms/workbook",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_125", "acord_130", "wc_rating_workbook"]},
+      "tolerance": {"absolute": 0, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "N5-ANNUAL-COUNTS-001", "version": "1.0.0", "taxonomy_id": "N5",
+      "handler": "n5_annual_claim_counts",
+      "title": "Loss detail vs annual claim counts/WC history",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["loss_run"]},
+      "tolerance": {"absolute": 0, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "N6-GL-BASES-001", "version": "1.0.0", "taxonomy_id": "N6",
+      "handler": "n6_gl_bases",
+      "title": "GL sales and area-rating bases reconciliation",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["acord_125", "acord_126", "quote"]},
+      "tolerance": {"absolute": 0, "percent": 2.0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "N7-GARAGING-001", "version": "1.0.0", "taxonomy_id": "N7",
+      "handler": "n7_garaging_state",
+      "title": "Fleet garaging-state code conflicts with address",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["fleet_schedule"]}
+    },
+    {
+      "rule_id": "N8-DRIVER-QUAL-001", "version": "1.0.0", "taxonomy_id": "N8",
+      "handler": "n8_driver_qualification",
+      "title": "Heavy-vehicle driver qualification review",
+      "severity": "HIGH", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["fleet_schedule"]}
+    },
+    {
+      "rule_id": "N14-EXTERNAL-001", "version": "1.0.0", "taxonomy_id": "N14",
+      "handler": "n14_external_record_match",
+      "title": "External OSHA/public record premises matching",
+      "severity": "LOW", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_all": ["external_records"]}
+    },
+    {
+      "rule_id": "N15-CLASS-RATE-001", "version": "1.0.0", "taxonomy_id": "N15",
+      "handler": "n15_class_rate",
+      "title": "WC class-rate discrepancy",
+      "severity": "MEDIUM", "blocking": false, "enabled": true,
+      "applicability": {"required_document_types_any": ["wc_rating_workbook", "quote"]},
+      "tolerance": {"absolute": 0.0001, "percent": 0, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "DQ-DUP-ID-001", "version": "1.0.0", "taxonomy_id": "DQ",
+      "handler": "dq_duplicate_ids",
+      "title": "Duplicate record identifiers within a document",
+      "severity": "LOW", "blocking": false, "enabled": true,
+      "applicability": {}
+    },
+    {
+      "rule_id": "DQ-ARITH-001", "version": "1.0.0", "taxonomy_id": "DQ",
+      "handler": "dq_arithmetic",
+      "title": "Internal arithmetic/total inconsistencies",
+      "severity": "LOW", "blocking": false, "enabled": true,
+      "applicability": {},
+      "tolerance": {"absolute": 1.0, "percent": 0.5, "source": "default ruleset 1.0.0"}
+    },
+    {
+      "rule_id": "DQ-DATES-001", "version": "1.0.0", "taxonomy_id": "DQ",
+      "handler": "dq_date_order",
+      "title": "Invalid date ordering",
+      "severity": "LOW", "blocking": false, "enabled": true,
+      "applicability": {}
+    },
+    {
+      "rule_id": "DQ-STALE-001", "version": "1.0.0", "taxonomy_id": "DQ",
+      "handler": "dq_stale_documents",
+      "title": "Stale documents per profile freshness rules",
+      "severity": "LOW", "blocking": false, "enabled": true,
+      "applicability": {}
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A02-2026-0202",
+  "document": {
+    "document_id": "A-ACORD126-V2",
+    "document_type": "acord_126",
+    "document_name": "ACORD_126.pdf",
+    "issuer": "broker_synthetic",
+    "version": "resubmitted",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "sales_rows": [
+      {
+        "row_id": "S1",
+        "location_id": "LOC-1",
+        "description": "warehousing",
+        "amount": 5200000
+      },
+      {
+        "row_id": "S2",
+        "location_id": "LOC-2",
+        "description": "distribution",
+        "amount": 3300000
+      }
+    ],
+    "area_rows": [
+      {
+        "row_id": "AR1",
+        "location_id": "LOC-1",
+        "square_footage": 40000
+      },
+      {
+        "row_id": "AR2",
+        "location_id": "LOC-2",
+        "square_footage": 15000
+      }
+    ],
+    "claims_history": [
+      {
+        "year": "2025",
+        "claim_count": 3,
+        "line_of_business": "GL"
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "ACORD_126.pdf",
+    "fields": {}
+  }
+}

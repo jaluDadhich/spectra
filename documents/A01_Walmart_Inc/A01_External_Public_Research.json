@@ -1,0 +1,1166 @@
+{
+  "source_file": "A01_External_Public_Research(2).xlsx",
+  "output_file": "A01_External_Public_Research.json",
+  "document_type": "Excel workbook",
+  "extraction_method": "cell-level extraction with sheet structure, heuristic table/key-value views, formulas and cached formula values",
+  "workbook_metadata": {
+    "sheet_names_in_order": [
+      "Corporate Context",
+      "OSHA Public Records",
+      "Interpretation Notes"
+    ],
+    "sheet_count": 3,
+    "calculation_mode": null
+  },
+  "sheets": [
+    {
+      "sheet_name": "Corporate Context",
+      "dimensions": {
+        "max_row": 5,
+        "max_column": 7
+      },
+      "merged_ranges": [
+        "A2:G2",
+        "A1:G1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A01 | PUBLIC ENTITY CONTEXT",
+          "merged": [
+            "A1:G1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "Facts below are from official company sources. They establish public identity/context only, not the synthetic underwriting values.",
+          "merged": [
+            "A2:G2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "Corporate Context__table_1",
+          "header_row": 4,
+          "headers": [
+            "Source Category",
+            "Entity / Topic",
+            "Observed Public Fact",
+            "Address / Scope",
+            "Source URL",
+            "Source Type",
+            "Underwriting Use / Limitation"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 5,
+              "values": {
+                "Source Category": "Corporate identity",
+                "Entity / Topic": "Walmart Inc.",
+                "Observed Public Fact": "Walmart describes itself as an omnichannel retailer; its company profile lists headquarters/contact in Bentonville, Arkansas.",
+                "Address / Scope": "1 Customer Drive, Bentonville, AR 72712",
+                "Source URL": "https://stock.walmart.com/company-information",
+                "Source Type": "Public corporate source",
+                "Underwriting Use / Limitation": "Identity / broad operations only"
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A01 | PUBLIC ENTITY CONTEXT",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Facts below are from official company sources. They establish public identity/context only, not the synthetic underwriting values.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Source Category",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Entity / Topic",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Observed Public Fact",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Address / Scope",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Source URL",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "Source Type",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G4",
+              "column": "G",
+              "value": "Underwriting Use / Limitation",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "Corporate identity",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "Walmart Inc.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "Walmart describes itself as an omnichannel retailer; its company profile lists headquarters/contact in Bentonville, Arkansas.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "1 Customer Drive, Bentonville, AR 72712",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "https://stock.walmart.com/company-information",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": "Public corporate source",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G5",
+              "column": "G",
+              "value": "Identity / broad operations only",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A01 | PUBLIC ENTITY CONTEXT",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Facts below are from official company sources. They establish public identity/context only, not the synthetic underwriting values.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Source Category",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Entity / Topic",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Observed Public Fact",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Address / Scope",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Source URL",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "Source Type",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G4",
+          "column": "G",
+          "value": "Underwriting Use / Limitation",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "Corporate identity",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "Walmart Inc.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "Walmart describes itself as an omnichannel retailer; its company profile lists headquarters/contact in Bentonville, Arkansas.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "1 Customer Drive, Bentonville, AR 72712",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "https://stock.walmart.com/company-information",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": "Public corporate source",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G5",
+          "column": "G",
+          "value": "Identity / broad operations only",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 16,
+        "nonempty_row_count": 4,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_original_coordinates_preserved": true
+      }
+    },
+    {
+      "sheet_name": "OSHA Public Records",
+      "dimensions": {
+        "max_row": 5,
+        "max_column": 7
+      },
+      "merged_ranges": [
+        "A2:G2",
+        "A1:G1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A01 | OSHA ESTABLISHMENT RECORD",
+          "merged": [
+            "A1:G1"
+          ]
+        }
+      ],
+      "notes_and_context": [
+        {
+          "row": 2,
+          "text": "Public record is site-specific and dynamic. Re-query the official source and validate entity/address/period before relying on it.",
+          "merged": [
+            "A2:G2"
+          ]
+        }
+      ],
+      "detected_tables": [
+        {
+          "table_id": "OSHA Public Records__table_1",
+          "header_row": 4,
+          "headers": [
+            "Record Type",
+            "Employer / Entity String",
+            "Record Summary",
+            "Status Displayed",
+            "Official Source URL",
+            "Exact Match Caveat",
+            "Retrieval Date"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 5,
+              "values": {
+                "Record Type": "Inspection Detail",
+                "Employer / Entity String": "Walmart Inc.",
+                "Record Summary": "Inspection 1720681.015 — Walmart, Inc.; 1421 E Frontage Rd, Alamo, TX 78516; opened 2024-01-10; inspection type Planned; page displayed case status OPEN; violation table showed one current Other citation, standard 19100263 J01 III, issued 2024-07-08, current penalty $8,065, latest event informal settlement.",
+                "Status Displayed": "OPEN as displayed on the accessible record page during this research pass; dynamic record, re-query before operational use.",
+                "Official Source URL": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1720681.015",
+                "Exact Match Caveat": "This is a site-specific OSHA record. The synthetic SOV locations are not claimed to be this Alamo site. Do not associate the record with a scheduled risk without matching address/entity and applicability.",
+                "Retrieval Date": "2026-10-27"
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "date_or_version_sensitive_evidence",
+          "trigger_terms": [
+            "current"
+          ]
+        },
+        {
+          "heuristic": "external_authority_or_validation_required",
+          "trigger_terms": [
+            "validate",
+            "caveat"
+          ]
+        },
+        {
+          "heuristic": "count_or_arithmetic_reconciliation",
+          "trigger_terms": [
+            "sum"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A01 | OSHA ESTABLISHMENT RECORD",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Public record is site-specific and dynamic. Re-query the official source and validate entity/address/period before relying on it.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Record Type",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Employer / Entity String",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Record Summary",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Status Displayed",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Official Source URL",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "Exact Match Caveat",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G4",
+              "column": "G",
+              "value": "Retrieval Date",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "Inspection Detail",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "Walmart Inc.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "Inspection 1720681.015 — Walmart, Inc.; 1421 E Frontage Rd, Alamo, TX 78516; opened 2024-01-10; inspection type Planned; page displayed case status OPEN; violation table showed one current Other citation, standard 19100263 J01 III, issued 2024-07-08, current penalty $8,065, latest event informal settlement.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "OPEN as displayed on the accessible record page during this research pass; dynamic record, re-query before operational use.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1720681.015",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": "This is a site-specific OSHA record. The synthetic SOV locations are not claimed to be this Alamo site. Do not associate the record with a scheduled risk without matching address/entity and applicability.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G5",
+              "column": "G",
+              "value": "2026-10-27",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A01 | OSHA ESTABLISHMENT RECORD",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Public record is site-specific and dynamic. Re-query the official source and validate entity/address/period before relying on it.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Record Type",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Employer / Entity String",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Record Summary",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Status Displayed",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Official Source URL",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "Exact Match Caveat",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G4",
+          "column": "G",
+          "value": "Retrieval Date",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "Inspection Detail",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "Walmart Inc.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "Inspection 1720681.015 — Walmart, Inc.; 1421 E Frontage Rd, Alamo, TX 78516; opened 2024-01-10; inspection type Planned; page displayed case status OPEN; violation table showed one current Other citation, standard 19100263 J01 III, issued 2024-07-08, current penalty $8,065, latest event informal settlement.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "OPEN as displayed on the accessible record page during this research pass; dynamic record, re-query before operational use.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1720681.015",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": "This is a site-specific OSHA record. The synthetic SOV locations are not claimed to be this Alamo site. Do not associate the record with a scheduled risk without matching address/entity and applicability.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G5",
+          "column": "G",
+          "value": "2026-10-27",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 16,
+        "nonempty_row_count": 4,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_original_coordinates_preserved": true
+      }
+    },
+    {
+      "sheet_name": "Interpretation Notes",
+      "dimensions": {
+        "max_row": 9,
+        "max_column": 3
+      },
+      "merged_ranges": [
+        "A1:C1",
+        "A2:C2"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A01 | SOURCE INTERPRETATION CONTROLS",
+          "merged": [
+            "A1:C1"
+          ]
+        }
+      ],
+      "notes_and_context": [
+        {
+          "row": 2,
+          "text": "These controls should be implemented in Spectra to avoid falsely attributing public records.",
+          "merged": [
+            "A2:C2"
+          ]
+        }
+      ],
+      "detected_tables": [
+        {
+          "table_id": "Interpretation Notes__table_1",
+          "header_row": 8,
+          "headers": [
+            "Permitted use",
+            "Use approved sources for an approved underwriting purpose; retain source limitations.",
+            "Public access does not imply unrestricted commercial reuse."
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 9,
+              "values": {
+                "Permitted use": "Finding calibration",
+                "Use approved sources for an approved underwriting purpose; retain source limitations.": "A source record alone is not automatically an underwriting defect.",
+                "Public access does not imply unrestricted commercial reuse.": "Apply carrier rules, risk relevance and materiality."
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [
+        {
+          "row": 4,
+          "key": "Control",
+          "value": "Requirement",
+          "additional_values": [
+            "Why it matters"
+          ],
+          "cell_coordinates": [
+            "A4",
+            "B4",
+            "C4"
+          ],
+          "detection_method": "label_in_first_populated_column_with_one_or_two_following_values"
+        },
+        {
+          "row": 5,
+          "key": "Entity match",
+          "value": "Match legal entity, DBA, subsidiary/operating company and identifiers, not name text alone.",
+          "additional_values": [
+            "A public result for a related company is not automatically a match."
+          ],
+          "cell_coordinates": [
+            "A5",
+            "B5",
+            "C5"
+          ],
+          "detection_method": "label_in_first_populated_column_with_one_or_two_following_values"
+        },
+        {
+          "row": 6,
+          "key": "Premises match",
+          "value": "Match exact site address or approved establishment ID to a scheduled location.",
+          "additional_values": [
+            "Corporate-level context is not site-level proof."
+          ],
+          "cell_coordinates": [
+            "A6",
+            "B6",
+            "C6"
+          ],
+          "detection_method": "label_in_first_populated_column_with_one_or_two_following_values"
+        },
+        {
+          "row": 7,
+          "key": "Time alignment",
+          "value": "Preserve record open date, issue date, case status, last event and retrieval timestamp.",
+          "additional_values": [
+            "Public enforcement records can change."
+          ],
+          "cell_coordinates": [
+            "A7",
+            "B7",
+            "C7"
+          ],
+          "detection_method": "label_in_first_populated_column_with_one_or_two_following_values"
+        },
+        {
+          "row": 9,
+          "key": "Finding calibration",
+          "value": "A source record alone is not automatically an underwriting defect.",
+          "additional_values": [
+            "Apply carrier rules, risk relevance and materiality."
+          ],
+          "cell_coordinates": [
+            "A9",
+            "B9",
+            "C9"
+          ],
+          "detection_method": "label_in_first_populated_column_with_one_or_two_following_values"
+        }
+      ],
+      "heuristics": [],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A01 | SOURCE INTERPRETATION CONTROLS",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "These controls should be implemented in Spectra to avoid falsely attributing public records.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Control",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Requirement",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Why it matters",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "Entity match",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "Match legal entity, DBA, subsidiary/operating company and identifiers, not name text alone.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "A public result for a related company is not automatically a match.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "Premises match",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": "Match exact site address or approved establishment ID to a scheduled location.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "Corporate-level context is not site-level proof.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "Time alignment",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": "Preserve record open date, issue date, case status, last event and retrieval timestamp.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "Public enforcement records can change.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "coordinate": "A8",
+              "column": "A",
+              "value": "Permitted use",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B8",
+              "column": "B",
+              "value": "Use approved sources for an approved underwriting purpose; retain source limitations.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C8",
+              "column": "C",
+              "value": "Public access does not imply unrestricted commercial reuse.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "coordinate": "A9",
+              "column": "A",
+              "value": "Finding calibration",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B9",
+              "column": "B",
+              "value": "A source record alone is not automatically an underwriting defect.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C9",
+              "column": "C",
+              "value": "Apply carrier rules, risk relevance and materiality.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A01 | SOURCE INTERPRETATION CONTROLS",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "These controls should be implemented in Spectra to avoid falsely attributing public records.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Control",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Requirement",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Why it matters",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "Entity match",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "Match legal entity, DBA, subsidiary/operating company and identifiers, not name text alone.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "A public result for a related company is not automatically a match.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "Premises match",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": "Match exact site address or approved establishment ID to a scheduled location.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "Corporate-level context is not site-level proof.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "Time alignment",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": "Preserve record open date, issue date, case status, last event and retrieval timestamp.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "Public enforcement records can change.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A8",
+          "column": "A",
+          "value": "Permitted use",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B8",
+          "column": "B",
+          "value": "Use approved sources for an approved underwriting purpose; retain source limitations.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C8",
+          "column": "C",
+          "value": "Public access does not imply unrestricted commercial reuse.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A9",
+          "column": "A",
+          "value": "Finding calibration",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B9",
+          "column": "B",
+          "value": "A source record alone is not automatically an underwriting defect.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C9",
+          "column": "C",
+          "value": "Apply carrier rules, risk relevance and materiality.",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 20,
+        "nonempty_row_count": 8,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_original_coordinates_preserved": true
+      }
+    }
+  ],
+  "file_level_heuristics": [
+    {
+      "heuristic": "multi_sheet_workbook",
+      "sheet_count": 3
+    },
+    {
+      "heuristic": "complete_cell_inventory",
+      "nonempty_cell_count": 52
+    },
+    {
+      "heuristic": "single_final_json_per_source_workbook",
+      "description": "All sheets are merged into this one JSON document; no worksheet is omitted."
+    }
+  ],
+  "extraction_notes": [
+    "Every non-empty cell is preserved with its original Excel coordinate and value.",
+    "Detected tables and key-value pairs are structured interpretations; all_nonempty_rows/all_nonempty_cells remain the source-of-truth extraction.",
+    "Formula text and cached result are both retained where available. A cached result may be null if the workbook does not contain one.",
+    "Blank cells are not serialized individually; their positions remain inferable from coordinates and worksheet dimensions.",
+    "Heuristics are identification signals, not underwriting conclusions."
+  ]
+}

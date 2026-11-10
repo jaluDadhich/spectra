@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A02-2026-0202",
+  "document": {
+    "document_id": "A-FLEET",
+    "document_type": "fleet_schedule",
+    "document_name": "Fleet_Schedule.xlsx",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "vehicles": [
+      {
+        "unit_id": "U-1",
+        "vin": "1FTYR10U33PA12345",
+        "status": "active",
+        "gvwr": 33000,
+        "vehicle_type": "tractor",
+        "garaging_state": "NV",
+        "garaging_address": "100 Warehouse Way, Fresno, CA 93721",
+        "assigned_driver_id": "D9",
+        "cost_new": 180000
+      },
+      {
+        "unit_id": "U-2",
+        "vin": "1GBJC34R82F11223",
+        "status": "active",
+        "gvwr": 14000,
+        "vehicle_type": "box_truck",
+        "garaging_state": "CA",
+        "garaging_address": "250 Depot Road, Sacramento, CA 95814",
+        "assigned_driver_id": "D2",
+        "cost_new": 65000
+      },
+      {
+        "unit_id": "U-3",
+        "vin": "2HGFC2F59MH54321",
+        "status": "sold",
+        "gvwr": 12000,
+        "vehicle_type": "van",
+        "garaging_state": "CA",
+        "garaging_address": "250 Depot Road, Sacramento, CA 95814",
+        "assigned_driver_id": null,
+        "cost_new": 42000
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Fleet_Schedule.json",
+    "fields": {}
+  }
+}

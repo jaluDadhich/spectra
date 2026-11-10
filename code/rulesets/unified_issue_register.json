@@ -1,0 +1,478 @@
+{
+  "catalog_id": "unified_account_agnostic_underwriting_issue_register",
+  "version": "1.1.0",
+  "scope": "Account-agnostic commercial insurance submission checks. The 14 U-categories are the complete and exclusive issue scope: every reported finding must map to exactly one U-category, and every applicable category is evaluated on every submission. Categories contain no account-specific names, IDs, addresses, or exposure values.",
+  "source": "documents/unified_account_agnostic_underwriting_issue_register.pdf",
+  "policy": [
+    "Treat each U01-U14 entry as a reusable issue category, not an account-specific rule containing fixed values.",
+    "For each account, inspect the supplied documents and determine whether the category is applicable and whether the available evidence supports a finding.",
+    "Compare like-for-like values: same period, location, class, state, unit, coverage basis, policy year and exposure scope.",
+    "Retain source traceability. Every finding identifies the source document and the relevant page, worksheet, row, cell or JSON path where available.",
+    "Do not infer missing facts, force a match, or treat company-wide public information as proof of an operation at a scheduled insured premises.",
+    "Do not hard-code sample accounts, their values, issue IDs, document names or specific field values into detection logic.",
+    "Never silently treat missing data as a clean result: when a category cannot be assessed, state NOT_ASSESSABLE explicitly.",
+    "Compare only like-for-like data: same period, location, class, state, unit, coverage basis, policy year and exposure scope.",
+    "Normalize aliases and document formats to canonical concepts before comparison; do not hard-code account names, IDs, addresses, exposure values, document names or field values.",
+    "A finding must cite source documents and page, worksheet, row, cell or JSON path where available.",
+    "Missing data is not a clean result, but a missing-data finding is reportable only when that category explicitly covers the evidence gap and the absence is evidenced.",
+    "A category is NOT_APPLICABLE when its exposure or document context is absent; do not force a category match."
+  ],
+  "status_definitions": {
+    "CONFIRMED": "The supplied evidence directly supports the discrepancy.",
+    "POTENTIAL": "There is an indicator, but a required match, scope definition or supporting fact is unresolved.",
+    "NOT_ASSESSABLE": "The category is relevant, but required documents or fields are absent or insufficient.",
+    "NOT_APPLICABLE": "The account does not have the exposure or document context needed for this category.",
+    "NO_DISCREPANCY": "The category was checked with adequate evidence and the tested values reconciled."
+  },
+  "issues": [
+    {
+      "id": "U01",
+      "title": "Location count and property-value inconsistencies",
+      "primary_area": "Property / locations",
+      "summary": "Differences in declared premises counts, scheduled location counts, premises identifiers, addresses and property values across the application, property SOV, property schedules and related forms.",
+      "source_documents": [
+        "application premises/location count and location schedule",
+        "property SOV",
+        "ACORD property forms",
+        "additional-premises schedules"
+      ],
+      "rule_ids": [
+        "P2-LOCATION-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_125",
+          "acord_140",
+          "sov",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "locations"
+        ]
+      },
+      "typical_finding": "Different declared location counts; a scheduled premises missing from a form; a property value assigned to the wrong location; or SOV and ACORD values that do not agree.",
+      "detection_requirements": [
+        "Compare distinct premises counts across application, location schedule and property sources.",
+        "Match by stable ID, otherwise normalized address and premises attributes; never assume row order.",
+        "Compare matched location values by coverage component and identify missing, duplicated, shifted or inconsistent values."
+      ]
+    },
+    {
+      "id": "U02",
+      "title": "Conflicting versions of the same document",
+      "primary_area": "Document control",
+      "summary": "Material field-level changes between received, revised, corrected and resubmitted versions of the same document when the revisions are unexplained or cannot be tied to an authorized change history.",
+      "source_documents": [
+        "all available versions of the same application or schedule",
+        "received dates, document dates, version labels and source metadata"
+      ],
+      "rule_ids": [
+        "P4-VERSION-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_125",
+          "acord_126",
+          "acord_130",
+          "acord_140",
+          "sov",
+          "fleet_schedule",
+          "driver_roster",
+          "loss_run",
+          "wc_rating_workbook",
+          "quote",
+          "acord_combined"
+        ],
+        "record_kinds_any": []
+      },
+      "typical_finding": "Two versions carry materially different values or terms, and the available packet does not explain or authorize the change.",
+      "must_not_claim": "Do not infer fraud, manipulation or that the latest version is authoritative solely because it is newer.",
+      "detection_requirements": [
+        "Group versions by document type and submission context; order only by reliable received/document dates.",
+        "Diff corresponding material fields and identify additions, removals and changes.",
+        "Check change logs, broker explanations and supersession markers; do not infer fraud or authority from recency alone."
+      ]
+    },
+    {
+      "id": "U03",
+      "title": "Workers' Compensation payroll mismatch",
+      "primary_area": "Workers' Compensation",
+      "summary": "Differences between payroll declared on WC forms, payroll allocated by class/location/state in supporting schedules, rating workbooks and quoted payroll inputs.",
+      "source_documents": [
+        "ACORD 130 or equivalent WC application and payroll summary",
+        "payroll-by-class workbook",
+        "state rating worksheets",
+        "draft quote/rating inputs"
+      ],
+      "rule_ids": [
+        "P3-WC-PAYROLL-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_130",
+          "wc_rating_workbook",
+          "quote",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "wc_payroll_rows"
+        ]
+      },
+      "typical_finding": "Declared payroll and supporting/quoted payroll totals differ, or detailed allocations do not sum to the stated total.",
+      "detection_requirements": [
+        "Sum detailed payroll and compare with each declared or quoted total.",
+        "Reconcile totals by state, location and class where possible, using matching periods and populations.",
+        "State absolute and percentage variance, including denominator and comparison basis."
+      ]
+    },
+    {
+      "id": "U04",
+      "title": "Workers' Compensation experience modifier mismatch",
+      "primary_area": "Workers' Compensation",
+      "summary": "Inconsistencies between the applicable experience modification factor, the value shown on the application, supporting modifier history and the factor applied in the quote.",
+      "source_documents": [
+        "ACORD 130 experience modification section",
+        "current and prior experience modification worksheets",
+        "draft quote and rating inputs with effective dates"
+      ],
+      "rule_ids": [
+        "P6-EMOD-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_130",
+          "wc_rating_workbook",
+          "quote",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "rating_factors"
+        ]
+      },
+      "typical_finding": "The application, current supporting modifier and quote use inconsistent factors or effective periods.",
+      "must_not_claim": "Do not choose a factor based only on which document is newest or lowest.",
+      "detection_requirements": [
+        "Compare numeric experience modifiers and effective dates across application, current support/history and quote.",
+        "Confirm the factor applies to the relevant policy period; flag conflicting values or periods.",
+        "Do not select a factor based only on recency or lower value."
+      ]
+    },
+    {
+      "id": "U05",
+      "title": "Workers' Compensation state allocation and incomplete classification schedule",
+      "primary_area": "Workers' Compensation",
+      "summary": "Missing or inconsistent WC state/location/class allocations and incomplete ACORD or equivalent classification schedules relative to supporting payroll records and the declared operations footprint.",
+      "source_documents": [
+        "WC application locations and classification/payroll table",
+        "WC rating workbook rows by state, location and class",
+        "property/location schedule and documented employee work states"
+      ],
+      "rule_ids": [
+        "N3-WC-STATE-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_130",
+          "wc_rating_workbook",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "wc_payroll_rows"
+        ]
+      },
+      "typical_finding": "The WC schedule omits relevant locations/classes, or state allocation is inconsistent with documented work locations and supporting schedules.",
+      "must_not_claim": "Do not assume property situs alone proves the WC work state.",
+      "detection_requirements": [
+        "Compare WC locations, states and classes across forms, rating workbook and documented employee work locations.",
+        "Do not infer WC work state from property situs alone.",
+        "Identify omitted rows/locations/states and quantify missing payroll only when source data permits."
+      ]
+    },
+    {
+      "id": "U06",
+      "title": "Workers' Compensation employee-count mismatch",
+      "primary_area": "Workers' Compensation",
+      "summary": "Differences in full-time, part-time and total employee counts across applications, WC classification schedules, payroll workbooks and location-level records.",
+      "source_documents": [
+        "ACORD 125 employee counts by location",
+        "ACORD 130 employee counts by class/location",
+        "WC workbook employee counts and supporting employee census"
+      ],
+      "rule_ids": [
+        "N4-EMP-COUNT-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_125",
+          "acord_130",
+          "wc_rating_workbook",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "wc_payroll_rows"
+        ]
+      },
+      "typical_finding": "Employee counts differ for the same location, class, employment type or stated population, or schedule totals fail to reconcile.",
+      "must_not_claim": "Do not compare an overall headcount with a class subset as if they were equivalent.",
+      "detection_requirements": [
+        "Compare full-time, part-time and total counts at the same overall, location or class level.",
+        "Reconcile class totals to location totals and location totals to application totals.",
+        "Do not compare an overall count with a class subset as equivalent."
+      ]
+    },
+    {
+      "id": "U07",
+      "title": "Workers' Compensation class-rate mismatch",
+      "primary_area": "Workers' Compensation",
+      "summary": "Differences in rates per payroll unit for corresponding WC class codes across the application, rating workbook and rating support.",
+      "source_documents": [
+        "ACORD 130 class codes and rates",
+        "WC rating workbook class codes, rates and state assignments",
+        "carrier-approved or state/bureau rating support"
+      ],
+      "rule_ids": [
+        "N15-CLASS-RATE-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_130",
+          "wc_rating_workbook",
+          "quote",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "rating_factors"
+        ]
+      },
+      "typical_finding": "One or more corresponding class-code/state/period rate values differ between the form and supporting rating data.",
+      "must_not_claim": "Do not assume either table is authoritative when approved rate support is absent.",
+      "detection_requirements": [
+        "Match WC rates by class code, state and effective period.",
+        "Compare corresponding rate values and state whether authenticated carrier/state/bureau support exists.",
+        "Do not assume either table is authoritative without approved rate support."
+      ]
+    },
+    {
+      "id": "U08",
+      "title": "Loss-run and claims-history reconciliation",
+      "primary_area": "Loss history",
+      "summary": "Inconsistencies within loss detail and between loss detail, loss summaries, carrier summaries and claims history recorded on ACORD forms: duplicate identifiers, claim-level financial arithmetic, summary totals, annual counts and line-of-business counts.",
+      "source_documents": [
+        "Loss Detail and Loss Summary sheets",
+        "ACORD 126 and ACORD 130 prior insurance/loss history",
+        "carrier loss-run summary or draft quote loss data"
+      ],
+      "rule_ids": [
+        "P5-CLAIMS-001",
+        "N5-ANNUAL-COUNTS-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "loss_run",
+          "acord_126",
+          "acord_130",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "claims"
+        ]
+      },
+      "typical_finding": "Duplicate or inconsistent claim records; reported incurred not equal to the component calculation; loss detail totals not equal to summary totals; or annual/line-specific claim counts that do not reconcile.",
+      "detection_requirements": [
+        "Check claim ID uniqueness and conflicting claim details.",
+        "Recalculate incurred from source-defined paid/reserve components and compare claim-level results.",
+        "Reconcile detail, summary and carrier totals; count claims by policy year and line of business.",
+        "Use matching valuation dates and policy-year definitions; keep duplicate, arithmetic, total and count patterns distinct within U08."
+      ]
+    },
+    {
+      "id": "U09",
+      "title": "General Liability sales and area exposure mismatch",
+      "primary_area": "General Liability",
+      "summary": "Unreconciled GL sales-rated and area-rated exposure bases across the application, GL hazard schedule, property schedule and rating/quote inputs.",
+      "source_documents": [
+        "ACORD 125 annual gross sales and premises square footage",
+        "ACORD 126 GL schedule of hazards",
+        "property SOV square footage and supporting rating inputs/quote"
+      ],
+      "rule_ids": [
+        "N6-GL-BASES-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "acord_125",
+          "acord_126",
+          "quote",
+          "sov",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "exposures"
+        ]
+      },
+      "typical_finding": "GL sales-rated exposures do not reconcile to declared sales, or GL area-rated square footage does not reconcile to the relevant property/application area basis.",
+      "must_not_claim": "Keep sales, payroll and area bases separate; do not add unlike exposure units together.",
+      "detection_requirements": [
+        "Reconcile sales-rated GL exposure to declared gross sales and quantify unexplained residuals.",
+        "Compare area-rated GL exposure to relevant application/SOV premises area.",
+        "Keep sales, payroll and area units separate; consider support for exclusions, allocations or different rating scope."
+      ]
+    },
+    {
+      "id": "U10",
+      "title": "Declared fleet count versus scheduled active units",
+      "primary_area": "Auto / fleet",
+      "summary": "Differences between the declared number of power units/vehicles and the eligible active units shown in the fleet schedule or unit-count reconciliation.",
+      "source_documents": [
+        "ACORD 125 or equivalent declared vehicle/power-unit count",
+        "fleet schedule and unit count reconciliation"
+      ],
+      "rule_ids": [
+        "P3-FLEET-COUNT-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "fleet_schedule"
+        ],
+        "record_kinds_any": [
+          "vehicles"
+        ]
+      },
+      "typical_finding": "The declared count differs from the count of eligible active scheduled units, after reconciling dates and unit scope.",
+      "detection_requirements": [
+        "Count distinct units by stable IDs and distinguish active/inactive/sold/duplicate/trailer/other units when available.",
+        "Compare declared count with eligible active units using matching date and vehicle/power-unit scope.",
+        "Report difference and percentage only after establishing the denominator and scope."
+      ]
+    },
+    {
+      "id": "U11",
+      "title": "Fleet garaging-state and address mismatch",
+      "primary_area": "Auto / fleet",
+      "summary": "Vehicles for which the garaging-state code conflicts with the state indicated by the associated garaging address.",
+      "source_documents": [
+        "fleet schedule unit ID, garaging state and garaging address fields",
+        "address components including city, state and ZIP; location register if supplied"
+      ],
+      "rule_ids": [
+        "N7-GARAGING-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "fleet_schedule"
+        ],
+        "record_kinds_any": [
+          "vehicles"
+        ]
+      },
+      "typical_finding": "The garaging-state field and the address state disagree for one or more scheduled units.",
+      "must_not_claim": "Do not silently overwrite either value or infer the correct garaging state from a nearby office or mailing address.",
+      "detection_requirements": [
+        "Independently parse/normalize each unit garaging address and compare its state with the garaging-state field.",
+        "Enumerate affected unit IDs; do not overwrite either value or infer from nearby/mailing addresses."
+      ]
+    },
+    {
+      "id": "U12",
+      "title": "Driver roster, MVR and vehicle qualification gaps",
+      "primary_area": "Driver / fleet",
+      "summary": "Missing or stale driver rosters/MVR evidence, unlinked driver assignments, absent qualification records and driver-to-vehicle licence/endorsement exceptions.",
+      "source_documents": [
+        "driver roster with licence state/class, endorsements, status and review dates",
+        "fleet schedule assigned driver IDs, vehicle type and GVWR",
+        "submission checklist and quote notes describing missing roster/MVR records"
+      ],
+      "rule_ids": [
+        "P1-DRIVER-ROSTER-001",
+        "N8-DRIVER-QUAL-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "fleet_schedule",
+          "driver_roster",
+          "submission_checklist"
+        ],
+        "record_kinds_any": [
+          "vehicles",
+          "drivers"
+        ]
+      },
+      "typical_finding": "Required roster/MVR evidence is missing, driver assignments cannot be validated, or recorded credentials do not demonstrate qualification for the assigned vehicle under the applicable criteria.",
+      "must_not_claim": "Where credentials or legal criteria are absent, report the assignment as unverified rather than declaring a violation.",
+      "detection_requirements": [
+        "Confirm roster and required MVR evidence are present; missing evidence is a gap, not a failed MVR.",
+        "Join assigned driver IDs to roster IDs; identify missing, inactive or unmatched drivers.",
+        "For specialized/heavy vehicles, compare licence/endorsements with applicable jurisdiction or carrier criteria only when those criteria are supplied.",
+        "Without credentials or applicable criteria, describe assignment as unverified; do not claim disqualification or violation.",
+        "Apply MVR freshness only when a defined review interval or carrier rule is supplied."
+      ]
+    },
+    {
+      "id": "U13",
+      "title": "Declared operations versus external information and entity/premises matching",
+      "primary_area": "Operations / external data",
+      "summary": "Material questions between declared operations, broker narratives and external corporate or regulatory information, while verifying that external evidence actually relates to the insured legal entity and scheduled premises.",
+      "source_documents": [
+        "application operations narrative and operational questionnaires",
+        "broker email, operations supplements and public-source research",
+        "external regulatory/establishment records"
+      ],
+      "rule_ids": [
+        "P7-OPERATIONS-001",
+        "N14-EXTERNAL-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "external_records",
+          "ops_supplement",
+          "broker_email",
+          "acord_125",
+          "acord_combined"
+        ],
+        "record_kinds_any": [
+          "narratives",
+          "external_observations"
+        ]
+      },
+      "typical_finding": "The declared operations require clarification against other supplied information, or an external record cannot be reliably matched to the insured entity/premises.",
+      "must_not_claim": "A mismatch alone does not establish exposure or a violation; unmatched records stay unmatched context.",
+      "detection_requirements": [
+        "Compare declared operations with broker narratives and supplied external context.",
+        "Separate company-wide descriptions from evidence of operations at a specific insured premises.",
+        "Match regulatory records to legal entity, establishment and exact scheduled address; consider subsidiaries/operating entities.",
+        "Unmatched public records remain context and must not be attributed as an adverse insured-location fact."
+      ]
+    },
+    {
+      "id": "U14",
+      "title": "Cargo exposure versus quoted limits and coverage terms",
+      "primary_area": "Cargo",
+      "summary": "Declared or broker-described cargo values, peak shipment values or cargo types not aligned with quoted limits, sublimits, exclusions or stated coverage scope.",
+      "source_documents": [
+        "broker cargo/shipment narrative and exposure schedules",
+        "ACORD operations and coverage sections",
+        "draft quote limits, sublimits, deductibles, exclusions and commodity/temperature restrictions"
+      ],
+      "rule_ids": [
+        "P11-EXPOSURE-LIMIT-001"
+      ],
+      "applicability": {
+        "document_types_any": [
+          "quote",
+          "ops_supplement",
+          "broker_email"
+        ],
+        "record_kinds_any": [
+          "quote_terms"
+        ]
+      },
+      "typical_finding": "Peak cargo exposure exceeds an applicable quoted limit, or declared cargo types/conditions appear outside the stated coverage terms or exclusions.",
+      "must_not_claim": "Do not treat the arithmetic comparison alone as a final legal coverage determination.",
+      "detection_requirements": [
+        "Compare declared/peak cargo values and cargo types with quoted limits, sublimits, exclusions and coverage scope.",
+        "Ground comparisons in supplied cargo schedules, broker narratives, coverage forms or quote terms.",
+        "Do not present arithmetic comparison as a final legal coverage determination."
+      ]
+    }
+  ]
+}

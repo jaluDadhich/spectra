@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-CLEAN-2026-0001",
+  "document": {
+    "document_id": "A-CHECKLIST",
+    "document_type": "submission_checklist",
+    "document_name": "Checklist.xlsx",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "items": [
+      {
+        "item": "acord_forms",
+        "status": "attached"
+      },
+      {
+        "item": "loss_run",
+        "status": "attached"
+      },
+      {
+        "item": "driver_roster",
+        "status": "attached"
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Checklist.json",
+    "fields": {}
+  }
+}

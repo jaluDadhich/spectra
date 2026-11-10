@@ -1,0 +1,5256 @@
+{
+  "source_file": "A02_WC_Rating_Workbook(4).xlsx",
+  "output_file": "A02_WC_Rating_Workbook.json",
+  "document_type": "Excel workbook",
+  "extraction_method": "cell-level extraction with worksheet structure, heuristic table and key-value interpretations, formulas and cached values",
+  "workbook_metadata": {
+    "sheet_names_in_order": [
+      "Payroll by Class",
+      "Experience Mod History",
+      "Rating Inputs"
+    ],
+    "sheet_count": 3,
+    "calculation_mode": null
+  },
+  "sheets": [
+    {
+      "sheet_name": "Payroll by Class",
+      "dimensions": {
+        "max_row": 24,
+        "max_column": 12
+      },
+      "merged_ranges": [
+        "A2:L2",
+        "A1:L1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A02 | PAYROLL / CLASSIFICATION SCHEDULE",
+          "merged_ranges": [
+            "A1:L1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "Schedule payroll target: $17,300,000. Class codes and rates are synthetic test values; state/bureau rules must be validated.",
+          "merged_ranges": [
+            "A2:L2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "Payroll by Class__table_1",
+          "header_row": 23,
+          "headers": [
+            "A02-LOC-04",
+            "WA",
+            "8742",
+            "Outside sales / field representatives",
+            "6",
+            "1",
+            "216250",
+            "0.33",
+            "=G23*H23/100",
+            "ESTIMATED",
+            "Class code/rate are synthetic; verify with state bureau/carrier.",
+            "Primary payroll basis"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 24,
+              "values": {
+                "A02-LOC-04": "A02-LOC-04",
+                "WA": "WA",
+                "8742": "8017",
+                "Outside sales / field representatives": "Retail / merchandise operations",
+                "6": 19,
+                "1": 2,
+                "216250": 648750,
+                "0.33": 0.71,
+                "=G23*H23/100": "=G24*H24/100",
+                "=G23*H23/100__formula": "=G24*H24/100",
+                "=G23*H23/100__cached_value": 4606.125,
+                "ESTIMATED": "ESTIMATED",
+                "Class code/rate are synthetic; verify with state bureau/carrier.": "Class code/rate are synthetic; verify with state bureau/carrier.",
+                "Primary payroll basis": "Primary payroll basis"
+              }
+            }
+          ],
+          "detection_method": "heuristic_text_header_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "external_authority_or_validation_required",
+          "trigger_terms": [
+            "verify",
+            "validate",
+            "caveat"
+          ]
+        },
+        {
+          "heuristic": "spreadsheet_formula_present",
+          "formula_cells": [
+            "I5",
+            "I6",
+            "I7",
+            "I8",
+            "I9",
+            "I10",
+            "I11",
+            "I12",
+            "I13",
+            "I14",
+            "I15",
+            "I16",
+            "I17",
+            "I18",
+            "I19",
+            "I20",
+            "I21",
+            "I22",
+            "I23",
+            "I24"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A02 | PAYROLL / CLASSIFICATION SCHEDULE",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Schedule payroll target: $17,300,000. Class codes and rates are synthetic test values; state/bureau rules must be validated.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Location ID",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "State",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Class Code (synthetic)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Category / Duties",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Full-Time Employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "Part-Time Employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G4",
+              "column": "G",
+              "value": "Estimated Annual Payroll ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H4",
+              "column": "H",
+              "value": "Rate per $100 Payroll*",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I4",
+              "column": "I",
+              "value": "Manual Premium ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J4",
+              "column": "J",
+              "value": "Payroll Basis",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K4",
+              "column": "K",
+              "value": "Evidence / Caveat",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L4",
+              "column": "L",
+              "value": "Additional Notes",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "A02-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "7380",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "Drivers / delivery personnel",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": 54,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G5",
+              "column": "G",
+              "value": 1816500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H5",
+              "column": "H",
+              "value": 0.65,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I5",
+              "column": "I",
+              "value": "=G5*H5/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G5*H5/100",
+              "cached_value": 11807.25
+            },
+            {
+              "coordinate": "J5",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K5",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L5",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "A02-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "8292",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "Warehouse / loading operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E6",
+              "column": "E",
+              "value": 38,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F6",
+              "column": "F",
+              "value": 5,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G6",
+              "column": "G",
+              "value": 1297500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H6",
+              "column": "H",
+              "value": 0.82,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I6",
+              "column": "I",
+              "value": "=G6*H6/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G6*H6/100",
+              "cached_value": 10639.5
+            },
+            {
+              "coordinate": "J6",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K6",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L6",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "A02-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "8810",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Clerical office employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E7",
+              "column": "E",
+              "value": 10,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F7",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G7",
+              "column": "G",
+              "value": 346000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H7",
+              "column": "H",
+              "value": 0.14,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I7",
+              "column": "I",
+              "value": "=G7*H7/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G7*H7/100",
+              "cached_value": 484.4000000000001
+            },
+            {
+              "coordinate": "J7",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K7",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L7",
+              "column": "L",
+              "value": "Clerical separation to be supported",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "coordinate": "A8",
+              "column": "A",
+              "value": "A02-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B8",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C8",
+              "column": "C",
+              "value": "8742",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D8",
+              "column": "D",
+              "value": "Outside sales / field representatives",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E8",
+              "column": "E",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F8",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G8",
+              "column": "G",
+              "value": 216250,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H8",
+              "column": "H",
+              "value": 0.33,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I8",
+              "column": "I",
+              "value": "=G8*H8/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G8*H8/100",
+              "cached_value": 713.625
+            },
+            {
+              "coordinate": "J8",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K8",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L8",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "coordinate": "A9",
+              "column": "A",
+              "value": "A02-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B9",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C9",
+              "column": "C",
+              "value": "8017",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D9",
+              "column": "D",
+              "value": "Retail / merchandise operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E9",
+              "column": "E",
+              "value": 19,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F9",
+              "column": "F",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G9",
+              "column": "G",
+              "value": 648750,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H9",
+              "column": "H",
+              "value": 0.71,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I9",
+              "column": "I",
+              "value": "=G9*H9/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G9*H9/100",
+              "cached_value": 4606.125
+            },
+            {
+              "coordinate": "J9",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K9",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L9",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "coordinate": "A10",
+              "column": "A",
+              "value": "A02-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B10",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C10",
+              "column": "C",
+              "value": "7380",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D10",
+              "column": "D",
+              "value": "Drivers / delivery personnel",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E10",
+              "column": "E",
+              "value": 54,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F10",
+              "column": "F",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G10",
+              "column": "G",
+              "value": 1816500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H10",
+              "column": "H",
+              "value": 0.65,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I10",
+              "column": "I",
+              "value": "=G10*H10/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G10*H10/100",
+              "cached_value": 11807.25
+            },
+            {
+              "coordinate": "J10",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K10",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L10",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "coordinate": "A11",
+              "column": "A",
+              "value": "A02-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B11",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C11",
+              "column": "C",
+              "value": "8292",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D11",
+              "column": "D",
+              "value": "Warehouse / loading operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E11",
+              "column": "E",
+              "value": 38,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F11",
+              "column": "F",
+              "value": 5,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G11",
+              "column": "G",
+              "value": 1297500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H11",
+              "column": "H",
+              "value": 0.82,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I11",
+              "column": "I",
+              "value": "=G11*H11/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G11*H11/100",
+              "cached_value": 10639.5
+            },
+            {
+              "coordinate": "J11",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K11",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L11",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "coordinate": "A12",
+              "column": "A",
+              "value": "A02-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B12",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C12",
+              "column": "C",
+              "value": "8810",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D12",
+              "column": "D",
+              "value": "Clerical office employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E12",
+              "column": "E",
+              "value": 10,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F12",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G12",
+              "column": "G",
+              "value": 346000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H12",
+              "column": "H",
+              "value": 0.14,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I12",
+              "column": "I",
+              "value": "=G12*H12/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G12*H12/100",
+              "cached_value": 484.4000000000001
+            },
+            {
+              "coordinate": "J12",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K12",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L12",
+              "column": "L",
+              "value": "Clerical separation to be supported",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "cells": [
+            {
+              "coordinate": "A13",
+              "column": "A",
+              "value": "A02-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B13",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C13",
+              "column": "C",
+              "value": "8742",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D13",
+              "column": "D",
+              "value": "Outside sales / field representatives",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E13",
+              "column": "E",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F13",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G13",
+              "column": "G",
+              "value": 216250,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H13",
+              "column": "H",
+              "value": 0.33,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I13",
+              "column": "I",
+              "value": "=G13*H13/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G13*H13/100",
+              "cached_value": 713.625
+            },
+            {
+              "coordinate": "J13",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K13",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L13",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 14,
+          "cells": [
+            {
+              "coordinate": "A14",
+              "column": "A",
+              "value": "A02-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B14",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C14",
+              "column": "C",
+              "value": "8017",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D14",
+              "column": "D",
+              "value": "Retail / merchandise operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E14",
+              "column": "E",
+              "value": 19,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F14",
+              "column": "F",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G14",
+              "column": "G",
+              "value": 648750,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H14",
+              "column": "H",
+              "value": 0.71,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I14",
+              "column": "I",
+              "value": "=G14*H14/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G14*H14/100",
+              "cached_value": 4606.125
+            },
+            {
+              "coordinate": "J14",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K14",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L14",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 15,
+          "cells": [
+            {
+              "coordinate": "A15",
+              "column": "A",
+              "value": "A02-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B15",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C15",
+              "column": "C",
+              "value": "7380",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D15",
+              "column": "D",
+              "value": "Drivers / delivery personnel",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E15",
+              "column": "E",
+              "value": 54,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F15",
+              "column": "F",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G15",
+              "column": "G",
+              "value": 1816500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H15",
+              "column": "H",
+              "value": 0.65,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I15",
+              "column": "I",
+              "value": "=G15*H15/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G15*H15/100",
+              "cached_value": 11807.25
+            },
+            {
+              "coordinate": "J15",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K15",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L15",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 16,
+          "cells": [
+            {
+              "coordinate": "A16",
+              "column": "A",
+              "value": "A02-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B16",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C16",
+              "column": "C",
+              "value": "8292",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D16",
+              "column": "D",
+              "value": "Warehouse / loading operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E16",
+              "column": "E",
+              "value": 38,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F16",
+              "column": "F",
+              "value": 5,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G16",
+              "column": "G",
+              "value": 1297500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H16",
+              "column": "H",
+              "value": 0.82,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I16",
+              "column": "I",
+              "value": "=G16*H16/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G16*H16/100",
+              "cached_value": 10639.5
+            },
+            {
+              "coordinate": "J16",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K16",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L16",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 17,
+          "cells": [
+            {
+              "coordinate": "A17",
+              "column": "A",
+              "value": "A02-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B17",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C17",
+              "column": "C",
+              "value": "8810",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D17",
+              "column": "D",
+              "value": "Clerical office employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E17",
+              "column": "E",
+              "value": 10,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F17",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G17",
+              "column": "G",
+              "value": 346000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H17",
+              "column": "H",
+              "value": 0.14,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I17",
+              "column": "I",
+              "value": "=G17*H17/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G17*H17/100",
+              "cached_value": 484.4000000000001
+            },
+            {
+              "coordinate": "J17",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K17",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L17",
+              "column": "L",
+              "value": "Clerical separation to be supported",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 18,
+          "cells": [
+            {
+              "coordinate": "A18",
+              "column": "A",
+              "value": "A02-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B18",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C18",
+              "column": "C",
+              "value": "8742",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D18",
+              "column": "D",
+              "value": "Outside sales / field representatives",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E18",
+              "column": "E",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F18",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G18",
+              "column": "G",
+              "value": 216250,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H18",
+              "column": "H",
+              "value": 0.33,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I18",
+              "column": "I",
+              "value": "=G18*H18/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G18*H18/100",
+              "cached_value": 713.625
+            },
+            {
+              "coordinate": "J18",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K18",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L18",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 19,
+          "cells": [
+            {
+              "coordinate": "A19",
+              "column": "A",
+              "value": "A02-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B19",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C19",
+              "column": "C",
+              "value": "8017",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D19",
+              "column": "D",
+              "value": "Retail / merchandise operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E19",
+              "column": "E",
+              "value": 19,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F19",
+              "column": "F",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G19",
+              "column": "G",
+              "value": 648750,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H19",
+              "column": "H",
+              "value": 0.71,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I19",
+              "column": "I",
+              "value": "=G19*H19/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G19*H19/100",
+              "cached_value": 4606.125
+            },
+            {
+              "coordinate": "J19",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K19",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L19",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 20,
+          "cells": [
+            {
+              "coordinate": "A20",
+              "column": "A",
+              "value": "A02-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B20",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C20",
+              "column": "C",
+              "value": "7380",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D20",
+              "column": "D",
+              "value": "Drivers / delivery personnel",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E20",
+              "column": "E",
+              "value": 54,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F20",
+              "column": "F",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G20",
+              "column": "G",
+              "value": 1816500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H20",
+              "column": "H",
+              "value": 0.65,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I20",
+              "column": "I",
+              "value": "=G20*H20/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G20*H20/100",
+              "cached_value": 11807.25
+            },
+            {
+              "coordinate": "J20",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K20",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L20",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 21,
+          "cells": [
+            {
+              "coordinate": "A21",
+              "column": "A",
+              "value": "A02-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B21",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C21",
+              "column": "C",
+              "value": "8292",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D21",
+              "column": "D",
+              "value": "Warehouse / loading operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E21",
+              "column": "E",
+              "value": 38,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F21",
+              "column": "F",
+              "value": 5,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G21",
+              "column": "G",
+              "value": 1297500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H21",
+              "column": "H",
+              "value": 0.82,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I21",
+              "column": "I",
+              "value": "=G21*H21/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G21*H21/100",
+              "cached_value": 10639.5
+            },
+            {
+              "coordinate": "J21",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K21",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L21",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 22,
+          "cells": [
+            {
+              "coordinate": "A22",
+              "column": "A",
+              "value": "A02-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B22",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C22",
+              "column": "C",
+              "value": "8810",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D22",
+              "column": "D",
+              "value": "Clerical office employees",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E22",
+              "column": "E",
+              "value": 10,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F22",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G22",
+              "column": "G",
+              "value": 346000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H22",
+              "column": "H",
+              "value": 0.14,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I22",
+              "column": "I",
+              "value": "=G22*H22/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G22*H22/100",
+              "cached_value": 484.4000000000001
+            },
+            {
+              "coordinate": "J22",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K22",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L22",
+              "column": "L",
+              "value": "Clerical separation to be supported",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 23,
+          "cells": [
+            {
+              "coordinate": "A23",
+              "column": "A",
+              "value": "A02-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B23",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C23",
+              "column": "C",
+              "value": "8742",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D23",
+              "column": "D",
+              "value": "Outside sales / field representatives",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E23",
+              "column": "E",
+              "value": 6,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F23",
+              "column": "F",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G23",
+              "column": "G",
+              "value": 216250,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H23",
+              "column": "H",
+              "value": 0.33,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I23",
+              "column": "I",
+              "value": "=G23*H23/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G23*H23/100",
+              "cached_value": 713.625
+            },
+            {
+              "coordinate": "J23",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K23",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L23",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 24,
+          "cells": [
+            {
+              "coordinate": "A24",
+              "column": "A",
+              "value": "A02-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B24",
+              "column": "B",
+              "value": "WA",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C24",
+              "column": "C",
+              "value": "8017",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D24",
+              "column": "D",
+              "value": "Retail / merchandise operations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E24",
+              "column": "E",
+              "value": 19,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F24",
+              "column": "F",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G24",
+              "column": "G",
+              "value": 648750,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "H24",
+              "column": "H",
+              "value": 0.71,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "I24",
+              "column": "I",
+              "value": "=G24*H24/100",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=G24*H24/100",
+              "cached_value": 4606.125
+            },
+            {
+              "coordinate": "J24",
+              "column": "J",
+              "value": "ESTIMATED",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "K24",
+              "column": "K",
+              "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L24",
+              "column": "L",
+              "value": "Primary payroll basis",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A02 | PAYROLL / CLASSIFICATION SCHEDULE",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Schedule payroll target: $17,300,000. Class codes and rates are synthetic test values; state/bureau rules must be validated.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Location ID",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "State",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Class Code (synthetic)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Category / Duties",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Full-Time Employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "Part-Time Employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G4",
+          "column": "G",
+          "value": "Estimated Annual Payroll ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H4",
+          "column": "H",
+          "value": "Rate per $100 Payroll*",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I4",
+          "column": "I",
+          "value": "Manual Premium ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J4",
+          "column": "J",
+          "value": "Payroll Basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K4",
+          "column": "K",
+          "value": "Evidence / Caveat",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L4",
+          "column": "L",
+          "value": "Additional Notes",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "A02-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "7380",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "Drivers / delivery personnel",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": 54,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G5",
+          "column": "G",
+          "value": 1816500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H5",
+          "column": "H",
+          "value": 0.65,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I5",
+          "column": "I",
+          "value": "=G5*H5/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G5*H5/100",
+          "cached_value": 11807.25
+        },
+        {
+          "coordinate": "J5",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K5",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L5",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "A02-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "8292",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "Warehouse / loading operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E6",
+          "column": "E",
+          "value": 38,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F6",
+          "column": "F",
+          "value": 5,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G6",
+          "column": "G",
+          "value": 1297500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H6",
+          "column": "H",
+          "value": 0.82,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I6",
+          "column": "I",
+          "value": "=G6*H6/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G6*H6/100",
+          "cached_value": 10639.5
+        },
+        {
+          "coordinate": "J6",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K6",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L6",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "A02-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "8810",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Clerical office employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E7",
+          "column": "E",
+          "value": 10,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F7",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G7",
+          "column": "G",
+          "value": 346000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H7",
+          "column": "H",
+          "value": 0.14,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I7",
+          "column": "I",
+          "value": "=G7*H7/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G7*H7/100",
+          "cached_value": 484.4000000000001
+        },
+        {
+          "coordinate": "J7",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K7",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L7",
+          "column": "L",
+          "value": "Clerical separation to be supported",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A8",
+          "column": "A",
+          "value": "A02-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B8",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C8",
+          "column": "C",
+          "value": "8742",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D8",
+          "column": "D",
+          "value": "Outside sales / field representatives",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E8",
+          "column": "E",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F8",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G8",
+          "column": "G",
+          "value": 216250,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H8",
+          "column": "H",
+          "value": 0.33,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I8",
+          "column": "I",
+          "value": "=G8*H8/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G8*H8/100",
+          "cached_value": 713.625
+        },
+        {
+          "coordinate": "J8",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K8",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L8",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A9",
+          "column": "A",
+          "value": "A02-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B9",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C9",
+          "column": "C",
+          "value": "8017",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D9",
+          "column": "D",
+          "value": "Retail / merchandise operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E9",
+          "column": "E",
+          "value": 19,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F9",
+          "column": "F",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G9",
+          "column": "G",
+          "value": 648750,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H9",
+          "column": "H",
+          "value": 0.71,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I9",
+          "column": "I",
+          "value": "=G9*H9/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G9*H9/100",
+          "cached_value": 4606.125
+        },
+        {
+          "coordinate": "J9",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K9",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L9",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A10",
+          "column": "A",
+          "value": "A02-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B10",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C10",
+          "column": "C",
+          "value": "7380",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D10",
+          "column": "D",
+          "value": "Drivers / delivery personnel",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E10",
+          "column": "E",
+          "value": 54,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F10",
+          "column": "F",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G10",
+          "column": "G",
+          "value": 1816500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H10",
+          "column": "H",
+          "value": 0.65,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I10",
+          "column": "I",
+          "value": "=G10*H10/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G10*H10/100",
+          "cached_value": 11807.25
+        },
+        {
+          "coordinate": "J10",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K10",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L10",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A11",
+          "column": "A",
+          "value": "A02-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B11",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C11",
+          "column": "C",
+          "value": "8292",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D11",
+          "column": "D",
+          "value": "Warehouse / loading operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E11",
+          "column": "E",
+          "value": 38,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F11",
+          "column": "F",
+          "value": 5,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G11",
+          "column": "G",
+          "value": 1297500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H11",
+          "column": "H",
+          "value": 0.82,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I11",
+          "column": "I",
+          "value": "=G11*H11/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G11*H11/100",
+          "cached_value": 10639.5
+        },
+        {
+          "coordinate": "J11",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K11",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L11",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A12",
+          "column": "A",
+          "value": "A02-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B12",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C12",
+          "column": "C",
+          "value": "8810",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D12",
+          "column": "D",
+          "value": "Clerical office employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E12",
+          "column": "E",
+          "value": 10,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F12",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G12",
+          "column": "G",
+          "value": 346000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H12",
+          "column": "H",
+          "value": 0.14,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I12",
+          "column": "I",
+          "value": "=G12*H12/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G12*H12/100",
+          "cached_value": 484.4000000000001
+        },
+        {
+          "coordinate": "J12",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K12",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L12",
+          "column": "L",
+          "value": "Clerical separation to be supported",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A13",
+          "column": "A",
+          "value": "A02-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B13",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C13",
+          "column": "C",
+          "value": "8742",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D13",
+          "column": "D",
+          "value": "Outside sales / field representatives",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E13",
+          "column": "E",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F13",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G13",
+          "column": "G",
+          "value": 216250,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H13",
+          "column": "H",
+          "value": 0.33,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I13",
+          "column": "I",
+          "value": "=G13*H13/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G13*H13/100",
+          "cached_value": 713.625
+        },
+        {
+          "coordinate": "J13",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K13",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L13",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A14",
+          "column": "A",
+          "value": "A02-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B14",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C14",
+          "column": "C",
+          "value": "8017",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D14",
+          "column": "D",
+          "value": "Retail / merchandise operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E14",
+          "column": "E",
+          "value": 19,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F14",
+          "column": "F",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G14",
+          "column": "G",
+          "value": 648750,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H14",
+          "column": "H",
+          "value": 0.71,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I14",
+          "column": "I",
+          "value": "=G14*H14/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G14*H14/100",
+          "cached_value": 4606.125
+        },
+        {
+          "coordinate": "J14",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K14",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L14",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A15",
+          "column": "A",
+          "value": "A02-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B15",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C15",
+          "column": "C",
+          "value": "7380",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D15",
+          "column": "D",
+          "value": "Drivers / delivery personnel",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E15",
+          "column": "E",
+          "value": 54,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F15",
+          "column": "F",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G15",
+          "column": "G",
+          "value": 1816500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H15",
+          "column": "H",
+          "value": 0.65,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I15",
+          "column": "I",
+          "value": "=G15*H15/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G15*H15/100",
+          "cached_value": 11807.25
+        },
+        {
+          "coordinate": "J15",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K15",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L15",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A16",
+          "column": "A",
+          "value": "A02-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B16",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C16",
+          "column": "C",
+          "value": "8292",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D16",
+          "column": "D",
+          "value": "Warehouse / loading operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E16",
+          "column": "E",
+          "value": 38,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F16",
+          "column": "F",
+          "value": 5,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G16",
+          "column": "G",
+          "value": 1297500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H16",
+          "column": "H",
+          "value": 0.82,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I16",
+          "column": "I",
+          "value": "=G16*H16/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G16*H16/100",
+          "cached_value": 10639.5
+        },
+        {
+          "coordinate": "J16",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K16",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L16",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A17",
+          "column": "A",
+          "value": "A02-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B17",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C17",
+          "column": "C",
+          "value": "8810",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D17",
+          "column": "D",
+          "value": "Clerical office employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E17",
+          "column": "E",
+          "value": 10,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F17",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G17",
+          "column": "G",
+          "value": 346000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H17",
+          "column": "H",
+          "value": 0.14,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I17",
+          "column": "I",
+          "value": "=G17*H17/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G17*H17/100",
+          "cached_value": 484.4000000000001
+        },
+        {
+          "coordinate": "J17",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K17",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L17",
+          "column": "L",
+          "value": "Clerical separation to be supported",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A18",
+          "column": "A",
+          "value": "A02-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B18",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C18",
+          "column": "C",
+          "value": "8742",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D18",
+          "column": "D",
+          "value": "Outside sales / field representatives",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E18",
+          "column": "E",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F18",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G18",
+          "column": "G",
+          "value": 216250,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H18",
+          "column": "H",
+          "value": 0.33,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I18",
+          "column": "I",
+          "value": "=G18*H18/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G18*H18/100",
+          "cached_value": 713.625
+        },
+        {
+          "coordinate": "J18",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K18",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L18",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A19",
+          "column": "A",
+          "value": "A02-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B19",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C19",
+          "column": "C",
+          "value": "8017",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D19",
+          "column": "D",
+          "value": "Retail / merchandise operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E19",
+          "column": "E",
+          "value": 19,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F19",
+          "column": "F",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G19",
+          "column": "G",
+          "value": 648750,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H19",
+          "column": "H",
+          "value": 0.71,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I19",
+          "column": "I",
+          "value": "=G19*H19/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G19*H19/100",
+          "cached_value": 4606.125
+        },
+        {
+          "coordinate": "J19",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K19",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L19",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A20",
+          "column": "A",
+          "value": "A02-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B20",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C20",
+          "column": "C",
+          "value": "7380",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D20",
+          "column": "D",
+          "value": "Drivers / delivery personnel",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E20",
+          "column": "E",
+          "value": 54,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F20",
+          "column": "F",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G20",
+          "column": "G",
+          "value": 1816500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H20",
+          "column": "H",
+          "value": 0.65,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I20",
+          "column": "I",
+          "value": "=G20*H20/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G20*H20/100",
+          "cached_value": 11807.25
+        },
+        {
+          "coordinate": "J20",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K20",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L20",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A21",
+          "column": "A",
+          "value": "A02-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B21",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C21",
+          "column": "C",
+          "value": "8292",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D21",
+          "column": "D",
+          "value": "Warehouse / loading operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E21",
+          "column": "E",
+          "value": 38,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F21",
+          "column": "F",
+          "value": 5,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G21",
+          "column": "G",
+          "value": 1297500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H21",
+          "column": "H",
+          "value": 0.82,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I21",
+          "column": "I",
+          "value": "=G21*H21/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G21*H21/100",
+          "cached_value": 10639.5
+        },
+        {
+          "coordinate": "J21",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K21",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L21",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A22",
+          "column": "A",
+          "value": "A02-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B22",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C22",
+          "column": "C",
+          "value": "8810",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D22",
+          "column": "D",
+          "value": "Clerical office employees",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E22",
+          "column": "E",
+          "value": 10,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F22",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G22",
+          "column": "G",
+          "value": 346000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H22",
+          "column": "H",
+          "value": 0.14,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I22",
+          "column": "I",
+          "value": "=G22*H22/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G22*H22/100",
+          "cached_value": 484.4000000000001
+        },
+        {
+          "coordinate": "J22",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K22",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L22",
+          "column": "L",
+          "value": "Clerical separation to be supported",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A23",
+          "column": "A",
+          "value": "A02-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B23",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C23",
+          "column": "C",
+          "value": "8742",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D23",
+          "column": "D",
+          "value": "Outside sales / field representatives",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E23",
+          "column": "E",
+          "value": 6,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F23",
+          "column": "F",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G23",
+          "column": "G",
+          "value": 216250,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H23",
+          "column": "H",
+          "value": 0.33,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I23",
+          "column": "I",
+          "value": "=G23*H23/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G23*H23/100",
+          "cached_value": 713.625
+        },
+        {
+          "coordinate": "J23",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K23",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L23",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A24",
+          "column": "A",
+          "value": "A02-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B24",
+          "column": "B",
+          "value": "WA",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C24",
+          "column": "C",
+          "value": "8017",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D24",
+          "column": "D",
+          "value": "Retail / merchandise operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E24",
+          "column": "E",
+          "value": 19,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F24",
+          "column": "F",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G24",
+          "column": "G",
+          "value": 648750,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "H24",
+          "column": "H",
+          "value": 0.71,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "I24",
+          "column": "I",
+          "value": "=G24*H24/100",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=G24*H24/100",
+          "cached_value": 4606.125
+        },
+        {
+          "coordinate": "J24",
+          "column": "J",
+          "value": "ESTIMATED",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "K24",
+          "column": "K",
+          "value": "Class code/rate are synthetic; verify with state bureau/carrier.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L24",
+          "column": "L",
+          "value": "Primary payroll basis",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 254,
+        "nonempty_row_count": 23,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_coordinates_preserved": true
+      }
+    },
+    {
+      "sheet_name": "Experience Mod History",
+      "dimensions": {
+        "max_row": 7,
+        "max_column": 6
+      },
+      "merged_ranges": [
+        "A2:F2",
+        "A1:F1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A02 | EXPERIENCE MODIFICATION HISTORY",
+          "merged_ranges": [
+            "A1:F1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "Factor history is synthetic. Use only to test date-aware and authority-aware input validation.",
+          "merged_ranges": [
+            "A2:F2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "Experience Mod History__table_1",
+          "header_row": 6,
+          "headers": [
+            "2025-2026",
+            "1.01",
+            "2025-11-01",
+            "Prior term mod worksheet (synthetic)",
+            "Historical",
+            "Prior"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 7,
+              "values": {
+                "2025-2026": "2026-2027",
+                "1.01": 0.98,
+                "2025-11-01": "2026-11-01",
+                "Prior term mod worksheet (synthetic)": "Current approved mod letter (synthetic test artifact)",
+                "Historical": "Current in test pack",
+                "Prior": "Current"
+              }
+            }
+          ],
+          "detection_method": "heuristic_text_header_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "date_or_version_sensitive_evidence",
+          "trigger_terms": [
+            "current",
+            "prior",
+            "effective date"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A02 | EXPERIENCE MODIFICATION HISTORY",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Factor history is synthetic. Use only to test date-aware and authority-aware input validation.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Policy Term",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Mod Factor",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Effective Date",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Source Document",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Source Status",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "Current / Prior",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "2024-2025",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": 1.03,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "2024-11-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "Prior term mod worksheet (synthetic)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "Historical",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": "Prior",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "2025-2026",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": 1.01,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "2025-11-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "Prior term mod worksheet (synthetic)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E6",
+              "column": "E",
+              "value": "Historical",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F6",
+              "column": "F",
+              "value": "Prior",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "2026-2027",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": 0.98,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "2026-11-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Current approved mod letter (synthetic test artifact)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E7",
+              "column": "E",
+              "value": "Current in test pack",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F7",
+              "column": "F",
+              "value": "Current",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A02 | EXPERIENCE MODIFICATION HISTORY",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Factor history is synthetic. Use only to test date-aware and authority-aware input validation.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Policy Term",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Mod Factor",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Effective Date",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Source Document",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Source Status",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "Current / Prior",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "2024-2025",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": 1.03,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "2024-11-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "Prior term mod worksheet (synthetic)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "Historical",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": "Prior",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "2025-2026",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": 1.01,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "2025-11-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "Prior term mod worksheet (synthetic)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E6",
+          "column": "E",
+          "value": "Historical",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F6",
+          "column": "F",
+          "value": "Prior",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "2026-2027",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": 0.98,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "2026-11-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Current approved mod letter (synthetic test artifact)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E7",
+          "column": "E",
+          "value": "Current in test pack",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F7",
+          "column": "F",
+          "value": "Current",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 26,
+        "nonempty_row_count": 6,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_coordinates_preserved": true
+      }
+    },
+    {
+      "sheet_name": "Rating Inputs",
+      "dimensions": {
+        "max_row": 10,
+        "max_column": 7
+      },
+      "merged_ranges": [
+        "A2:G2",
+        "A1:G1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A02 | RATING INPUT CONTROL",
+          "merged_ranges": [
+            "A1:G1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "Illustrative values only; the carrier's filed rating plan and rating engine remain authoritative.",
+          "merged_ranges": [
+            "A2:G2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "Rating Inputs__table_1",
+          "header_row": 9,
+          "headers": [
+            "Locations",
+            "4",
+            "3",
+            "Count",
+            "Mismatch",
+            "Property SOV + ACORD 125",
+            "Reconcile scheduled premises."
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 10,
+              "values": {
+                "Locations": "GL exposure basis",
+                "4": 43425000,
+                "3": 43425000,
+                "Count": "USD sales",
+                "Mismatch": "Aligned",
+                "Property SOV + ACORD 125": "ACORD 126 / synthetic GL schedule",
+                "Reconcile scheduled premises.": "Rate and class code still require carrier validation."
+              }
+            }
+          ],
+          "detection_method": "heuristic_text_header_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "cross_document_or_control_total_mismatch",
+          "trigger_terms": [
+            "mismatch",
+            "difference",
+            "reconcile"
+          ]
+        },
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "external_authority_or_validation_required",
+          "trigger_terms": [
+            "authoritative"
+          ]
+        },
+        {
+          "heuristic": "count_or_arithmetic_reconciliation",
+          "trigger_terms": [
+            "count"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A02 | RATING INPUT CONTROL",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Illustrative values only; the carrier's filed rating plan and rating engine remain authoritative.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Input",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Application / Supporting Value",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Draft Quote Value",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Unit / Basis",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Difference / Exception",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "Evidence Source",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G4",
+              "column": "G",
+              "value": "Recommended Action",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "Gross sales",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": 96500000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": 96500000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "USD annual",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "Aligned",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": "ACORD 125 + synthetic sales statement",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G5",
+              "column": "G",
+              "value": "No discrepancy seeded in this field.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "WC payroll",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": 17300000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": 17300000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "USD annual",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E6",
+              "column": "E",
+              "value": "Aligned",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F6",
+              "column": "F",
+              "value": "Payroll by Class worksheet / ACORD 130",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G6",
+              "column": "G",
+              "value": "No discrepancy seeded in this field.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "Experience modification",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": 0.98,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": 0.98,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Factor",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E7",
+              "column": "E",
+              "value": "Aligned",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F7",
+              "column": "F",
+              "value": "Experience Mod History + Draft Quote",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G7",
+              "column": "G",
+              "value": "Values align.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "coordinate": "A8",
+              "column": "A",
+              "value": "Power units",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B8",
+              "column": "B",
+              "value": 74,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C8",
+              "column": "C",
+              "value": 74,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D8",
+              "column": "D",
+              "value": "Count",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E8",
+              "column": "E",
+              "value": "Aligned",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F8",
+              "column": "F",
+              "value": "Fleet schedule + ACORD 125",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G8",
+              "column": "G",
+              "value": "Values align.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "coordinate": "A9",
+              "column": "A",
+              "value": "Locations",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B9",
+              "column": "B",
+              "value": 4,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C9",
+              "column": "C",
+              "value": 3,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D9",
+              "column": "D",
+              "value": "Count",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E9",
+              "column": "E",
+              "value": "Mismatch",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F9",
+              "column": "F",
+              "value": "Property SOV + ACORD 125",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G9",
+              "column": "G",
+              "value": "Reconcile scheduled premises.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "coordinate": "A10",
+              "column": "A",
+              "value": "GL exposure basis",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B10",
+              "column": "B",
+              "value": 43425000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C10",
+              "column": "C",
+              "value": 43425000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D10",
+              "column": "D",
+              "value": "USD sales",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E10",
+              "column": "E",
+              "value": "Aligned",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F10",
+              "column": "F",
+              "value": "ACORD 126 / synthetic GL schedule",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G10",
+              "column": "G",
+              "value": "Rate and class code still require carrier validation.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A02 | RATING INPUT CONTROL",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Illustrative values only; the carrier's filed rating plan and rating engine remain authoritative.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Input",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Application / Supporting Value",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Draft Quote Value",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Unit / Basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Difference / Exception",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "Evidence Source",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G4",
+          "column": "G",
+          "value": "Recommended Action",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "Gross sales",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": 96500000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": 96500000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "USD annual",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "Aligned",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": "ACORD 125 + synthetic sales statement",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G5",
+          "column": "G",
+          "value": "No discrepancy seeded in this field.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "WC payroll",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": 17300000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": 17300000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "USD annual",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E6",
+          "column": "E",
+          "value": "Aligned",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F6",
+          "column": "F",
+          "value": "Payroll by Class worksheet / ACORD 130",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G6",
+          "column": "G",
+          "value": "No discrepancy seeded in this field.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "Experience modification",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": 0.98,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": 0.98,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Factor",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E7",
+          "column": "E",
+          "value": "Aligned",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F7",
+          "column": "F",
+          "value": "Experience Mod History + Draft Quote",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G7",
+          "column": "G",
+          "value": "Values align.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A8",
+          "column": "A",
+          "value": "Power units",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B8",
+          "column": "B",
+          "value": 74,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C8",
+          "column": "C",
+          "value": 74,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D8",
+          "column": "D",
+          "value": "Count",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E8",
+          "column": "E",
+          "value": "Aligned",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F8",
+          "column": "F",
+          "value": "Fleet schedule + ACORD 125",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G8",
+          "column": "G",
+          "value": "Values align.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A9",
+          "column": "A",
+          "value": "Locations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B9",
+          "column": "B",
+          "value": 4,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C9",
+          "column": "C",
+          "value": 3,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D9",
+          "column": "D",
+          "value": "Count",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E9",
+          "column": "E",
+          "value": "Mismatch",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F9",
+          "column": "F",
+          "value": "Property SOV + ACORD 125",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G9",
+          "column": "G",
+          "value": "Reconcile scheduled premises.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A10",
+          "column": "A",
+          "value": "GL exposure basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B10",
+          "column": "B",
+          "value": 43425000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C10",
+          "column": "C",
+          "value": 43425000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D10",
+          "column": "D",
+          "value": "USD sales",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E10",
+          "column": "E",
+          "value": "Aligned",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F10",
+          "column": "F",
+          "value": "ACORD 126 / synthetic GL schedule",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G10",
+          "column": "G",
+          "value": "Rate and class code still require carrier validation.",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 51,
+        "nonempty_row_count": 9,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_coordinates_preserved": true
+      }
+    }
+  ],
+  "file_level_heuristics": [
+    {
+      "heuristic": "multi_sheet_workbook",
+      "sheet_count": 3
+    },
+    {
+      "heuristic": "complete_nonempty_cell_inventory",
+      "nonempty_cell_count": 331
+    },
+    {
+      "heuristic": "all_worksheets_merged",
+      "description": "All worksheets are represented in this single JSON file."
+    }
+  ],
+  "extraction_notes": [
+    "Every non-empty cell is preserved with its original worksheet coordinate and value.",
+    "Tables and key-value pairs are heuristic interpretations; raw cell inventory is retained as the source of truth.",
+    "Formula expressions and cached results are both included when present; cached values can be null.",
+    "Blank cells are omitted as individual records; original coordinates and sheet dimensions are retained.",
+    "Heuristic triggers are indicators for downstream review, not underwriting decisions."
+  ]
+}

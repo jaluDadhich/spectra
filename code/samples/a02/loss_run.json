@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A02-2026-0202",
+  "document": {
+    "document_id": "A-LOSSRUN",
+    "document_type": "loss_run",
+    "document_name": "Loss_Run.pdf",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "valuation_date": "2026-10-01",
+    "claims": [
+      {
+        "claim_id": "CLM-2001",
+        "line_of_business": "GL",
+        "loss_date": "2025-03-14",
+        "paid": 50000,
+        "reserves": 25000,
+        "incurred": 75000,
+        "status": "open",
+        "policy_year": "2025"
+      },
+      {
+        "claim_id": "CLM-2001",
+        "line_of_business": "GL",
+        "loss_date": "2025-03-14",
+        "paid": 50000,
+        "reserves": 45000,
+        "incurred": 95000,
+        "status": "open",
+        "policy_year": "2025"
+      },
+      {
+        "claim_id": "CLM-2002",
+        "line_of_business": "WC",
+        "loss_date": "2025-06-02",
+        "paid": 10000,
+        "reserves": 0,
+        "incurred": 10000,
+        "status": "closed",
+        "policy_year": "2025"
+      }
+    ],
+    "summary": {
+      "total_incurred": 180000,
+      "claim_count": 3,
+      "annual_counts": [
+        {
+          "year": "2025",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Loss_Run.pdf",
+    "fields": {}
+  }
+}

@@ -1,0 +1,2916 @@
+{
+  "source_file": "A01_Property_SOV(2).xlsx",
+  "output_file": "A01_Property_SOV.json",
+  "document_type": "Excel workbook",
+  "extraction_method": "cell-level extraction with sheet structure, heuristic table/key-value views, formulas and cached formula values",
+  "workbook_metadata": {
+    "sheet_names_in_order": [
+      "Statement of Values",
+      "SOV Summary"
+    ],
+    "sheet_count": 2,
+    "calculation_mode": null
+  },
+  "sheets": [
+    {
+      "sheet_name": "Statement of Values",
+      "dimensions": {
+        "max_row": 9,
+        "max_column": 26
+      },
+      "merged_ranges": [
+        "A1:Z1",
+        "A2:Z2"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A01 | STATEMENT OF VALUES",
+          "merged": [
+            "A1:Z1"
+          ]
+        }
+      ],
+      "notes_and_context": [
+        {
+          "row": 2,
+          "text": "5 synthetic premises; cross-check application count 4 and ACORD 140. Addresses are placeholders.",
+          "merged": [
+            "A2:Z2"
+          ]
+        }
+      ],
+      "detected_tables": [
+        {
+          "table_id": "Statement of Values__table_1",
+          "header_row": 8,
+          "headers": [
+            "A01-LOC-04",
+            "PREM-04",
+            "1435 Sample Commerce Parkway",
+            "Nashville",
+            "TN",
+            "37210",
+            "County-TN-SIM",
+            "Cross-dock / transfer terminal",
+            "Cross-dock",
+            "2007",
+            "Joisted masonry",
+            "1",
+            "140000",
+            "2021",
+            "2022",
+            "2020",
+            "Reported; certificate missing",
+            "2",
+            "17250000",
+            "2376000",
+            "2944000",
+            "438000",
+            "=SUM(S8:V8)",
+            "Replacement Cost",
+            "$10,000 / wind $25,000",
+            "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites."
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 9,
+              "values": {
+                "A01-LOC-04": "A01-LOC-05",
+                "PREM-04": "PREM-05",
+                "1435 Sample Commerce Parkway": "1580 Sample Commerce Parkway",
+                "Nashville": "Dallas",
+                "TN": "TX",
+                "37210": "75212",
+                "County-TN-SIM": "County-TX-SIM",
+                "Cross-dock / transfer terminal": "Warehouse / distribution",
+                "Cross-dock": "Distribution warehouse",
+                "2007": 2008,
+                "Joisted masonry": "Non-combustible",
+                "1": 2,
+                "140000": 155000,
+                "2021": 2022,
+                "2022": 2023,
+                "2020": 2021,
+                "Reported; certificate missing": "100% documented",
+                "2": "3",
+                "17250000": 14600000,
+                "2376000": 4070000,
+                "2944000": 2944000,
+                "438000": 324000,
+                "=SUM(S8:V8)": "=SUM(S9:V9)",
+                "=SUM(S8:V8)__formula": "=SUM(S9:V9)",
+                "=SUM(S8:V8)__cached_value": 21938000,
+                "Replacement Cost": "Replacement Cost",
+                "$10,000 / wind $25,000": "$10,000 / wind $25,000",
+                "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites."
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "missing_evidence_or_document_gap",
+          "trigger_terms": [
+            "missing"
+          ]
+        },
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic",
+            "placeholder"
+          ]
+        },
+        {
+          "heuristic": "count_or_arithmetic_reconciliation",
+          "trigger_terms": [
+            "count",
+            "total",
+            "sum"
+          ]
+        },
+        {
+          "heuristic": "spreadsheet_formula_present",
+          "formula_cells": [
+            "W5",
+            "W6",
+            "W7",
+            "W8",
+            "W9"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A01 | STATEMENT OF VALUES",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "5 synthetic premises; cross-check application count 4 and ACORD 140. Addresses are placeholders.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Location ID",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Premises #",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Street Address (synthetic)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "City",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "State",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F4",
+              "column": "F",
+              "value": "ZIP",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G4",
+              "column": "G",
+              "value": "County (synthetic)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H4",
+              "column": "H",
+              "value": "Occupancy",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I4",
+              "column": "I",
+              "value": "Use / Description",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J4",
+              "column": "J",
+              "value": "Year Built",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K4",
+              "column": "K",
+              "value": "Construction",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L4",
+              "column": "L",
+              "value": "Stories",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M4",
+              "column": "M",
+              "value": "Building Area (sq ft)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "N4",
+              "column": "N",
+              "value": "Roof Updated",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O4",
+              "column": "O",
+              "value": "Electrical Updated",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P4",
+              "column": "P",
+              "value": "Plumbing Updated",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q4",
+              "column": "Q",
+              "value": "Sprinkler Evidence",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R4",
+              "column": "R",
+              "value": "Protection Class",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S4",
+              "column": "S",
+              "value": "Building Value ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "T4",
+              "column": "T",
+              "value": "Business Personal Property ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "U4",
+              "column": "U",
+              "value": "Business Income Limit ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "V4",
+              "column": "V",
+              "value": "Equipment Value ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "W4",
+              "column": "W",
+              "value": "Total Insured Values ($)",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "X4",
+              "column": "X",
+              "value": "Valuation Basis",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y4",
+              "column": "Y",
+              "value": "Deductible",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Z4",
+              "column": "Z",
+              "value": "Source / Notes",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "A01-LOC-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "PREM-01",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "1000 Sample Commerce Parkway",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "Bentonville",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "AR",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F5",
+              "column": "F",
+              "value": "72712",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G5",
+              "column": "G",
+              "value": "County-AR-SIM",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H5",
+              "column": "H",
+              "value": "Warehouse / distribution",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I5",
+              "column": "I",
+              "value": "Distribution warehouse",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J5",
+              "column": "J",
+              "value": 2004,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K5",
+              "column": "K",
+              "value": "Joisted masonry",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L5",
+              "column": "L",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M5",
+              "column": "M",
+              "value": 95000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "N5",
+              "column": "N",
+              "value": 2018,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O5",
+              "column": "O",
+              "value": 2019,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P5",
+              "column": "P",
+              "value": 2017,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q5",
+              "column": "Q",
+              "value": "100% documented",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R5",
+              "column": "R",
+              "value": "2",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S5",
+              "column": "S",
+              "value": 18500000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "T5",
+              "column": "T",
+              "value": 5016000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "U5",
+              "column": "U",
+              "value": 2944000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "V5",
+              "column": "V",
+              "value": 375000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "W5",
+              "column": "W",
+              "value": "=SUM(S5:V5)",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=SUM(S5:V5)",
+              "cached_value": 26835000
+            },
+            {
+              "coordinate": "X5",
+              "column": "X",
+              "value": "Replacement Cost",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y5",
+              "column": "Y",
+              "value": "$10,000 / wind $25,000",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "Z5",
+              "column": "Z",
+              "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "A01-LOC-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": "PREM-02",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "1145 Sample Commerce Parkway",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "Springdale",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E6",
+              "column": "E",
+              "value": "AR",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F6",
+              "column": "F",
+              "value": "72762",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G6",
+              "column": "G",
+              "value": "County-AR-SIM",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H6",
+              "column": "H",
+              "value": "Retail / general merchandise",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I6",
+              "column": "I",
+              "value": "Warehouse retail",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J6",
+              "column": "J",
+              "value": 2005,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K6",
+              "column": "K",
+              "value": "Non-combustible",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L6",
+              "column": "L",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M6",
+              "column": "M",
+              "value": 110000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "N6",
+              "column": "N",
+              "value": 2019,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O6",
+              "column": "O",
+              "value": 2020,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P6",
+              "column": "P",
+              "value": 2018,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q6",
+              "column": "Q",
+              "value": "100% documented",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R6",
+              "column": "R",
+              "value": "3",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S6",
+              "column": "S",
+              "value": 12500000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "T6",
+              "column": "T",
+              "value": 3795000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "U6",
+              "column": "U",
+              "value": 2944000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "V6",
+              "column": "V",
+              "value": 684000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "W6",
+              "column": "W",
+              "value": "=SUM(S6:V6)",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=SUM(S6:V6)",
+              "cached_value": 19923000
+            },
+            {
+              "coordinate": "X6",
+              "column": "X",
+              "value": "Replacement Cost",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y6",
+              "column": "Y",
+              "value": "$10,000 / wind $25,000",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "Z6",
+              "column": "Z",
+              "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "A01-LOC-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": "PREM-03",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "1290 Sample Commerce Parkway",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Tulsa",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E7",
+              "column": "E",
+              "value": "OK",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F7",
+              "column": "F",
+              "value": "74116",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G7",
+              "column": "G",
+              "value": "County-OK-SIM",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H7",
+              "column": "H",
+              "value": "Cold-chain / temperature-controlled",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I7",
+              "column": "I",
+              "value": "Cold storage",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J7",
+              "column": "J",
+              "value": 2006,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K7",
+              "column": "K",
+              "value": "Non-combustible",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L7",
+              "column": "L",
+              "value": 3,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M7",
+              "column": "M",
+              "value": 125000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "N7",
+              "column": "N",
+              "value": 2020,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O7",
+              "column": "O",
+              "value": 2021,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P7",
+              "column": "P",
+              "value": 2019,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q7",
+              "column": "Q",
+              "value": "100% documented",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R7",
+              "column": "R",
+              "value": "4",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S7",
+              "column": "S",
+              "value": 22800000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "T7",
+              "column": "T",
+              "value": 3212000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "U7",
+              "column": "U",
+              "value": 2944000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "V7",
+              "column": "V",
+              "value": 517500,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "W7",
+              "column": "W",
+              "value": "=SUM(S7:V7)",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=SUM(S7:V7)",
+              "cached_value": 29473500
+            },
+            {
+              "coordinate": "X7",
+              "column": "X",
+              "value": "Replacement Cost",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y7",
+              "column": "Y",
+              "value": "$10,000 / wind $25,000",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "Z7",
+              "column": "Z",
+              "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "coordinate": "A8",
+              "column": "A",
+              "value": "A01-LOC-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B8",
+              "column": "B",
+              "value": "PREM-04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C8",
+              "column": "C",
+              "value": "1435 Sample Commerce Parkway",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D8",
+              "column": "D",
+              "value": "Nashville",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E8",
+              "column": "E",
+              "value": "TN",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F8",
+              "column": "F",
+              "value": "37210",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G8",
+              "column": "G",
+              "value": "County-TN-SIM",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H8",
+              "column": "H",
+              "value": "Cross-dock / transfer terminal",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I8",
+              "column": "I",
+              "value": "Cross-dock",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J8",
+              "column": "J",
+              "value": 2007,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K8",
+              "column": "K",
+              "value": "Joisted masonry",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L8",
+              "column": "L",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M8",
+              "column": "M",
+              "value": 140000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "N8",
+              "column": "N",
+              "value": 2021,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O8",
+              "column": "O",
+              "value": 2022,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P8",
+              "column": "P",
+              "value": 2020,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q8",
+              "column": "Q",
+              "value": "Reported; certificate missing",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R8",
+              "column": "R",
+              "value": "2",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S8",
+              "column": "S",
+              "value": 17250000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "T8",
+              "column": "T",
+              "value": 2376000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "U8",
+              "column": "U",
+              "value": 2944000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "V8",
+              "column": "V",
+              "value": 438000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "W8",
+              "column": "W",
+              "value": "=SUM(S8:V8)",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=SUM(S8:V8)",
+              "cached_value": 23008000
+            },
+            {
+              "coordinate": "X8",
+              "column": "X",
+              "value": "Replacement Cost",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y8",
+              "column": "Y",
+              "value": "$10,000 / wind $25,000",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "Z8",
+              "column": "Z",
+              "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "coordinate": "A9",
+              "column": "A",
+              "value": "A01-LOC-05",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B9",
+              "column": "B",
+              "value": "PREM-05",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C9",
+              "column": "C",
+              "value": "1580 Sample Commerce Parkway",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D9",
+              "column": "D",
+              "value": "Dallas",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E9",
+              "column": "E",
+              "value": "TX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "F9",
+              "column": "F",
+              "value": "75212",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "G9",
+              "column": "G",
+              "value": "County-TX-SIM",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "H9",
+              "column": "H",
+              "value": "Warehouse / distribution",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "I9",
+              "column": "I",
+              "value": "Distribution warehouse",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "J9",
+              "column": "J",
+              "value": 2008,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "K9",
+              "column": "K",
+              "value": "Non-combustible",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "L9",
+              "column": "L",
+              "value": 2,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "M9",
+              "column": "M",
+              "value": 155000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "N9",
+              "column": "N",
+              "value": 2022,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "O9",
+              "column": "O",
+              "value": 2023,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "P9",
+              "column": "P",
+              "value": 2021,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Q9",
+              "column": "Q",
+              "value": "100% documented",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "R9",
+              "column": "R",
+              "value": "3",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "S9",
+              "column": "S",
+              "value": 14600000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "T9",
+              "column": "T",
+              "value": 4070000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "U9",
+              "column": "U",
+              "value": 2944000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "V9",
+              "column": "V",
+              "value": 324000,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "W9",
+              "column": "W",
+              "value": "=SUM(S9:V9)",
+              "data_type": "f",
+              "number_format": "$#,##0;[Red]($#,##0);-",
+              "formula": "=SUM(S9:V9)",
+              "cached_value": 21938000
+            },
+            {
+              "coordinate": "X9",
+              "column": "X",
+              "value": "Replacement Cost",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "Y9",
+              "column": "Y",
+              "value": "$10,000 / wind $25,000",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "Z9",
+              "column": "Z",
+              "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A01 | STATEMENT OF VALUES",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "5 synthetic premises; cross-check application count 4 and ACORD 140. Addresses are placeholders.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Location ID",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Premises #",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Street Address (synthetic)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "City",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "State",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F4",
+          "column": "F",
+          "value": "ZIP",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G4",
+          "column": "G",
+          "value": "County (synthetic)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H4",
+          "column": "H",
+          "value": "Occupancy",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I4",
+          "column": "I",
+          "value": "Use / Description",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J4",
+          "column": "J",
+          "value": "Year Built",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K4",
+          "column": "K",
+          "value": "Construction",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L4",
+          "column": "L",
+          "value": "Stories",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M4",
+          "column": "M",
+          "value": "Building Area (sq ft)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "N4",
+          "column": "N",
+          "value": "Roof Updated",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O4",
+          "column": "O",
+          "value": "Electrical Updated",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P4",
+          "column": "P",
+          "value": "Plumbing Updated",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q4",
+          "column": "Q",
+          "value": "Sprinkler Evidence",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R4",
+          "column": "R",
+          "value": "Protection Class",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S4",
+          "column": "S",
+          "value": "Building Value ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "T4",
+          "column": "T",
+          "value": "Business Personal Property ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "U4",
+          "column": "U",
+          "value": "Business Income Limit ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "V4",
+          "column": "V",
+          "value": "Equipment Value ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "W4",
+          "column": "W",
+          "value": "Total Insured Values ($)",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "X4",
+          "column": "X",
+          "value": "Valuation Basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y4",
+          "column": "Y",
+          "value": "Deductible",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Z4",
+          "column": "Z",
+          "value": "Source / Notes",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "A01-LOC-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "PREM-01",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "1000 Sample Commerce Parkway",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "Bentonville",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "AR",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F5",
+          "column": "F",
+          "value": "72712",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G5",
+          "column": "G",
+          "value": "County-AR-SIM",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H5",
+          "column": "H",
+          "value": "Warehouse / distribution",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I5",
+          "column": "I",
+          "value": "Distribution warehouse",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J5",
+          "column": "J",
+          "value": 2004,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K5",
+          "column": "K",
+          "value": "Joisted masonry",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L5",
+          "column": "L",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M5",
+          "column": "M",
+          "value": 95000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "N5",
+          "column": "N",
+          "value": 2018,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O5",
+          "column": "O",
+          "value": 2019,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P5",
+          "column": "P",
+          "value": 2017,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q5",
+          "column": "Q",
+          "value": "100% documented",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R5",
+          "column": "R",
+          "value": "2",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S5",
+          "column": "S",
+          "value": 18500000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "T5",
+          "column": "T",
+          "value": 5016000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "U5",
+          "column": "U",
+          "value": 2944000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "V5",
+          "column": "V",
+          "value": 375000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "W5",
+          "column": "W",
+          "value": "=SUM(S5:V5)",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=SUM(S5:V5)",
+          "cached_value": 26835000
+        },
+        {
+          "coordinate": "X5",
+          "column": "X",
+          "value": "Replacement Cost",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y5",
+          "column": "Y",
+          "value": "$10,000 / wind $25,000",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "Z5",
+          "column": "Z",
+          "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "A01-LOC-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": "PREM-02",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "1145 Sample Commerce Parkway",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "Springdale",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E6",
+          "column": "E",
+          "value": "AR",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F6",
+          "column": "F",
+          "value": "72762",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G6",
+          "column": "G",
+          "value": "County-AR-SIM",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H6",
+          "column": "H",
+          "value": "Retail / general merchandise",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I6",
+          "column": "I",
+          "value": "Warehouse retail",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J6",
+          "column": "J",
+          "value": 2005,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K6",
+          "column": "K",
+          "value": "Non-combustible",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L6",
+          "column": "L",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M6",
+          "column": "M",
+          "value": 110000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "N6",
+          "column": "N",
+          "value": 2019,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O6",
+          "column": "O",
+          "value": 2020,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P6",
+          "column": "P",
+          "value": 2018,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q6",
+          "column": "Q",
+          "value": "100% documented",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R6",
+          "column": "R",
+          "value": "3",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S6",
+          "column": "S",
+          "value": 12500000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "T6",
+          "column": "T",
+          "value": 3795000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "U6",
+          "column": "U",
+          "value": 2944000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "V6",
+          "column": "V",
+          "value": 684000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "W6",
+          "column": "W",
+          "value": "=SUM(S6:V6)",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=SUM(S6:V6)",
+          "cached_value": 19923000
+        },
+        {
+          "coordinate": "X6",
+          "column": "X",
+          "value": "Replacement Cost",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y6",
+          "column": "Y",
+          "value": "$10,000 / wind $25,000",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "Z6",
+          "column": "Z",
+          "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "A01-LOC-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": "PREM-03",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "1290 Sample Commerce Parkway",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Tulsa",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E7",
+          "column": "E",
+          "value": "OK",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F7",
+          "column": "F",
+          "value": "74116",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G7",
+          "column": "G",
+          "value": "County-OK-SIM",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H7",
+          "column": "H",
+          "value": "Cold-chain / temperature-controlled",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I7",
+          "column": "I",
+          "value": "Cold storage",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J7",
+          "column": "J",
+          "value": 2006,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K7",
+          "column": "K",
+          "value": "Non-combustible",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L7",
+          "column": "L",
+          "value": 3,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M7",
+          "column": "M",
+          "value": 125000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "N7",
+          "column": "N",
+          "value": 2020,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O7",
+          "column": "O",
+          "value": 2021,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P7",
+          "column": "P",
+          "value": 2019,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q7",
+          "column": "Q",
+          "value": "100% documented",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R7",
+          "column": "R",
+          "value": "4",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S7",
+          "column": "S",
+          "value": 22800000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "T7",
+          "column": "T",
+          "value": 3212000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "U7",
+          "column": "U",
+          "value": 2944000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "V7",
+          "column": "V",
+          "value": 517500,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "W7",
+          "column": "W",
+          "value": "=SUM(S7:V7)",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=SUM(S7:V7)",
+          "cached_value": 29473500
+        },
+        {
+          "coordinate": "X7",
+          "column": "X",
+          "value": "Replacement Cost",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y7",
+          "column": "Y",
+          "value": "$10,000 / wind $25,000",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "Z7",
+          "column": "Z",
+          "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A8",
+          "column": "A",
+          "value": "A01-LOC-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B8",
+          "column": "B",
+          "value": "PREM-04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C8",
+          "column": "C",
+          "value": "1435 Sample Commerce Parkway",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D8",
+          "column": "D",
+          "value": "Nashville",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E8",
+          "column": "E",
+          "value": "TN",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F8",
+          "column": "F",
+          "value": "37210",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G8",
+          "column": "G",
+          "value": "County-TN-SIM",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H8",
+          "column": "H",
+          "value": "Cross-dock / transfer terminal",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I8",
+          "column": "I",
+          "value": "Cross-dock",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J8",
+          "column": "J",
+          "value": 2007,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K8",
+          "column": "K",
+          "value": "Joisted masonry",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L8",
+          "column": "L",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M8",
+          "column": "M",
+          "value": 140000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "N8",
+          "column": "N",
+          "value": 2021,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O8",
+          "column": "O",
+          "value": 2022,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P8",
+          "column": "P",
+          "value": 2020,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q8",
+          "column": "Q",
+          "value": "Reported; certificate missing",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R8",
+          "column": "R",
+          "value": "2",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S8",
+          "column": "S",
+          "value": 17250000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "T8",
+          "column": "T",
+          "value": 2376000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "U8",
+          "column": "U",
+          "value": 2944000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "V8",
+          "column": "V",
+          "value": 438000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "W8",
+          "column": "W",
+          "value": "=SUM(S8:V8)",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=SUM(S8:V8)",
+          "cached_value": 23008000
+        },
+        {
+          "coordinate": "X8",
+          "column": "X",
+          "value": "Replacement Cost",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y8",
+          "column": "Y",
+          "value": "$10,000 / wind $25,000",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "Z8",
+          "column": "Z",
+          "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A9",
+          "column": "A",
+          "value": "A01-LOC-05",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B9",
+          "column": "B",
+          "value": "PREM-05",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C9",
+          "column": "C",
+          "value": "1580 Sample Commerce Parkway",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D9",
+          "column": "D",
+          "value": "Dallas",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E9",
+          "column": "E",
+          "value": "TX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "F9",
+          "column": "F",
+          "value": "75212",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "G9",
+          "column": "G",
+          "value": "County-TX-SIM",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "H9",
+          "column": "H",
+          "value": "Warehouse / distribution",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "I9",
+          "column": "I",
+          "value": "Distribution warehouse",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "J9",
+          "column": "J",
+          "value": 2008,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "K9",
+          "column": "K",
+          "value": "Non-combustible",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "L9",
+          "column": "L",
+          "value": 2,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "M9",
+          "column": "M",
+          "value": 155000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "N9",
+          "column": "N",
+          "value": 2022,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "O9",
+          "column": "O",
+          "value": 2023,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "P9",
+          "column": "P",
+          "value": 2021,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Q9",
+          "column": "Q",
+          "value": "100% documented",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "R9",
+          "column": "R",
+          "value": "3",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "S9",
+          "column": "S",
+          "value": 14600000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "T9",
+          "column": "T",
+          "value": 4070000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "U9",
+          "column": "U",
+          "value": 2944000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "V9",
+          "column": "V",
+          "value": 324000,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "W9",
+          "column": "W",
+          "value": "=SUM(S9:V9)",
+          "data_type": "f",
+          "number_format": "$#,##0;[Red]($#,##0);-",
+          "formula": "=SUM(S9:V9)",
+          "cached_value": 21938000
+        },
+        {
+          "coordinate": "X9",
+          "column": "X",
+          "value": "Replacement Cost",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "Y9",
+          "column": "Y",
+          "value": "$10,000 / wind $25,000",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "Z9",
+          "column": "Z",
+          "value": "Synthetic location schedule; street addresses are placeholders, not claimed as real insured sites.",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 158,
+        "nonempty_row_count": 8,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_original_coordinates_preserved": true
+      }
+    },
+    {
+      "sheet_name": "SOV Summary",
+      "dimensions": {
+        "max_row": 7,
+        "max_column": 5
+      },
+      "merged_ranges": [
+        "A2:E2",
+        "A1:E1"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A01 | SOV RECONCILIATION",
+          "merged": [
+            "A1:E1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "All property values are synthetic and should not be treated as actual declared insured values.",
+          "merged": [
+            "A2:E2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "SOV Summary__table_1",
+          "header_row": 4,
+          "headers": [
+            "Measure",
+            "Application / Form Value",
+            "SOV Value",
+            "Difference",
+            "Expected Spectra Handling"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 5,
+              "values": {
+                "Measure": "Locations declared",
+                "Application / Form Value": 4,
+                "SOV Value": 5,
+                "Difference": 1,
+                "Expected Spectra Handling": "P2: flag mismatch."
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        },
+        {
+          "table_id": "SOV Summary__table_2",
+          "header_row": 6,
+          "headers": [
+            "Building / BPP / BI basis",
+            "See ACORD 140",
+            "See location schedule",
+            "See Total Insured Values column",
+            "Cross-check amounts and subject limits."
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 7,
+              "values": {
+                "Building / BPP / BI basis": "Sprinkler certificate",
+                "See ACORD 140": "See application / evidence checklist",
+                "See location schedule": "Missing at location 04",
+                "See Total Insured Values column": "Evidence gap",
+                "Cross-check amounts and subject limits.": "P1 if required evidence absent."
+              }
+            }
+          ],
+          "detection_method": "heuristic_header_row_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "missing_evidence_or_document_gap",
+          "trigger_terms": [
+            "missing",
+            "evidence gap"
+          ]
+        },
+        {
+          "heuristic": "cross_document_or_control_total_mismatch",
+          "trigger_terms": [
+            "mismatch",
+            "difference"
+          ]
+        },
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "count_or_arithmetic_reconciliation",
+          "trigger_terms": [
+            "total"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A01 | SOV RECONCILIATION",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "All property values are synthetic and should not be treated as actual declared insured values.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Measure",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Application / Form Value",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "SOV Value",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Difference",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E4",
+              "column": "E",
+              "value": "Expected Spectra Handling",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "Locations declared",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": 4,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": 5,
+              "data_type": "n",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": 1,
+              "data_type": "n",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E5",
+              "column": "E",
+              "value": "P2: flag mismatch.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "Building / BPP / BI basis",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": "See ACORD 140",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "See location schedule",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "See Total Insured Values column",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E6",
+              "column": "E",
+              "value": "Cross-check amounts and subject limits.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "Sprinkler certificate",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": "See application / evidence checklist",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "Missing at location 04",
+              "data_type": "s",
+              "number_format": "$#,##0;[Red]($#,##0);-"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Evidence gap",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "E7",
+              "column": "E",
+              "value": "P1 if required evidence absent.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A01 | SOV RECONCILIATION",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "All property values are synthetic and should not be treated as actual declared insured values.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Measure",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Application / Form Value",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "SOV Value",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Difference",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E4",
+          "column": "E",
+          "value": "Expected Spectra Handling",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "Locations declared",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": 4,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": 5,
+          "data_type": "n",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": 1,
+          "data_type": "n",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E5",
+          "column": "E",
+          "value": "P2: flag mismatch.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "Building / BPP / BI basis",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": "See ACORD 140",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "See location schedule",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "See Total Insured Values column",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E6",
+          "column": "E",
+          "value": "Cross-check amounts and subject limits.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "Sprinkler certificate",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": "See application / evidence checklist",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "Missing at location 04",
+          "data_type": "s",
+          "number_format": "$#,##0;[Red]($#,##0);-"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Evidence gap",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "E7",
+          "column": "E",
+          "value": "P1 if required evidence absent.",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 22,
+        "nonempty_row_count": 6,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_original_coordinates_preserved": true
+      }
+    }
+  ],
+  "file_level_heuristics": [
+    {
+      "heuristic": "multi_sheet_workbook",
+      "sheet_count": 2
+    },
+    {
+      "heuristic": "complete_cell_inventory",
+      "nonempty_cell_count": 180
+    },
+    {
+      "heuristic": "single_final_json_per_source_workbook",
+      "description": "All sheets are merged into this one JSON document; no worksheet is omitted."
+    }
+  ],
+  "extraction_notes": [
+    "Every non-empty cell is preserved with its original Excel coordinate and value.",
+    "Detected tables and key-value pairs are structured interpretations; all_nonempty_rows/all_nonempty_cells remain the source-of-truth extraction.",
+    "Formula text and cached result are both retained where available. A cached result may be null if the workbook does not contain one.",
+    "Blank cells are not serialized individually; their positions remain inferable from coordinates and worksheet dimensions.",
+    "Heuristics are identification signals, not underwriting conclusions."
+  ]
+}

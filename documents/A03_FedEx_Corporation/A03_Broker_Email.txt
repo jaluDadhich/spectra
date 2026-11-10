@@ -1,0 +1,33 @@
+From: submissions@northstarrisk.example
+To: commercial.underwriting@example.test
+Date: October 26, 2026
+Subject: New business package submission - FedEx Corporation - 11/15/2026
+Submission ID: SPX-A03-2026-1042
+
+Underwriting Team,
+
+Please review the attached simulated commercial package for FedEx Corporation.
+
+PUBLIC ENTITY ANCHOR: The named company is real and is used only to exercise legal-entity resolution and approved public-source lookup. This is not an actual application submitted by the company. Every loss, location, payroll, fleet, rating factor, limit and quote value in the packet is synthetic.
+
+Declared operations:
+Domestic parcel pickup, local delivery and regional ground routes only; the application says no international freight forwarding or temperature-controlled cargo is included in this simulated risk.
+
+Broker operations note:
+Narrative additionally describes regional freight transfer and some temperature-controlled / high-value cargo movements at a subset of facilities. Confirm whether these activities belong to the legal insured and policy scope.
+
+Loss history note:
+See the attached Excel loss-run detail, valuation information and claim-level records.
+
+Rating / exposure note:
+Application payroll is $22,100,000; synthetic supporting payroll basis is $22,100,000. Application vehicle count is 290; fleet schedule rows are 312. See the issue manifest for scenario intent.
+
+Coverage / quote note:
+The simulated draft quote has a $100,000 cargo limit and excludes temperature-controlled goods, while the broker narrative mentions a simulated peak shipment value of $750,000. Requires underwriter review.
+
+Please confirm legal entity, covered locations and operations; reconcile policy periods and schedules; validate pricing inputs using carrier-approved rules; and refer uncertain external-source matches for human review. Public-company-wide information and establishment-level OSHA records are not automatically proof of exposures at the synthetic scheduled premises.
+
+Regards,
+Jordan Ellis
+Commercial Lines Submission Team
+Northstar Risk Partners (fictional)

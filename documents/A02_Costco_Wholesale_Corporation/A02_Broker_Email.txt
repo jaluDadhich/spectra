@@ -1,0 +1,33 @@
+From: submissions@northstarrisk.example
+To: commercial.underwriting@example.test
+Date: October 26, 2026
+Subject: New business package submission - Costco Wholesale Corporation - 12/01/2026
+Submission ID: SPX-A02-2026-1042
+
+Underwriting Team,
+
+Please review the attached simulated commercial package for Costco Wholesale Corporation.
+
+PUBLIC ENTITY ANCHOR: The named company is real and is used only to exercise legal-entity resolution and approved public-source lookup. This is not an actual application submitted by the company. Every loss, location, payroll, fleet, rating factor, limit and quote value in the packet is synthetic.
+
+Declared operations:
+Warehouse retail, receiving, storage, membership sales and general merchandise distribution. The simulated schedule marks pharmacy, optical, gasoline and food-processing operations as not present at the named insured locations; confirm location-level scope.
+
+Broker operations note:
+Broker states these three insured locations are conventional warehouse retail only. This is a synthetic representation designed for external-context verification and does not represent what Costco actually told an insurer.
+
+Loss history note:
+See the attached Excel loss-run detail, valuation information and claim-level records.
+
+Rating / exposure note:
+Application payroll is $17,300,000; synthetic supporting payroll basis is $17,300,000. Application vehicle count is 74; fleet schedule rows are 74. See the issue manifest for scenario intent.
+
+Coverage / quote note:
+Draft terms are internally comparable except for the two ACORD 140 versions. Verify location-level operation scope before making any coverage inference.
+
+Please confirm legal entity, covered locations and operations; reconcile policy periods and schedules; validate pricing inputs using carrier-approved rules; and refer uncertain external-source matches for human review. Public-company-wide information and establishment-level OSHA records are not automatically proof of exposures at the synthetic scheduled premises.
+
+Regards,
+Jordan Ellis
+Commercial Lines Submission Team
+Northstar Risk Partners (fictional)

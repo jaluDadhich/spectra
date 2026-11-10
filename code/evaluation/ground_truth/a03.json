@@ -1,0 +1,59 @@
+{
+  "account": "A03",
+  "expected": [
+    {
+      "taxonomy_id": "U12",
+      "manifested": true,
+      "note": "no driver roster"
+    },
+    {
+      "taxonomy_id": "U03",
+      "manifested": true,
+      "note": "fleet count + payroll"
+    },
+    {
+      "taxonomy_id": "U04",
+      "manifested": true,
+      "note": "emod mismatch"
+    },
+    {
+      "taxonomy_id": "U13",
+      "manifested": true,
+      "note": "undeclared operations"
+    },
+    {
+      "taxonomy_id": "U14",
+      "manifested": true,
+      "note": "cargo exposure exceeds limit"
+    },
+    {
+      "taxonomy_id": "U05",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U08",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U09",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U11",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U12",
+      "manifested": false
+    },
+    {
+      "taxonomy_id": "U07",
+      "manifested": false
+    }
+  ],
+  "excluded": [
+    "U01",
+    "U02",
+    "U06"
+  ]
+}

@@ -1,0 +1,35 @@
+SPECTRA ISSUE MANIFEST — A01
+Public entity anchor: Walmart Inc.
+Synthetic submission ID: SPX-A01-2026-1042
+Case type: CHALLENGED SYNTHETIC CASE
+
+REAL-WORLD / SYNTHETIC DATA DISTINCTION
+Walmart Inc. is a real public entity used as a public-source identity anchor. These application materials, loss runs, payroll, fleet, vehicle identifiers, premises, rating factors, property values, quotes and planted discrepancies are synthetic evaluation data. This is not an authentic submission and does not allege that Walmart submitted these values or has these insurance, claims, payroll, or coverage characteristics.
+
+DESIGNED FINDINGS
+P1 — Missing / incomplete evidence
+  Seeded condition: Current sprinkler inspection / service certificate for location A01-LOC-04 is not attached.
+  Expected Spectra response: Flag as missing evidence; do not convert an incomplete required check to PASS.
+
+P2 — Cross-document conflict
+  Seeded condition: Application declares 4 locations; Property SOV lists 5 distinct location IDs.
+  Expected Spectra response: Show both values, document IDs, page/cell references, and the difference.
+
+P3 — Understated / mismatched exposure declaration
+  Seeded condition: Application payroll is $28,600,000; synthetic supporting class-payroll schedule totals $32,400,000.
+  Expected Spectra response: Reconcile period and scope; quantify pricing impact only with approved rating logic.
+
+P6 — Pricing-input validation
+  Seeded condition: ACORD 130 shows an experience modification factor of 1.12, while the draft quote applies 0.98.
+  Expected Spectra response: Check factor effective dates and source authority; do not replace the carrier's rating engine.
+
+
+PUBLIC RECORD INTERPRETATION
+See A01_External_Public_Research.xlsx for official source URLs and the observed record snapshot. OSHA records are establishment-specific and dynamic. The public record listed there is not for the synthetic scheduled premises. Re-query live records and validate legal entity, facility address, date, status and underwriting relevance before using any result.
+
+EXPECTED EVALUATION
+1. Detect the missing sprinkler inspection/service certificate for A01-LOC-04.
+2. Reconcile application location count against the property SOV.
+3. Reconcile application payroll against the class payroll schedule.
+4. Detect experience-modification difference between application support and draft quote.
+5. Return evidence-backed, deduplicated findings with source references, uncertainty, materiality and recommended action.

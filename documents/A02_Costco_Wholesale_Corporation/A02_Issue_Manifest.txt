@@ -1,0 +1,36 @@
+SPECTRA ISSUE MANIFEST — A02
+Public entity anchor: Costco Wholesale Corporation
+Synthetic submission ID: SPX-A02-2026-1042
+Case type: CHALLENGED SYNTHETIC CASE
+
+REAL-WORLD / SYNTHETIC DATA DISTINCTION
+The named company is a real public entity used for external source lookup tests. The application materials, loss runs, payroll, fleet, vehicle identifiers, premises, rating factors, property values, quotes and planted discrepancies in this packet were created as synthetic evaluation data. This is not an authentic submission, and it does not allege that the named company submitted these values or has these insurance, claims, payroll, compliance, or coverage characteristics.
+
+DESIGNED FINDINGS
+P2 — Cross-document conflict
+  Seeded condition: Application declares 3 locations; Property SOV lists 4 distinct location IDs. Two versions of the ACORD 140 Property Section were received with a conflicting building value for location 02.
+  Expected Spectra response: Show both values, document IDs, page/cell references, and the difference.
+
+P4 — Document integrity / unexplained version anomaly
+  Seeded condition: Two ACORD 140 Property Section copies share the same submission identifier and most content but differ in the requested building amount on the first-premises page and in the Location 02 amount on the additional-premises schedule; no change log explains the changes.
+  Expected Spectra response: Flag an unexplained version discrepancy, not proof of manipulation or fraud.
+
+P5 — Claims / loss-history reconciliation
+  Seeded condition: The loss-run workbook has a duplicate claim identifier with different loss details; the carrier-style summary total also differs from recalculated claim-level incurred amounts.
+  Expected Spectra response: Identify candidate duplicates and amounts; request authoritative loss-run confirmation.
+
+P7 — Declared operations vs external public context
+  Seeded condition: Costco public sources describe membership warehouse retail and note that pharmacy, optical and gasoline services are available at some locations. Corporate-wide public information does not prove these services apply to the specific synthetic sites. The synthetic application has a narrow operations description; applicability of parent/operating-company facts must be resolved.
+  Expected Spectra response: Create a possible-scope question; exact insured identity, establishment and location matching are required.
+
+
+PUBLIC RECORD INTERPRETATION
+See External_Public_Research.xlsx for official source URLs and the observed record snapshot. OSHA records are establishment-specific and dynamic. A record for a parent, subsidiary, operating company or another site is not automatically a finding for the synthetic submission. Re-query live records and validate legal entity, facility address, date, source status, and underwriting relevance before using the result.
+
+EXPECTED EVALUATION
+1. Extract ACORD-style form fields from PDFs, along with detailed Excel schedules and broker TXT records.
+2. Reconcile ACORD 125 / 126 / 130 / 140 against loss runs, property SOV, fleet schedule, driver roster, payroll and rating workbook, and quote.
+3. Detect document version anomaly only in A02; don't label it fraud.
+4. Match external records to the exact legal entity and scheduled establishment before attributing them.
+5. Use the clean control to test false-positive suppression.
+6. Return evidence-backed, deduplicated findings, uncertainty, materiality, and recommended action.

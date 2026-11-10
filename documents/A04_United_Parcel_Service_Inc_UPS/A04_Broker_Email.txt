@@ -1,0 +1,33 @@
+From: submissions@northstarrisk.example
+To: commercial.underwriting@example.test
+Date: October 26, 2026
+Subject: New business package submission - United Parcel Service, Inc. (UPS) - 11/01/2026
+Submission ID: SPX-A04-2026-1042
+
+Underwriting Team,
+
+Please review the attached simulated commercial package for United Parcel Service, Inc. (UPS).
+
+PUBLIC ENTITY ANCHOR: The named company is real and is used only to exercise legal-entity resolution and approved public-source lookup. This is not an actual application submitted by the company. Every loss, location, payroll, fleet, rating factor, limit and quote value in the packet is synthetic.
+
+Declared operations:
+Domestic parcel pickup/delivery, ground line-haul and standard logistics support; no temperature-controlled cargo or international freight forwarding is declared for this simulated policy scope.
+
+Broker operations note:
+The scope, location schedule, vehicle list, payroll, loss history and quoted conditions are consistent within this synthetic control packet.
+
+Loss history note:
+See the attached Excel loss-run detail, valuation information and claim-level records.
+
+Rating / exposure note:
+Application payroll is $14,200,000; synthetic supporting payroll basis is $14,200,000. Application vehicle count is 128; fleet schedule rows are 128. See the issue manifest for scenario intent.
+
+Coverage / quote note:
+The quote terms correspond to the operations, locations and limits represented in the control packet. No issue is deliberately seeded in the eight Spectra problem classes.
+
+Please confirm legal entity, covered locations and operations; reconcile policy periods and schedules; validate pricing inputs using carrier-approved rules; and refer uncertain external-source matches for human review. Public-company-wide information and establishment-level OSHA records are not automatically proof of exposures at the synthetic scheduled premises.
+
+Regards,
+Jordan Ellis
+Commercial Lines Submission Team
+Northstar Risk Partners (fictional)

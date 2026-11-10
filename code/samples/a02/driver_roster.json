@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A02-2026-0202",
+  "document": {
+    "document_id": "A-ROSTER",
+    "document_type": "driver_roster",
+    "document_name": "Driver_Roster.xlsx",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "roster_date": "2026-09-15",
+    "drivers": [
+      {
+        "driver_id": "D1",
+        "name": "Maria Torres",
+        "license_class": "CDL-A",
+        "cdl_endorsements": [
+          "T"
+        ],
+        "mvr_review_date": "2026-08-01",
+        "hire_date": "2022-04-11"
+      },
+      {
+        "driver_id": "D2",
+        "name": "James Chen",
+        "license_class": "CDL-B",
+        "cdl_endorsements": [],
+        "mvr_review_date": "2026-08-01",
+        "hire_date": "2023-02-20"
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Driver_Roster.json",
+    "fields": {}
+  }
+}

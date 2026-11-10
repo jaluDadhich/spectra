@@ -1,0 +1,8 @@
+SUPPLEMENTAL OPERATIONS / PUBLIC-RECORD RECONCILIATION QUESTIONNAIRE
+Submission ID: SPX-A04-2026-1042
+Status: synthetic training copy only; not a statement made by the real company.
+
+Declared operations: domestic parcel pickup/delivery, ground line-haul and standard logistics support. No temperature-controlled cargo or international freight forwarding is declared in this synthetic scope.
+Premises: three synthetic Atlanta, Georgia locations. Location uses are standardized as distribution warehouse, warehouse/distribution, and logistics warehouse. No cold-storage exposure is represented in the clean-control version.
+External public context: the McKinney, Texas OSHA record is at a different address from all synthetic premises. It is contextual only and must not be attributed to the synthetic locations.
+Do not infer actual legal entity, premises, employee, driver, claims, payroll or coverage facts from this training packet.

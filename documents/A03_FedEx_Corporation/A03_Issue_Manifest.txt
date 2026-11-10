@@ -1,0 +1,40 @@
+SPECTRA ISSUE MANIFEST — A03
+Public entity anchor: FedEx Corporation
+Synthetic submission ID: SPX-A03-2026-1042
+Case type: CHALLENGED SYNTHETIC CASE
+
+REAL-WORLD / SYNTHETIC DATA DISTINCTION
+The named company is a real public entity used for external source lookup tests. The application materials, loss runs, payroll, fleet, vehicle identifiers, premises, rating factors, property values, quotes and planted discrepancies in this packet were created as synthetic evaluation data. This is not an authentic submission, and it does not allege that the named company submitted these values or has these insurance, claims, payroll, compliance, or coverage characteristics.
+
+DESIGNED FINDINGS
+P1 — Missing / incomplete evidence
+  Seeded condition: Current driver roster and current MVR review file are not attached. The fleet worksheet contains unit-level synthetic rows but no validated current driver-to-vehicle roster.
+  Expected Spectra response: Flag as missing evidence; do not convert an incomplete required check to PASS.
+
+P3 — Understated / mismatched exposure declaration
+  Seeded condition: Application declares 290 power units; the synthetic vehicle schedule contains 312 unit rows.
+  Expected Spectra response: Reconcile period and scope; quantify pricing impact only with approved rating logic.
+
+P6 — Pricing-input validation
+  Seeded condition: ACORD 130 shows an experience modification factor of 1.07, while the draft quote applies 0.94.
+  Expected Spectra response: Check factor effective dates and source authority; do not replace the carrier's rating engine.
+
+P7 — Declared operations vs external public context
+  Seeded condition: FedEx Corporation is described publicly as an umbrella group of operating companies, with broad transportation, e-commerce and business services. The specific OSHA record in the source workbook names FedEx Ground Package System Inc.; it is not automatically a parent-company fact. The synthetic application has a narrow operations description; applicability of parent/operating-company facts must be resolved.
+  Expected Spectra response: Create a possible-scope question; exact insured identity, establishment and location matching are required.
+
+P11 — Potential exposure-to-coverage mismatch
+  Seeded condition: Synthetic broker narrative refers to temperature-controlled / high-value cargo with a simulated peak shipment value of $750,000; the quote has a $100,000 cargo limit and excludes temperature-controlled goods.
+  Expected Spectra response: Flag for qualified underwriter review; do not make a final legal coverage determination.
+
+
+PUBLIC RECORD INTERPRETATION
+See External_Public_Research.xlsx for official source URLs and the observed record snapshot. OSHA records are establishment-specific and dynamic. A record for a parent, subsidiary, operating company or another site is not automatically a finding for the synthetic submission. Re-query live records and validate legal entity, facility address, date, source status, and underwriting relevance before using the result.
+
+EXPECTED EVALUATION
+1. Extract ACORD-style form fields from PDFs, along with detailed Excel schedules and broker TXT records.
+2. Reconcile ACORD 125 / 126 / 130 / 140 against loss runs, property SOV, fleet schedule, driver roster, payroll and rating workbook, and quote.
+3. Detect document version anomaly only in A02; don't label it fraud.
+4. Match external records to the exact legal entity and scheduled establishment before attributing them.
+5. Use the clean control to test false-positive suppression.
+6. Return evidence-backed, deduplicated findings, uncertainty, materiality, and recommended action.

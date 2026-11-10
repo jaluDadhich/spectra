@@ -1,0 +1,21 @@
+SPECTRA ISSUE MANIFEST — A04
+Public entity anchor: United Parcel Service, Inc. (UPS)
+Synthetic submission ID: SPX-A04-2026-1042
+Case type: CLEAN CONTROL
+
+REAL-WORLD / SYNTHETIC DATA DISTINCTION
+The named company is a real public entity used for external source lookup tests. The application materials, loss runs, payroll, fleet, vehicle identifiers, premises, rating factors, property values, quotes and planted discrepancies in this packet were created as synthetic evaluation data. This is not an authentic submission, and it does not allege that the named company submitted these values or has these insurance, claims, payroll, compliance, or coverage characteristics.
+
+DESIGNED FINDINGS
+NO INTENTIONALLY SEEDED FINDINGS across the eight in-scope problems. The supplied application forms, schedules, claim-level history, rating factors, and quote inputs are internally aligned within the defined synthetic test tolerances. The external-source workbook contains contextual public records for other premises; their existence alone is not a defect against the synthetic submission.
+
+PUBLIC RECORD INTERPRETATION
+See External_Public_Research.xlsx for official source URLs and the observed record snapshot. OSHA records are establishment-specific and dynamic. A record for a parent, subsidiary, operating company or another site is not automatically a finding for the synthetic submission. Re-query live records and validate legal entity, facility address, date, source status, and underwriting relevance before using the result.
+
+EXPECTED EVALUATION
+1. Extract ACORD-style form fields from PDFs, along with detailed Excel schedules and broker TXT records.
+2. Reconcile ACORD 125 / 126 / 130 / 140 against loss runs, property SOV, fleet schedule, driver roster, payroll and rating workbook, and quote.
+3. Detect document version anomaly only in A02; don't label it fraud.
+4. Match external records to the exact legal entity and scheduled establishment before attributing them.
+5. Use the clean control to test false-positive suppression.
+6. Return evidence-backed, deduplicated findings, uncertainty, materiality, and recommended action.

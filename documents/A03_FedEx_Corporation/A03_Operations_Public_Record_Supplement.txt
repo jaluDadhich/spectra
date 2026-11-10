@@ -1,0 +1,25 @@
+SUPPLEMENTAL OPERATIONS / PUBLIC-RECORD RECONCILIATION QUESTIONNAIRE
+Submission ID: SPX-A03-2026-1042
+Named entity anchor: FedEx Corporation
+Document status: SYNTHETIC TEST CONTENT - NOT A STATEMENT MADE BY THE REAL COMPANY
+
+1. Operations description from application:
+Domestic parcel pickup, local delivery and regional ground routes only; the application says no international freight forwarding or temperature-controlled cargo is included in this simulated risk.
+
+2. Broker narrative / follow-up:
+Narrative additionally describes regional freight transfer and some temperature-controlled / high-value cargo movements at a subset of facilities. Confirm whether these activities belong to the legal insured and policy scope.
+
+3. Public-source context:
+FedEx describes a group of operating companies and transportation, e-commerce and business services; its public company page identifies Memphis, Tennessee as corporate headquarters.
+
+4. Safety / establishment record:
+See External_Public_Research.xlsx. Record is site-specific, date-sensitive, and only a candidate match until exact legal entity, address, establishment, and underwriting relevance are established.
+
+5. Recommended Spectra action:
+- Resolve parent / subsidiary / operating company identity.
+- Match addresses and relevant period before comparing.
+- Distinguish corporate-wide public offerings from actual exposures at scheduled premises.
+- Do not infer a violation at a synthetic location from an OSHA record at a different address.
+- Route unresolved material differences to underwriter review.
+
+All public facts are cited by URL in External_Public_Research.xlsx. All submitted operations answers are synthetic.

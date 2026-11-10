@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-CLEAN-2026-0001",
+  "document": {
+    "document_id": "A-QUOTE",
+    "document_type": "quote",
+    "document_name": "Draft_Quote.pdf",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "terms": [
+      {
+        "term_id": "Q-GL-OCC",
+        "term_type": "limit",
+        "coverage": "general_liability",
+        "name": "each_occurrence",
+        "value": 1000000
+      },
+      {
+        "term_id": "Q-PROP-BLANKET",
+        "term_type": "limit",
+        "coverage": "property",
+        "name": "blanket_building_contents",
+        "value": 6000000
+      },
+      {
+        "term_id": "Q-PROP-DED",
+        "term_type": "deductible",
+        "coverage": "property",
+        "name": "per_occurrence",
+        "value": 5000
+      },
+      {
+        "term_id": "Q-FORM-CP",
+        "term_type": "form",
+        "coverage": "property",
+        "name": "CP 00 10",
+        "value": "CP 00 10 10 12"
+      }
+    ],
+    "rating_inputs": {
+      "payroll_by_class": [
+        {
+          "class_code": "8810",
+          "state": "CA",
+          "payroll": 1200000
+        },
+        {
+          "class_code": "7219",
+          "state": "CA",
+          "payroll": 800000
+        }
+      ],
+      "experience_mod": {
+        "factor": 0.95,
+        "effective_date": "2026-01-01"
+      },
+      "class_rates": [
+        {
+          "class_code": "8810",
+          "state": "CA",
+          "rate": 1.25,
+          "effective_date": "2026-01-01"
+        },
+        {
+          "class_code": "7219",
+          "state": "CA",
+          "rate": 4.5,
+          "effective_date": "2026-01-01"
+        }
+      ],
+      "vehicle_count": 2,
+      "gross_sales": 8000000
+    },
+    "statements": {
+      "driver_roster_attached": true,
+      "loss_runs_attached": true
+    },
+    "operations_described": [
+      "warehousing",
+      "local delivery"
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Draft_Quote.pdf",
+    "fields": {}
+  }
+}

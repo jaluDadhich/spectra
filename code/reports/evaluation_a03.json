@@ -1,0 +1,129 @@
+{
+  "account": "A03",
+  "run_id": "RUN-D658A270EE05",
+  "case_status": "REVIEW",
+  "summary": {
+    "true_positives": 12,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manifested_recall": 1.0,
+    "excluded_violations": [],
+    "duplicate_alert_rate": 0.0,
+    "evidence_citation_accuracy": 0.941
+  },
+  "per_family": {
+    "P1": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-2A5A60341914"
+      ],
+      "note": "no driver roster"
+    },
+    "P3": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-5E80E09FCA8B",
+        "F-6FDDD3E098C5",
+        "F-DABC9F3D241F",
+        "F-0B2BCF82820A"
+      ],
+      "note": "fleet count + payroll"
+    },
+    "P6": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-111CA1DA7007"
+      ],
+      "note": "emod mismatch"
+    },
+    "P7": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-A9DE112342DB"
+      ],
+      "note": "undeclared operations"
+    },
+    "P11": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-CCC5828B00E8"
+      ],
+      "note": "cargo exposure exceeds limit"
+    },
+    "N3": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-CF6CD33F8718"
+      ],
+      "note": ""
+    },
+    "N4": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-31E888CB6FC2",
+        "F-9F31DFDBE0C9"
+      ],
+      "note": ""
+    },
+    "N5": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-7480831A8C51"
+      ],
+      "note": ""
+    },
+    "N6": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-2AD4DA7B39A8"
+      ],
+      "note": ""
+    },
+    "N7": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-33C9D721E8DE"
+      ],
+      "note": ""
+    },
+    "N8": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-CD3FB10E8400"
+      ],
+      "note": ""
+    },
+    "N15": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-72F75EE79C2B"
+      ],
+      "note": ""
+    }
+  },
+  "false_positive_findings": [],
+  "undetected": [],
+  "token_usage": {
+    "calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_cost_usd": null,
+    "retries": 0,
+    "errors": 0
+  }
+}

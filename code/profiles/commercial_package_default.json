@@ -1,0 +1,17 @@
+{
+  "profile_id": "commercial_package_default",
+  "version": "1.0.0",
+  "description": "Default required-document profile for a commercial package submission (GL + WC + property + auto). Adjust per carrier.",
+  "requirements": [
+    {"document_type": "acord_125", "required": true, "rationale": "Core applicant/general information"},
+    {"document_type": "quote", "required": true, "rationale": "Draft quote under review"},
+    {"document_type": "loss_run", "required": true, "freshness_days": 120, "rationale": "Currently-valued loss history"},
+    {"document_type": "driver_roster", "required": true, "lines_of_business": ["commercial_auto", "package"], "freshness_days": 180, "rationale": "Current driver roster / MVR review evidence"},
+    {"document_type": "fleet_schedule", "required": true, "lines_of_business": ["commercial_auto", "package"], "rationale": "Vehicle schedule for unit reconciliation"},
+    {"document_type": "acord_130", "required": true, "lines_of_business": ["workers_comp", "package"], "rationale": "WC application"},
+    {"document_type": "wc_rating_workbook", "required": true, "lines_of_business": ["workers_comp", "package"], "rationale": "WC rating inputs"},
+    {"document_type": "acord_140", "required": false, "lines_of_business": ["property", "package"], "rationale": "Property section"},
+    {"document_type": "sov", "required": false, "lines_of_business": ["property", "package"], "rationale": "Schedule of values"},
+    {"document_type": "acord_126", "required": false, "lines_of_business": ["general_liability", "package"], "rationale": "GL section"}
+  ]
+}

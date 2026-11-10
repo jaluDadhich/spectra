@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Spectra — {{ run.submission_id }}{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>{{ run.submission_id }}
+    <span class="badge {{ run.status.value.replace('/', '_') }}">{{ run.status.value }}</span>
+    {% if run.partial %}<span class="badge REVIEW">PARTIAL</span>{% endif %}
+  </h2>
+  <p class="muted">Run <code>{{ run.run_id }}</code> · created {{ run.created_at }} ·
+     config: {% for k, v in run.config_versions.items() %}{{ k }}={{ v }} {% endfor %}</p>
+  <div class="grid">
+    <div><strong>{{ run.findings|length }}</strong><br><span class="muted">findings</span></div>
+    {% for sev, count in severity_counts.items() %}
+    <div><strong class="{{ sev }}">{{ count }}</strong><br><span class="muted">{{ sev }}</span></div>
+    {% endfor %}
+    <div><strong>{{ run.checks|selectattr('status', 'equalto', 'COMPLETED')|list|length }}</strong><br>
+      <span class="muted">checks completed</span></div>
+    <div><strong>{{ run.checks|selectattr('status', 'equalto', 'INCOMPLETE')|list|length +
+                    run.checks|selectattr('status', 'equalto', 'FAILED')|list|length }}</strong><br>
+      <span class="muted">checks failed/incomplete</span></div>
+  </div>
+  <p><a href="/api/v1/reviews/{{ run.run_id }}/export?format=json">Export JSON</a> ·
+     <a href="/api/v1/reviews/{{ run.run_id }}/export?format=markdown">Export report</a> ·
+     <a href="/api/v1/reviews/{{ run.run_id }}/export?format=csv">Export CSV</a></p>
+</div>
+
+{% if run.errors %}
+<div class="card">
+  <h3>Processing notes / errors</h3>
+  <ul>{% for e in run.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+<div class="card">
+  <h3>Ranked findings</h3>
+  {% if not run.findings %}<p class="muted">No findings. All configured required checks completed.</p>{% endif %}
+  <table>
+    <tr><th>Severity</th><th>Taxonomy</th><th>Finding</th><th>Conclusion</th><th>Status</th></tr>
+    {% for f in run.findings %}
+    <tr>
+      <td class="{{ f.severity.value }}">{{ f.severity.value }}</td>
+      <td><code>{{ f.taxonomy_id }}</code></td>
+      <td><a href="/ui/runs/{{ run.run_id }}/findings/{{ f.finding_id }}">{{ f.title }}</a>
+          {% if f.blocking %}<span class="badge HOLD">blocking</span>{% endif %}</td>
+      <td>{{ f.conclusion_state.value }}</td>
+      <td>{{ f.status.value }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div class="card">
+  <h3>Checks</h3>
+  <table>
+    <tr><th>Check</th><th>Rule version</th><th>Status</th><th>Detail</th></tr>
+    {% for c in checks %}
+    <tr>
+      <td><code>{{ c.check_id }}</code></td>
+      <td>{{ c.rule_version or '—' }}</td>
+      <td>{{ c.status.value }}</td>
+      <td>{{ c.detail }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

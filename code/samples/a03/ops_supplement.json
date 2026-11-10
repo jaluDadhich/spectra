@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A03-2026-1042",
+  "document": {
+    "document_id": "A-OPS",
+    "document_type": "ops_supplement",
+    "document_name": "Operations_Supplement.pdf",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "operations": [
+      {
+        "description": "warehousing and local delivery",
+        "location_id": "LOC-1"
+      }
+    ],
+    "peak_shipment_value": 250000,
+    "cargo_description": "customer goods in transit"
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "Operations_Supplement.pdf",
+    "fields": {}
+  }
+}

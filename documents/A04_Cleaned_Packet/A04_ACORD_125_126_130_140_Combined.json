@@ -1,0 +1,2787 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A04-2026-1042",
+  "document": {
+    "document_id": "A04-ACORD-125-126-130-140-COMBINED",
+    "document_type": "acord_125_126_130_140_combined",
+    "document_name": "A04_ACORD_125_126_130_140_Combined.json",
+    "issuer": null,
+    "version": "corrected_synthetic_clean_control_copy",
+    "received_at": null,
+    "effective_period": {
+      "start": "11/01/2026",
+      "end": "11/01/2027"
+    },
+    "source_hash": null,
+    "source_metadata": {
+      "source_document_count": 2,
+      "total_source_pages": 4,
+      "source_documents": [
+        {
+          "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+          "form_sections": [
+            "ACORD 125",
+            "ACORD 126"
+          ],
+          "page_count": 2,
+          "sha256": "1dfa1df3f232818d01d9b5685f7ff8382a78ef70f2109ecae165a7694752a65b",
+          "pages": {
+            "1": "Policy / producer information; applicant / operations; declared premises",
+            "2": "General liability rating exposure; requested GL coverage; claims experience; application controls / disclosures"
+          }
+        },
+        {
+          "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+          "form_sections": [
+            "ACORD 130",
+            "ACORD 140"
+          ],
+          "page_count": 2,
+          "sha256": "974875d906fe0b8a7d18f53beeb69feb17ddf094e675576c0323eb79c8debb32",
+          "pages": {
+            "1": "Workers compensation terms; payroll by location and classification",
+            "2": "Property schedule / statement of values; WC claims history; rating caveats; underwriting status"
+          }
+        }
+      ],
+      "document_scope_note": "ACORD 125 / 126 and ACORD 130 / 140 field-set extracts. Both source PDFs identify this as a corrected synthetic clean-control copy."
+    }
+  },
+  "data": {
+    "acord_125": {
+      "policy_producer_information": {
+        "producer": "Northstar Risk Partners (fictional)",
+        "producer_contact": "Jordan Ellis • submissions@northstarrisk.example",
+        "proposed_carrier": "Example Mutual Insurance Company (fictional)",
+        "submission_status": "Quote request / pre-bind",
+        "effective_date": "11/01/2026",
+        "expiration_date": "11/01/2027",
+        "payment_plan": "Quarterly • Agency bill",
+        "requested_lines": [
+          "Commercial General Liability",
+          "Commercial Property",
+          "Workers Compensation",
+          "Business Auto"
+        ]
+      },
+      "applicant_operations": {
+        "named_insured": "United Parcel Service, Inc. (UPS)",
+        "named_insured_role": "Identity anchor only",
+        "mailing_address": "55 Glenlake Parkway NE, Atlanta, GA 30328 (public-company address; not proof of synthetic premises)",
+        "entity_type": "Corporation",
+        "primary_operations": "Domestic parcel pickup/delivery, ground line-haul and standard logistics support",
+        "operations_excluded_from_this_synthetic_scope": [
+          "Temperature-controlled cargo",
+          "International freight forwarding"
+        ],
+        "annual_gross_sales": "$74,200,000 (synthetic)",
+        "employees": "405 FT total across three synthetic locations; 135 FT per location",
+        "wc_payroll": "$14,200,000 (synthetic)",
+        "active_power_units": "128 (synthetic)"
+      },
+      "declared_premises": [
+        {
+          "location_id": "A04-LOC-01",
+          "address": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Distribution warehouse",
+          "area": "95,000 sq ft",
+          "full_time_employees": 135
+        },
+        {
+          "location_id": "A04-LOC-02",
+          "address": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Warehouse / distribution",
+          "area": "110,000 sq ft",
+          "full_time_employees": 135
+        },
+        {
+          "location_id": "A04-LOC-03",
+          "address": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Logistics warehouse",
+          "area": "125,000 sq ft",
+          "full_time_employees": 135
+        }
+      ]
+    },
+    "acord_126": {
+      "general_liability_rating_exposure_schedule": [
+        {
+          "exposure_basis": "Annual gross sales",
+          "amount": "$74,200,000",
+          "reconciliation": "Matches declared gross sales"
+        },
+        {
+          "exposure_basis": "Sales-rated class A",
+          "amount": "$33,390,000",
+          "reconciliation": "Illustrative class allocation"
+        },
+        {
+          "exposure_basis": "Sales-rated class B",
+          "amount": "$40,810,000",
+          "reconciliation": "Illustrative class allocation"
+        },
+        {
+          "exposure_basis": "Total sales-rated basis",
+          "amount": "$74,200,000",
+          "reconciliation": "Class A + B = declared gross sales"
+        },
+        {
+          "exposure_basis": "Area-rated exposure",
+          "amount": "330,000 sq ft",
+          "reconciliation": "Matches corrected SOV area total"
+        }
+      ],
+      "requested_gl_coverage": [
+        {
+          "coverage": "Each occurrence",
+          "requested_limit_or_basis": "$1,000,000",
+          "status": "Illustrative; carrier approval required"
+        },
+        {
+          "coverage": "General aggregate",
+          "requested_limit_or_basis": "$2,000,000",
+          "status": "Illustrative; carrier approval required"
+        },
+        {
+          "coverage": "Rating basis",
+          "requested_limit_or_basis": "Sales by class and building area",
+          "status": "Class split illustrative; do not use without carrier validation"
+        }
+      ],
+      "claims_experience_annual_counts": [
+        {
+          "policy_year": 2021,
+          "loss_detail_count": 6,
+          "gl": 6,
+          "wc": 0,
+          "auto": 0,
+          "property": 0,
+          "cargo": 0
+        },
+        {
+          "policy_year": 2022,
+          "loss_detail_count": 6,
+          "gl": 0,
+          "wc": 6,
+          "auto": 0,
+          "property": 0,
+          "cargo": 0
+        },
+        {
+          "policy_year": 2023,
+          "loss_detail_count": 6,
+          "gl": 0,
+          "wc": 0,
+          "auto": 6,
+          "property": 0,
+          "cargo": 0
+        },
+        {
+          "policy_year": 2024,
+          "loss_detail_count": 5,
+          "gl": 0,
+          "wc": 0,
+          "auto": 0,
+          "property": 5,
+          "cargo": 0
+        },
+        {
+          "policy_year": 2025,
+          "loss_detail_count": 5,
+          "gl": 0,
+          "wc": 0,
+          "auto": 0,
+          "property": 0,
+          "cargo": 5
+        }
+      ],
+      "total_synthetic_incurred_loss_summary": "$4,090,659",
+      "loss_detail_limitation": "Loss detail is a synthetic training ledger, not carrier-issued loss history.",
+      "application_controls_disclosures": "The submission is a training replica. All figures are synthetic. Legal entity, actual premises, tax ID, employee allocations, coverage eligibility and carrier rules require independent verification before any real placement. External OSHA information at a different address is not attributed to these synthetic premises."
+    },
+    "acord_130": {
+      "workers_compensation_terms": {
+        "part_1_wc": "Statutory, subject to jurisdiction and carrier rules",
+        "employers_liability_each_accident": "$1,000,000",
+        "employers_liability_disease_policy_limit": "$1,000,000",
+        "employers_liability_disease_each_employee": "$1,000,000",
+        "estimated_payroll": "$14,200,000",
+        "experience_modifier": "0.94 — synthetic test value; authority not authenticated"
+      },
+      "payroll_by_location_and_classification": [
+        {
+          "location": "A04-LOC-01",
+          "state": "GA",
+          "class": "7380",
+          "duties": "Drivers / delivery personnel",
+          "full_time_employees": 57,
+          "part_time_employees": 7,
+          "payroll": "$1,988,000",
+          "rate_per_100": "0.65"
+        },
+        {
+          "location": "A04-LOC-01",
+          "state": "GA",
+          "class": "8292",
+          "duties": "Warehouse / loading operations",
+          "full_time_employees": 40,
+          "part_time_employees": 5,
+          "payroll": "$1,420,000",
+          "rate_per_100": "0.82"
+        },
+        {
+          "location": "A04-LOC-01",
+          "state": "GA",
+          "class": "8810",
+          "duties": "Clerical office employees",
+          "full_time_employees": 11,
+          "part_time_employees": 1,
+          "payroll": "$378,667",
+          "rate_per_100": "0.14"
+        },
+        {
+          "location": "A04-LOC-01",
+          "state": "GA",
+          "class": "8742",
+          "duties": "Outside sales / field representatives",
+          "full_time_employees": 7,
+          "part_time_employees": 1,
+          "payroll": "$236,667",
+          "rate_per_100": "0.33"
+        },
+        {
+          "location": "A04-LOC-01",
+          "state": "GA",
+          "class": "8017",
+          "duties": "Retail / merchandise operations",
+          "full_time_employees": 20,
+          "part_time_employees": 2,
+          "payroll": "$710,000",
+          "rate_per_100": "0.71"
+        },
+        {
+          "location": "A04-LOC-02",
+          "state": "GA",
+          "class": "7380",
+          "duties": "Drivers / delivery personnel",
+          "full_time_employees": 57,
+          "part_time_employees": 7,
+          "payroll": "$1,988,000",
+          "rate_per_100": "0.65"
+        },
+        {
+          "location": "A04-LOC-02",
+          "state": "GA",
+          "class": "8292",
+          "duties": "Warehouse / loading operations",
+          "full_time_employees": 40,
+          "part_time_employees": 5,
+          "payroll": "$1,420,000",
+          "rate_per_100": "0.82"
+        },
+        {
+          "location": "A04-LOC-02",
+          "state": "GA",
+          "class": "8810",
+          "duties": "Clerical office employees",
+          "full_time_employees": 11,
+          "part_time_employees": 1,
+          "payroll": "$378,667",
+          "rate_per_100": "0.14"
+        },
+        {
+          "location": "A04-LOC-02",
+          "state": "GA",
+          "class": "8742",
+          "duties": "Outside sales / field representatives",
+          "full_time_employees": 7,
+          "part_time_employees": 1,
+          "payroll": "$236,667",
+          "rate_per_100": "0.33"
+        },
+        {
+          "location": "A04-LOC-02",
+          "state": "GA",
+          "class": "8017",
+          "duties": "Retail / merchandise operations",
+          "full_time_employees": 20,
+          "part_time_employees": 2,
+          "payroll": "$710,000",
+          "rate_per_100": "0.71"
+        },
+        {
+          "location": "A04-LOC-03",
+          "state": "GA",
+          "class": "7380",
+          "duties": "Drivers / delivery personnel",
+          "full_time_employees": 57,
+          "part_time_employees": 7,
+          "payroll": "$1,988,000",
+          "rate_per_100": "0.65"
+        },
+        {
+          "location": "A04-LOC-03",
+          "state": "GA",
+          "class": "8292",
+          "duties": "Warehouse / loading operations",
+          "full_time_employees": 40,
+          "part_time_employees": 5,
+          "payroll": "$1,420,000",
+          "rate_per_100": "0.82"
+        },
+        {
+          "location": "A04-LOC-03",
+          "state": "GA",
+          "class": "8810",
+          "duties": "Clerical office employees",
+          "full_time_employees": 11,
+          "part_time_employees": 1,
+          "payroll": "$378,667",
+          "rate_per_100": "0.14"
+        },
+        {
+          "location": "A04-LOC-03",
+          "state": "GA",
+          "class": "8742",
+          "duties": "Outside sales / field representatives",
+          "full_time_employees": 7,
+          "part_time_employees": 1,
+          "payroll": "$236,667",
+          "rate_per_100": "0.33"
+        },
+        {
+          "location": "A04-LOC-03",
+          "state": "GA",
+          "class": "8017",
+          "duties": "Retail / merchandise operations",
+          "full_time_employees": 20,
+          "part_time_employees": 2,
+          "payroll": "$709,998",
+          "rate_per_100": "0.71"
+        }
+      ],
+      "wc_claims_history": [
+        {
+          "policy_year": 2021,
+          "wc_claim_count": 0,
+          "status": "Matches loss detail"
+        },
+        {
+          "policy_year": 2022,
+          "wc_claim_count": 6,
+          "status": "Matches loss detail"
+        },
+        {
+          "policy_year": 2023,
+          "wc_claim_count": 0,
+          "status": "Matches loss detail"
+        },
+        {
+          "policy_year": 2024,
+          "wc_claim_count": 0,
+          "status": "Matches loss detail"
+        },
+        {
+          "policy_year": 2025,
+          "wc_claim_count": 0,
+          "status": "Matches loss detail"
+        }
+      ],
+      "rating_underwriting_caveats": "Class codes, rates and modifier are synthetic scenario values. For any real placement, obtain carrier-approved state/class rating support and authoritative experience-modification documentation. Building values and areas are illustrative and are not actual UPS exposures.",
+      "underwriting_status": "DRAFT / PRE-BIND. No authorization to bind. Driver credential placeholders are not evidence of actual licenses, MVRs, endorsements or qualifications."
+    },
+    "acord_140": {
+      "property_schedule_statement_of_values": [
+        {
+          "location": "A04-LOC-01",
+          "address": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Distribution warehouse",
+          "area": "95,000 sq ft",
+          "building_value": "$18,500,000"
+        },
+        {
+          "location": "A04-LOC-02",
+          "address": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Warehouse / distribution",
+          "area": "110,000 sq ft",
+          "building_value": "$12,500,000"
+        },
+        {
+          "location": "A04-LOC-03",
+          "address": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+          "use": "Logistics warehouse",
+          "area": "125,000 sq ft",
+          "building_value": "$22,800,000"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "extraction_source": "pdf_native_text_and_visual_page_review",
+    "source_file": [
+      "A04_ACORD_125_126_Combined(1).pdf",
+      "A04_ACORD_130_140_Combined(1).pdf"
+    ],
+    "fields": {
+      "data.acord_125.policy_producer_information.producer": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "producer",
+        "source_text": "Northstar Risk Partners (fictional)",
+        "extracted_value": "Northstar Risk Partners (fictional)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.producer_contact": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "producer_contact",
+        "source_text": "Jordan Ellis • submissions@northstarrisk.example",
+        "extracted_value": "Jordan Ellis • submissions@northstarrisk.example",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.proposed_carrier": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "proposed_carrier",
+        "source_text": "Example Mutual Insurance Company (fictional)",
+        "extracted_value": "Example Mutual Insurance Company (fictional)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.submission_status": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "submission_status",
+        "source_text": "Quote request / pre-bind",
+        "extracted_value": "Quote request / pre-bind",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.effective_date": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "effective_date",
+        "source_text": "11/01/2026",
+        "extracted_value": "11/01/2026",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.expiration_date": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "expiration_date",
+        "source_text": "11/01/2027",
+        "extracted_value": "11/01/2027",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.payment_plan": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "payment_plan",
+        "source_text": "Quarterly • Agency bill",
+        "extracted_value": "Quarterly • Agency bill",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.requested_lines[0]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "requested_lines[0]",
+        "source_text": "Commercial General Liability",
+        "extracted_value": "Commercial General Liability",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.requested_lines[1]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "requested_lines[1]",
+        "source_text": "Commercial Property",
+        "extracted_value": "Commercial Property",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.requested_lines[2]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "requested_lines[2]",
+        "source_text": "Workers Compensation",
+        "extracted_value": "Workers Compensation",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.policy_producer_information.requested_lines[3]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "requested_lines[3]",
+        "source_text": "Business Auto",
+        "extracted_value": "Business Auto",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.named_insured": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "named_insured",
+        "source_text": "United Parcel Service, Inc. (UPS)",
+        "extracted_value": "United Parcel Service, Inc. (UPS)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.named_insured_role": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "named_insured_role",
+        "source_text": "Identity anchor only",
+        "extracted_value": "Identity anchor only",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.mailing_address": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "mailing_address",
+        "source_text": "55 Glenlake Parkway NE, Atlanta, GA 30328 (public-company address; not proof of synthetic premises)",
+        "extracted_value": "55 Glenlake Parkway NE, Atlanta, GA 30328 (public-company address; not proof of synthetic premises)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.entity_type": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "entity_type",
+        "source_text": "Corporation",
+        "extracted_value": "Corporation",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.primary_operations": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "primary_operations",
+        "source_text": "Domestic parcel pickup/delivery, ground line-haul and standard logistics support",
+        "extracted_value": "Domestic parcel pickup/delivery, ground line-haul and standard logistics support",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.operations_excluded_from_this_synthetic_scope[0]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "operations_excluded_from_this_synthetic_scope[0]",
+        "source_text": "Temperature-controlled cargo",
+        "extracted_value": "Temperature-controlled cargo",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.operations_excluded_from_this_synthetic_scope[1]": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "operations_excluded_from_this_synthetic_scope[1]",
+        "source_text": "International freight forwarding",
+        "extracted_value": "International freight forwarding",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.annual_gross_sales": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "annual_gross_sales",
+        "source_text": "$74,200,000 (synthetic)",
+        "extracted_value": "$74,200,000 (synthetic)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.employees": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "employees",
+        "source_text": "405 FT total across three synthetic locations; 135 FT per location",
+        "extracted_value": "405 FT total across three synthetic locations; 135 FT per location",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.wc_payroll": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_payroll",
+        "source_text": "$14,200,000 (synthetic)",
+        "extracted_value": "$14,200,000 (synthetic)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.applicant_operations.active_power_units": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "active_power_units",
+        "source_text": "128 (synthetic)",
+        "extracted_value": "128 (synthetic)",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[0].location_id": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "location_id",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[0].address": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "address",
+        "source_text": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[0].use": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "use",
+        "source_text": "Distribution warehouse",
+        "extracted_value": "Distribution warehouse",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[0].area": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "area",
+        "source_text": "95,000 sq ft",
+        "extracted_value": "95,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[0].full_time_employees": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "135",
+        "extracted_value": 135,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[1].location_id": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "location_id",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[1].address": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "address",
+        "source_text": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[1].use": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "use",
+        "source_text": "Warehouse / distribution",
+        "extracted_value": "Warehouse / distribution",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[1].area": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "area",
+        "source_text": "110,000 sq ft",
+        "extracted_value": "110,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[1].full_time_employees": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "135",
+        "extracted_value": 135,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[2].location_id": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "location_id",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[2].address": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "address",
+        "source_text": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[2].use": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "use",
+        "source_text": "Logistics warehouse",
+        "extracted_value": "Logistics warehouse",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[2].area": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "area",
+        "source_text": "125,000 sq ft",
+        "extracted_value": "125,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_125.declared_premises[2].full_time_employees": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "135",
+        "extracted_value": 135,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[0].exposure_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "exposure_basis",
+        "source_text": "Annual gross sales",
+        "extracted_value": "Annual gross sales",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[0].amount": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "amount",
+        "source_text": "$74,200,000",
+        "extracted_value": "$74,200,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[0].reconciliation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "reconciliation",
+        "source_text": "Matches declared gross sales",
+        "extracted_value": "Matches declared gross sales",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[1].exposure_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "exposure_basis",
+        "source_text": "Sales-rated class A",
+        "extracted_value": "Sales-rated class A",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[1].amount": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "amount",
+        "source_text": "$33,390,000",
+        "extracted_value": "$33,390,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[1].reconciliation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "reconciliation",
+        "source_text": "Illustrative class allocation",
+        "extracted_value": "Illustrative class allocation",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[2].exposure_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "exposure_basis",
+        "source_text": "Sales-rated class B",
+        "extracted_value": "Sales-rated class B",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[2].amount": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "amount",
+        "source_text": "$40,810,000",
+        "extracted_value": "$40,810,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[2].reconciliation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "reconciliation",
+        "source_text": "Illustrative class allocation",
+        "extracted_value": "Illustrative class allocation",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[3].exposure_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "exposure_basis",
+        "source_text": "Total sales-rated basis",
+        "extracted_value": "Total sales-rated basis",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[3].amount": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "amount",
+        "source_text": "$74,200,000",
+        "extracted_value": "$74,200,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[3].reconciliation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "reconciliation",
+        "source_text": "Class A + B = declared gross sales",
+        "extracted_value": "Class A + B = declared gross sales",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[4].exposure_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "exposure_basis",
+        "source_text": "Area-rated exposure",
+        "extracted_value": "Area-rated exposure",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[4].amount": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "amount",
+        "source_text": "330,000 sq ft",
+        "extracted_value": "330,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.general_liability_rating_exposure_schedule[4].reconciliation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "reconciliation",
+        "source_text": "Matches corrected SOV area total",
+        "extracted_value": "Matches corrected SOV area total",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[0].coverage": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "coverage",
+        "source_text": "Each occurrence",
+        "extracted_value": "Each occurrence",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[0].requested_limit_or_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "requested_limit_or_basis",
+        "source_text": "$1,000,000",
+        "extracted_value": "$1,000,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[0].status": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "status",
+        "source_text": "Illustrative; carrier approval required",
+        "extracted_value": "Illustrative; carrier approval required",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[1].coverage": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "coverage",
+        "source_text": "General aggregate",
+        "extracted_value": "General aggregate",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[1].requested_limit_or_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "requested_limit_or_basis",
+        "source_text": "$2,000,000",
+        "extracted_value": "$2,000,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[1].status": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "status",
+        "source_text": "Illustrative; carrier approval required",
+        "extracted_value": "Illustrative; carrier approval required",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[2].coverage": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "coverage",
+        "source_text": "Rating basis",
+        "extracted_value": "Rating basis",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[2].requested_limit_or_basis": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "requested_limit_or_basis",
+        "source_text": "Sales by class and building area",
+        "extracted_value": "Sales by class and building area",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.requested_gl_coverage[2].status": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "status",
+        "source_text": "Class split illustrative; do not use without carrier validation",
+        "extracted_value": "Class split illustrative; do not use without carrier validation",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].policy_year": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "policy_year",
+        "source_text": "2021",
+        "extracted_value": 2021,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].loss_detail_count": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_count",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].gl": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "gl",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].wc": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "wc",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].auto": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "auto",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].property": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "property",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[0].cargo": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "cargo",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].policy_year": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "policy_year",
+        "source_text": "2022",
+        "extracted_value": 2022,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].loss_detail_count": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_count",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].gl": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "gl",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].wc": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "wc",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].auto": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "auto",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].property": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "property",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[1].cargo": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "cargo",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].policy_year": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "policy_year",
+        "source_text": "2023",
+        "extracted_value": 2023,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].loss_detail_count": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_count",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].gl": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "gl",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].wc": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "wc",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].auto": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "auto",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].property": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "property",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[2].cargo": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "cargo",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].policy_year": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "policy_year",
+        "source_text": "2024",
+        "extracted_value": 2024,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].loss_detail_count": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_count",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].gl": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "gl",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].wc": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "wc",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].auto": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "auto",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].property": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "property",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[3].cargo": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "cargo",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].policy_year": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "policy_year",
+        "source_text": "2025",
+        "extracted_value": 2025,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].loss_detail_count": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_count",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].gl": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "gl",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].wc": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "wc",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].auto": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "auto",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].property": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "property",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.claims_experience_annual_counts[4].cargo": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "cargo",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.total_synthetic_incurred_loss_summary": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "total_synthetic_incurred_loss_summary",
+        "source_text": "$4,090,659",
+        "extracted_value": "$4,090,659",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.loss_detail_limitation": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "loss_detail_limitation",
+        "source_text": "Loss detail is a synthetic training ledger, not carrier-issued loss history.",
+        "extracted_value": "Loss detail is a synthetic training ledger, not carrier-issued loss history.",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_126.application_controls_disclosures": {
+        "source_file": "A04_ACORD_125_126_Combined(1).pdf",
+        "page": 2,
+        "location": "application_controls_disclosures",
+        "source_text": "The submission is a training replica. All figures are synthetic. Legal entity, actual premises, tax ID, employee allocations, coverage eligibility and carrier rules require independent verification before any real placement. External OSHA information at a different address is not attributed to these synthetic premises.",
+        "extracted_value": "The submission is a training replica. All figures are synthetic. Legal entity, actual premises, tax ID, employee allocations, coverage eligibility and carrier rules require independent verification before any real placement. External OSHA information at a different address is not attributed to these synthetic premises.",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.part_1_wc": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_1_wc",
+        "source_text": "Statutory, subject to jurisdiction and carrier rules",
+        "extracted_value": "Statutory, subject to jurisdiction and carrier rules",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.employers_liability_each_accident": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "employers_liability_each_accident",
+        "source_text": "$1,000,000",
+        "extracted_value": "$1,000,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.employers_liability_disease_policy_limit": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "employers_liability_disease_policy_limit",
+        "source_text": "$1,000,000",
+        "extracted_value": "$1,000,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.employers_liability_disease_each_employee": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "employers_liability_disease_each_employee",
+        "source_text": "$1,000,000",
+        "extracted_value": "$1,000,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.estimated_payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "estimated_payroll",
+        "source_text": "$14,200,000",
+        "extracted_value": "$14,200,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.workers_compensation_terms.experience_modifier": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "experience_modifier",
+        "source_text": "0.94 — synthetic test value; authority not authenticated",
+        "extracted_value": "0.94 — synthetic test value; authority not authenticated",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "7380",
+        "extracted_value": "7380",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Drivers / delivery personnel",
+        "extracted_value": "Drivers / delivery personnel",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "57",
+        "extracted_value": 57,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,988,000",
+        "extracted_value": "$1,988,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[0].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.65",
+        "extracted_value": "0.65",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8292",
+        "extracted_value": "8292",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Warehouse / loading operations",
+        "extracted_value": "Warehouse / loading operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "40",
+        "extracted_value": 40,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,420,000",
+        "extracted_value": "$1,420,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[1].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.82",
+        "extracted_value": "0.82",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8810",
+        "extracted_value": "8810",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Clerical office employees",
+        "extracted_value": "Clerical office employees",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "11",
+        "extracted_value": 11,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$378,667",
+        "extracted_value": "$378,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[2].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.14",
+        "extracted_value": "0.14",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8742",
+        "extracted_value": "8742",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Outside sales / field representatives",
+        "extracted_value": "Outside sales / field representatives",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$236,667",
+        "extracted_value": "$236,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[3].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.33",
+        "extracted_value": "0.33",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8017",
+        "extracted_value": "8017",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Retail / merchandise operations",
+        "extracted_value": "Retail / merchandise operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "20",
+        "extracted_value": 20,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "2",
+        "extracted_value": 2,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$710,000",
+        "extracted_value": "$710,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[4].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.71",
+        "extracted_value": "0.71",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "7380",
+        "extracted_value": "7380",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Drivers / delivery personnel",
+        "extracted_value": "Drivers / delivery personnel",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "57",
+        "extracted_value": 57,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,988,000",
+        "extracted_value": "$1,988,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[5].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.65",
+        "extracted_value": "0.65",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8292",
+        "extracted_value": "8292",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Warehouse / loading operations",
+        "extracted_value": "Warehouse / loading operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "40",
+        "extracted_value": 40,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,420,000",
+        "extracted_value": "$1,420,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[6].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.82",
+        "extracted_value": "0.82",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8810",
+        "extracted_value": "8810",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Clerical office employees",
+        "extracted_value": "Clerical office employees",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "11",
+        "extracted_value": 11,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$378,667",
+        "extracted_value": "$378,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[7].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.14",
+        "extracted_value": "0.14",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8742",
+        "extracted_value": "8742",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Outside sales / field representatives",
+        "extracted_value": "Outside sales / field representatives",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$236,667",
+        "extracted_value": "$236,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[8].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.33",
+        "extracted_value": "0.33",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8017",
+        "extracted_value": "8017",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Retail / merchandise operations",
+        "extracted_value": "Retail / merchandise operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "20",
+        "extracted_value": 20,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "2",
+        "extracted_value": 2,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$710,000",
+        "extracted_value": "$710,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[9].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.71",
+        "extracted_value": "0.71",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "7380",
+        "extracted_value": "7380",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Drivers / delivery personnel",
+        "extracted_value": "Drivers / delivery personnel",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "57",
+        "extracted_value": 57,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,988,000",
+        "extracted_value": "$1,988,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[10].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.65",
+        "extracted_value": "0.65",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8292",
+        "extracted_value": "8292",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Warehouse / loading operations",
+        "extracted_value": "Warehouse / loading operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "40",
+        "extracted_value": 40,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "5",
+        "extracted_value": 5,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$1,420,000",
+        "extracted_value": "$1,420,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[11].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.82",
+        "extracted_value": "0.82",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8810",
+        "extracted_value": "8810",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Clerical office employees",
+        "extracted_value": "Clerical office employees",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "11",
+        "extracted_value": 11,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$378,667",
+        "extracted_value": "$378,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[12].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.14",
+        "extracted_value": "0.14",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8742",
+        "extracted_value": "8742",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Outside sales / field representatives",
+        "extracted_value": "Outside sales / field representatives",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "7",
+        "extracted_value": 7,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "1",
+        "extracted_value": 1,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$236,667",
+        "extracted_value": "$236,667",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[13].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.33",
+        "extracted_value": "0.33",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].state": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "state",
+        "source_text": "GA",
+        "extracted_value": "GA",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].class": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "class",
+        "source_text": "8017",
+        "extracted_value": "8017",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].duties": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "duties",
+        "source_text": "Retail / merchandise operations",
+        "extracted_value": "Retail / merchandise operations",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].full_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "full_time_employees",
+        "source_text": "20",
+        "extracted_value": 20,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].part_time_employees": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "part_time_employees",
+        "source_text": "2",
+        "extracted_value": 2,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].payroll": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "payroll",
+        "source_text": "$709,998",
+        "extracted_value": "$709,998",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.payroll_by_location_and_classification[14].rate_per_100": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rate_per_100",
+        "source_text": "0.71",
+        "extracted_value": "0.71",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[0].policy_year": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "policy_year",
+        "source_text": "2021",
+        "extracted_value": 2021,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[0].wc_claim_count": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_claim_count",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[0].status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "status",
+        "source_text": "Matches loss detail",
+        "extracted_value": "Matches loss detail",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[1].policy_year": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "policy_year",
+        "source_text": "2022",
+        "extracted_value": 2022,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[1].wc_claim_count": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_claim_count",
+        "source_text": "6",
+        "extracted_value": 6,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[1].status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "status",
+        "source_text": "Matches loss detail",
+        "extracted_value": "Matches loss detail",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[2].policy_year": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "policy_year",
+        "source_text": "2023",
+        "extracted_value": 2023,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[2].wc_claim_count": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_claim_count",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[2].status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "status",
+        "source_text": "Matches loss detail",
+        "extracted_value": "Matches loss detail",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[3].policy_year": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "policy_year",
+        "source_text": "2024",
+        "extracted_value": 2024,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[3].wc_claim_count": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_claim_count",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[3].status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "status",
+        "source_text": "Matches loss detail",
+        "extracted_value": "Matches loss detail",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[4].policy_year": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "policy_year",
+        "source_text": "2025",
+        "extracted_value": 2025,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[4].wc_claim_count": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "wc_claim_count",
+        "source_text": "0",
+        "extracted_value": 0,
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.wc_claims_history[4].status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "status",
+        "source_text": "Matches loss detail",
+        "extracted_value": "Matches loss detail",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.rating_underwriting_caveats": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "rating_underwriting_caveats",
+        "source_text": "Class codes, rates and modifier are synthetic scenario values. For any real placement, obtain carrier-approved state/class rating support and authoritative experience-modification documentation. Building values and areas are illustrative and are not actual UPS exposures.",
+        "extracted_value": "Class codes, rates and modifier are synthetic scenario values. For any real placement, obtain carrier-approved state/class rating support and authoritative experience-modification documentation. Building values and areas are illustrative and are not actual UPS exposures.",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_130.underwriting_status": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 1,
+        "location": "underwriting_status",
+        "source_text": "DRAFT / PRE-BIND. No authorization to bind. Driver credential placeholders are not evidence of actual licenses, MVRs, endorsements or qualifications.",
+        "extracted_value": "DRAFT / PRE-BIND. No authorization to bind. Driver credential placeholders are not evidence of actual licenses, MVRs, endorsements or qualifications.",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[0].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "location",
+        "source_text": "A04-LOC-01",
+        "extracted_value": "A04-LOC-01",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[0].address": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "address",
+        "source_text": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1000 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[0].use": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "use",
+        "source_text": "Distribution warehouse",
+        "extracted_value": "Distribution warehouse",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[0].area": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "area",
+        "source_text": "95,000 sq ft",
+        "extracted_value": "95,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[0].building_value": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "building_value",
+        "source_text": "$18,500,000",
+        "extracted_value": "$18,500,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[1].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "location",
+        "source_text": "A04-LOC-02",
+        "extracted_value": "A04-LOC-02",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[1].address": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "address",
+        "source_text": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1145 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[1].use": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "use",
+        "source_text": "Warehouse / distribution",
+        "extracted_value": "Warehouse / distribution",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[1].area": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "area",
+        "source_text": "110,000 sq ft",
+        "extracted_value": "110,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[1].building_value": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "building_value",
+        "source_text": "$12,500,000",
+        "extracted_value": "$12,500,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[2].location": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "location",
+        "source_text": "A04-LOC-03",
+        "extracted_value": "A04-LOC-03",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[2].address": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "address",
+        "source_text": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+        "extracted_value": "1290 Sample Commerce Parkway, Atlanta, GA 30328",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[2].use": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "use",
+        "source_text": "Logistics warehouse",
+        "extracted_value": "Logistics warehouse",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[2].area": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "area",
+        "source_text": "125,000 sq ft",
+        "extracted_value": "125,000 sq ft",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      },
+      "data.acord_140.property_schedule_statement_of_values[2].building_value": {
+        "source_file": "A04_ACORD_130_140_Combined(1).pdf",
+        "page": 2,
+        "location": "building_value",
+        "source_text": "$22,800,000",
+        "extracted_value": "$22,800,000",
+        "method": "native_pdf_text_and_rendered_page_visual_verification",
+        "verification_status": "source_verified"
+      }
+    }
+  },
+  "quality": {
+    "status": "review_required",
+    "field_count": 257,
+    "verified_field_count": 257,
+    "unresolved_field_count": 0,
+    "validation_errors": [],
+    "validation_checks": [
+      {
+        "check": "WC payroll row sum equals estimated payroll",
+        "result": "pass",
+        "source_rows_sum": "$14,200,000",
+        "declared_amount": "$14,200,000",
+        "note": "Calculated validation only; source row values are preserved unchanged."
+      },
+      {
+        "check": "Declared premises area equals GL area-rated exposure",
+        "result": "pass",
+        "premises_area_sum": "330,000 sq ft",
+        "gl_area_exposure": "330,000 sq ft",
+        "note": "Calculated validation only; source row values are preserved unchanged."
+      },
+      {
+        "check": "GL sales class A plus class B equals total sales-rated basis",
+        "result": "pass",
+        "class_sum": "$74,200,000",
+        "total_sales_rated_basis": "$74,200,000",
+        "note": "Calculated validation only; source row values are preserved unchanged."
+      },
+      {
+        "check": "WC claims history agrees with GL claims experience table WC column",
+        "result": "pass",
+        "note": "Compared year by year; no source values altered."
+      }
+    ],
+    "warnings": [
+      "Both PDFs state that all exposure, premises, value, claims, payroll, employee and rating data are synthetic; this is not an actual UPS application and is not for insurance placement.",
+      "United Parcel Service, Inc. (UPS) is identified as a named entity anchor only.",
+      "The mailing address is identified in the source as a public-company address and not proof of the synthetic premises.",
+      "The experience modifier is a synthetic test value and its authority is not authenticated.",
+      "Class codes, rates and modifier are illustrative and do not constitute authenticated carrier/state rating support.",
+      "Underwriting status is DRAFT / PRE-BIND; the source states there is no authorization to bind.",
+      "Driver credential placeholders are not evidence of actual licenses, MVRs, endorsements or qualifications."
+    ],
+    "review_required": true,
+    "scope_note": "Field extraction is complete for the information present in these two PDFs. This does not authenticate the identity, exposures, premises, rating inputs, claims history or coverage eligibility in the real world."
+  }
+}

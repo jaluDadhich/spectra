@@ -1,0 +1,121 @@
+{
+  "account": "A02",
+  "run_id": "RUN-573A28CDC74E",
+  "case_status": "REVIEW",
+  "summary": {
+    "true_positives": 11,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manifested_recall": 1.0,
+    "excluded_violations": [],
+    "duplicate_alert_rate": 0.0,
+    "evidence_citation_accuracy": 0.933
+  },
+  "per_family": {
+    "P2": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-8CDAD48E3644",
+        "F-B20215F4AAB4",
+        "F-1036F01B6D4F"
+      ],
+      "note": "SOV value conflict"
+    },
+    "P4": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-E49C2DB6FF31"
+      ],
+      "note": "unexplained resubmission"
+    },
+    "P5": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-A8B631771CED"
+      ],
+      "note": "duplicate claim conflict"
+    },
+    "P7": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-660615C76938"
+      ],
+      "note": "undeclared operations"
+    },
+    "N3": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-C1224674B45D"
+      ],
+      "note": ""
+    },
+    "N4": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-3658778968E5",
+        "F-950727042C4D"
+      ],
+      "note": ""
+    },
+    "N6": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-9AD194D72C4F",
+        "F-CCF87BDD69A4"
+      ],
+      "note": ""
+    },
+    "N7": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-08B7CDB9069D"
+      ],
+      "note": ""
+    },
+    "N8": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-108CEEA03189"
+      ],
+      "note": ""
+    },
+    "N14": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-5F114C9ADDD3"
+      ],
+      "note": ""
+    },
+    "N15": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-468909A71C90"
+      ],
+      "note": ""
+    }
+  },
+  "false_positive_findings": [],
+  "undetected": [],
+  "token_usage": {
+    "calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_cost_usd": null,
+    "retries": 0,
+    "errors": 0
+  }
+}

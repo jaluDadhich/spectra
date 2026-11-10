@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A01-2026-0101",
+  "document": {
+    "document_id": "A-SOV",
+    "document_type": "sov",
+    "document_name": "SOV.xlsx",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "locations": [
+      {
+        "location_id": "LOC-1",
+        "address": "100 Warehouse Way",
+        "city": "Fresno",
+        "state": "CA",
+        "zip": "93721",
+        "building_value": 3000000,
+        "contents_value": 1000000,
+        "tiv": 4000000
+      },
+      {
+        "location_id": "LOC-2",
+        "address": "250 Depot Road",
+        "city": "Sacramento",
+        "state": "CA",
+        "zip": "95814",
+        "building_value": 1500000,
+        "contents_value": 500000,
+        "tiv": 2000000
+      },
+      {
+        "location_id": "LOC-3",
+        "address": "88 Industrial Pkwy",
+        "city": "Reno",
+        "state": "NV",
+        "zip": "89502",
+        "building_value": 900000,
+        "contents_value": 300000,
+        "tiv": 1200000
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "SOV.json",
+    "fields": {
+      "locations[0].tiv": {
+        "source_sheet": "SOV",
+        "source_row": 2,
+        "source_column": "H",
+        "source_cell": "H2",
+        "extraction_confidence": 0.99
+      },
+      "locations[1].tiv": {
+        "source_sheet": "SOV",
+        "source_row": 3,
+        "source_column": "H",
+        "source_cell": "H3",
+        "extraction_confidence": 0.99
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A03-2026-1042",
+  "document": {
+    "document_id": "A-ACORD130",
+    "document_type": "acord_130",
+    "document_name": "ACORD_130.pdf",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "states": [
+      "CA"
+    ],
+    "class_rows": [
+      {
+        "row_id": "W1",
+        "class_code": "8810",
+        "state": "CA",
+        "location_id": "LOC-1",
+        "payroll": 1200000,
+        "full_time": 12,
+        "part_time": 3
+      },
+      {
+        "row_id": "W2",
+        "class_code": "7219",
+        "state": "CA",
+        "location_id": "LOC-2",
+        "payroll": 800000,
+        "full_time": 8,
+        "part_time": 2
+      }
+    ],
+    "experience_mod": {
+      "factor": 0.9,
+      "effective_date": "2026-01-01"
+    }
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "ACORD_130.pdf",
+    "fields": {}
+  }
+}

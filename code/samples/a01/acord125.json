@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A01-2026-0101",
+  "document": {
+    "document_id": "A-ACORD125",
+    "document_type": "acord_125",
+    "document_name": "ACORD_125.pdf",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "applicant": {
+      "legal_name": "Sierra Pacific Logistics LLC",
+      "dba": [
+        "Sierra Pacific"
+      ],
+      "fein": "47-2210983",
+      "usdot_number": "3847291"
+    },
+    "locations": [
+      {
+        "location_id": "LOC-1",
+        "address": "100 Warehouse Way",
+        "city": "Fresno",
+        "state": "CA",
+        "zip": "93721",
+        "square_footage": 40000,
+        "building_value": 3000000,
+        "contents_value": 1000000
+      },
+      {
+        "location_id": "LOC-2",
+        "address": "250 Depot Road",
+        "city": "Sacramento",
+        "state": "CA",
+        "zip": "95814",
+        "square_footage": 15000,
+        "building_value": 1500000,
+        "contents_value": 500000
+      }
+    ],
+    "operations_description": "Warehousing and local delivery operations from two California locations.",
+    "gross_sales": 8000000,
+    "sales_period": "annual",
+    "employee_counts": {
+      "full_time": 22,
+      "part_time": 5
+    }
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "ACORD_125.pdf",
+    "fields": {}
+  }
+}

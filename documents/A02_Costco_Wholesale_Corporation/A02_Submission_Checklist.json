@@ -1,0 +1,954 @@
+{
+  "source_file": "A02_Submission_Checklist(4).xlsx",
+  "output_file": "A02_Submission_Checklist.json",
+  "document_type": "Excel workbook",
+  "extraction_method": "cell-level extraction with worksheet structure, heuristic table and key-value interpretations, formulas and cached values",
+  "workbook_metadata": {
+    "sheet_names_in_order": [
+      "Submission Checklist"
+    ],
+    "sheet_count": 1,
+    "calculation_mode": null
+  },
+  "sheets": [
+    {
+      "sheet_name": "Submission Checklist",
+      "dimensions": {
+        "max_row": 16,
+        "max_column": 4
+      },
+      "merged_ranges": [
+        "A1:D1",
+        "A2:D2"
+      ],
+      "freeze_panes": "A5",
+      "auto_filter": null,
+      "headings": [
+        {
+          "row": 1,
+          "text": "A02 | SUBMISSION EVIDENCE CHECKLIST",
+          "merged_ranges": [
+            "A1:D1"
+          ]
+        },
+        {
+          "row": 2,
+          "text": "Required items and status for this synthetic test. A missing item is only seeded when explicitly marked missing.",
+          "merged_ranges": [
+            "A2:D2"
+          ]
+        }
+      ],
+      "notes_and_context": [],
+      "detected_tables": [
+        {
+          "table_id": "Submission Checklist__table_1",
+          "header_row": 15,
+          "headers": [
+            "Broker Email",
+            "TXT",
+            "Present",
+            "Submission context and declared operations"
+          ],
+          "data_row_count": 1,
+          "rows": [
+            {
+              "excel_row": 16,
+              "values": {
+                "Broker Email": "External Public Research",
+                "TXT": "XLSX",
+                "Present": "Present",
+                "Submission context and declared operations": "Official sources and source limitations"
+              }
+            }
+          ],
+          "detection_method": "heuristic_text_header_followed_by_populated_rows"
+        }
+      ],
+      "detected_key_value_pairs": [],
+      "heuristics": [
+        {
+          "heuristic": "missing_evidence_or_document_gap",
+          "trigger_terms": [
+            "missing"
+          ]
+        },
+        {
+          "heuristic": "synthetic_or_training_data_caveat",
+          "trigger_terms": [
+            "synthetic"
+          ]
+        },
+        {
+          "heuristic": "date_or_version_sensitive_evidence",
+          "trigger_terms": [
+            "current"
+          ]
+        }
+      ],
+      "all_nonempty_rows": [
+        {
+          "row": 1,
+          "cells": [
+            {
+              "coordinate": "A1",
+              "column": "A",
+              "value": "A02 | SUBMISSION EVIDENCE CHECKLIST",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "cells": [
+            {
+              "coordinate": "A2",
+              "column": "A",
+              "value": "Required items and status for this synthetic test. A missing item is only seeded when explicitly marked missing.",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "cells": [
+            {
+              "coordinate": "A4",
+              "column": "A",
+              "value": "Required Document / Evidence",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B4",
+              "column": "B",
+              "value": "Expected Format",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C4",
+              "column": "C",
+              "value": "Status",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D4",
+              "column": "D",
+              "value": "Why / Test Note",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "cells": [
+            {
+              "coordinate": "A5",
+              "column": "A",
+              "value": "ACORD 125 - Commercial Insurance Application",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B5",
+              "column": "B",
+              "value": "PDF",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C5",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D5",
+              "column": "D",
+              "value": "Core application",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "cells": [
+            {
+              "coordinate": "A6",
+              "column": "A",
+              "value": "ACORD 126 - Commercial General Liability",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B6",
+              "column": "B",
+              "value": "PDF",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C6",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D6",
+              "column": "D",
+              "value": "GL exposures / limits / hazard schedule",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "cells": [
+            {
+              "coordinate": "A7",
+              "column": "A",
+              "value": "ACORD 130 - Workers Compensation",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B7",
+              "column": "B",
+              "value": "PDF",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C7",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D7",
+              "column": "D",
+              "value": "Payroll / class code / mod factor",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "cells": [
+            {
+              "coordinate": "A8",
+              "column": "A",
+              "value": "ACORD 140 - Property Section",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B8",
+              "column": "B",
+              "value": "PDF",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C8",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D8",
+              "column": "D",
+              "value": "Premises / construction / property limits",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 9,
+          "cells": [
+            {
+              "coordinate": "A9",
+              "column": "A",
+              "value": "Loss Runs",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B9",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C9",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D9",
+              "column": "D",
+              "value": "Claim-level history and valuation",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "cells": [
+            {
+              "coordinate": "A10",
+              "column": "A",
+              "value": "Property Statement of Values",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B10",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C10",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D10",
+              "column": "D",
+              "value": "Full location and value schedule",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "cells": [
+            {
+              "coordinate": "A11",
+              "column": "A",
+              "value": "Fleet Schedule",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B11",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C11",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D11",
+              "column": "D",
+              "value": "Unit-level synthetic schedule",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "cells": [
+            {
+              "coordinate": "A12",
+              "column": "A",
+              "value": "WC Rating Workbook",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B12",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C12",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D12",
+              "column": "D",
+              "value": "Payroll/classification and factor evidence",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "cells": [
+            {
+              "coordinate": "A13",
+              "column": "A",
+              "value": "Current driver roster / MVR review",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B13",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C13",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D13",
+              "column": "D",
+              "value": "P1 for A03 only",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 14,
+          "cells": [
+            {
+              "coordinate": "A14",
+              "column": "A",
+              "value": "Current sprinkler inspection certificate - location 04",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B14",
+              "column": "B",
+              "value": "PDF",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C14",
+              "column": "C",
+              "value": "Present / not marked missing",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D14",
+              "column": "D",
+              "value": "P1 for A01 only",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 15,
+          "cells": [
+            {
+              "coordinate": "A15",
+              "column": "A",
+              "value": "Broker Email",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B15",
+              "column": "B",
+              "value": "TXT",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C15",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D15",
+              "column": "D",
+              "value": "Submission context and declared operations",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        },
+        {
+          "row": 16,
+          "cells": [
+            {
+              "coordinate": "A16",
+              "column": "A",
+              "value": "External Public Research",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "B16",
+              "column": "B",
+              "value": "XLSX",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "C16",
+              "column": "C",
+              "value": "Present",
+              "data_type": "s",
+              "number_format": "General"
+            },
+            {
+              "coordinate": "D16",
+              "column": "D",
+              "value": "Official sources and source limitations",
+              "data_type": "s",
+              "number_format": "General"
+            }
+          ]
+        }
+      ],
+      "all_nonempty_cells": [
+        {
+          "coordinate": "A1",
+          "column": "A",
+          "value": "A02 | SUBMISSION EVIDENCE CHECKLIST",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A2",
+          "column": "A",
+          "value": "Required items and status for this synthetic test. A missing item is only seeded when explicitly marked missing.",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A4",
+          "column": "A",
+          "value": "Required Document / Evidence",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B4",
+          "column": "B",
+          "value": "Expected Format",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C4",
+          "column": "C",
+          "value": "Status",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D4",
+          "column": "D",
+          "value": "Why / Test Note",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A5",
+          "column": "A",
+          "value": "ACORD 125 - Commercial Insurance Application",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B5",
+          "column": "B",
+          "value": "PDF",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C5",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D5",
+          "column": "D",
+          "value": "Core application",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A6",
+          "column": "A",
+          "value": "ACORD 126 - Commercial General Liability",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B6",
+          "column": "B",
+          "value": "PDF",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C6",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D6",
+          "column": "D",
+          "value": "GL exposures / limits / hazard schedule",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A7",
+          "column": "A",
+          "value": "ACORD 130 - Workers Compensation",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B7",
+          "column": "B",
+          "value": "PDF",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C7",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D7",
+          "column": "D",
+          "value": "Payroll / class code / mod factor",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A8",
+          "column": "A",
+          "value": "ACORD 140 - Property Section",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B8",
+          "column": "B",
+          "value": "PDF",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C8",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D8",
+          "column": "D",
+          "value": "Premises / construction / property limits",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A9",
+          "column": "A",
+          "value": "Loss Runs",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B9",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C9",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D9",
+          "column": "D",
+          "value": "Claim-level history and valuation",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A10",
+          "column": "A",
+          "value": "Property Statement of Values",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B10",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C10",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D10",
+          "column": "D",
+          "value": "Full location and value schedule",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A11",
+          "column": "A",
+          "value": "Fleet Schedule",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B11",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C11",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D11",
+          "column": "D",
+          "value": "Unit-level synthetic schedule",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A12",
+          "column": "A",
+          "value": "WC Rating Workbook",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B12",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C12",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D12",
+          "column": "D",
+          "value": "Payroll/classification and factor evidence",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A13",
+          "column": "A",
+          "value": "Current driver roster / MVR review",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B13",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C13",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D13",
+          "column": "D",
+          "value": "P1 for A03 only",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A14",
+          "column": "A",
+          "value": "Current sprinkler inspection certificate - location 04",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B14",
+          "column": "B",
+          "value": "PDF",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C14",
+          "column": "C",
+          "value": "Present / not marked missing",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D14",
+          "column": "D",
+          "value": "P1 for A01 only",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A15",
+          "column": "A",
+          "value": "Broker Email",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B15",
+          "column": "B",
+          "value": "TXT",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C15",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D15",
+          "column": "D",
+          "value": "Submission context and declared operations",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "A16",
+          "column": "A",
+          "value": "External Public Research",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "B16",
+          "column": "B",
+          "value": "XLSX",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "C16",
+          "column": "C",
+          "value": "Present",
+          "data_type": "s",
+          "number_format": "General"
+        },
+        {
+          "coordinate": "D16",
+          "column": "D",
+          "value": "Official sources and source limitations",
+          "data_type": "s",
+          "number_format": "General"
+        }
+      ],
+      "extraction_completeness": {
+        "all_nonempty_cells_preserved": true,
+        "nonempty_cell_count": 54,
+        "nonempty_row_count": 15,
+        "tables_are_heuristic_views_of_preserved_cells": true,
+        "blank_cells_omitted_but_coordinates_preserved": true
+      }
+    }
+  ],
+  "file_level_heuristics": [
+    {
+      "heuristic": "multi_sheet_workbook",
+      "sheet_count": 1
+    },
+    {
+      "heuristic": "complete_nonempty_cell_inventory",
+      "nonempty_cell_count": 54
+    },
+    {
+      "heuristic": "all_worksheets_merged",
+      "description": "All worksheets are represented in this single JSON file."
+    }
+  ],
+  "extraction_notes": [
+    "Every non-empty cell is preserved with its original worksheet coordinate and value.",
+    "Tables and key-value pairs are heuristic interpretations; raw cell inventory is retained as the source of truth.",
+    "Formula expressions and cached results are both included when present; cached values can be null.",
+    "Blank cells are omitted as individual records; original coordinates and sheet dimensions are retained.",
+    "Heuristic triggers are indicators for downstream review, not underwriting decisions."
+  ]
+}

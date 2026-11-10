@@ -1,0 +1,16 @@
+From: submissions@northstarrisk.example
+To: commercial.underwriting@example.test
+Date: October 26, 2026
+Subject: Revised synthetic clean-control package - SPX-A04-2026-1042
+
+Underwriting Team,
+
+Please review the revised synthetic training packet for SPX-A04-2026-1042. United Parcel Service, Inc. (UPS) is used only as a public-entity identity anchor; this is not an actual application submitted by UPS.
+
+The revised training assumptions use three synthetic Atlanta, Georgia locations; annual gross sales of $74,200,000; WC payroll of $14,200,000; 128 active synthetic power units; and 28 unique synthetic claims. The claim detail annual counts are 6, 6, 6, 5 and 5 for 2021-2025. WC class rates and the experience modifier are illustrative synthetic inputs, not authenticated carrier rating support.
+
+All location/state references have been standardized within this training fixture. Please do not treat synthetic driver credentials as proof of actual qualifications. The external OSHA record is at a different address and is not evidence of a finding at any scheduled synthetic premise.
+
+Regards,
+Jordan Ellis
+Northstar Risk Partners (fictional)

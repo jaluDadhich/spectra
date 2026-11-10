@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A01-2026-0101",
+  "document": {
+    "document_id": "A-EXT",
+    "document_type": "external_records",
+    "document_name": "External_Research.xlsx",
+    "issuer": "broker_synthetic",
+    "version": "received",
+    "received_at": "2026-10-20T10:00:00Z",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    },
+    "source_hash": null,
+    "source_metadata": {}
+  },
+  "data": {
+    "observations": [
+      {
+        "record_id": "OSHA-4471",
+        "source_name": "OSHA",
+        "subject": "inspection",
+        "entity_name": "Sierra Pacific Logistics Inc",
+        "address": "5000 Other Blvd",
+        "state": "CA",
+        "record_date": "2025-05-11",
+        "retrieved_at": "2026-10-18",
+        "record_identifier": "osha-inspection-4471"
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "synthetic_fixture_generator",
+    "source_file": "External_Research.json",
+    "fields": {}
+  }
+}

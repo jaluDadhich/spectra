@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Spectra — {{ f.finding_id }}{% endblock %}
+{% block content %}
+<div class="card">
+  <h2 class="{{ f.severity.value }}">[{{ f.severity.value }}] {{ f.title }}</h2>
+  <p class="muted">
+    <code>{{ f.finding_id }}</code> · taxonomy <code>{{ f.taxonomy_id }}</code> ·
+    rule <code>{{ f.rule_id }}</code> v{{ f.rule_version }} ·
+    status <strong>{{ f.status.value }}</strong> ·
+    conclusion <strong>{{ f.conclusion_state.value }}</strong>
+  </p>
+  {% if f.explanation %}<p>{{ f.explanation }}</p>{% endif %}
+  <p><strong>Why it matters:</strong> {{ f.possible_consequence }}</p>
+  {% if f.uncertainty_reason %}
+  <p><strong>Uncertainty:</strong> {{ f.uncertainty_reason }}</p>
+  {% endif %}
+  <p><strong>Materiality:</strong> {{ f.materiality.band.value }} — {{ f.materiality.rationale }}</p>
+  <p><strong>Confidence basis:</strong> {{ f.confidence.basis.value }}
+     {% if not f.confidence.calibrated %}(not calibrated to a probability){% endif %}</p>
+  <p><strong>Recommended action:</strong> {{ f.recommended_action }}</p>
+
+  {% if f.comparison %}
+  <h3>Side-by-side comparison</h3>
+  <table>
+    <tr><th>Values compared</th><th>Delta</th><th>Delta %</th><th>Formula</th>
+        <th>Tolerance</th><th>Entity alignment</th><th>Period alignment</th></tr>
+    <tr>
+      <td>{{ f.comparison.values_compared }}</td>
+      <td>{{ f.comparison.delta }}</td>
+      <td>{{ f.comparison.delta_pct }}</td>
+      <td>{{ f.comparison.delta_formula }}</td>
+      <td>{{ f.comparison.tolerance }} ({{ f.comparison.tolerance_source }})</td>
+      <td>{{ f.comparison.entity_alignment }}</td>
+      <td>{{ f.comparison.period_alignment }}</td>
+    </tr>
+  </table>
+  {% endif %}
+
+  <h3>Evidence</h3>
+  {% if not f.evidence %}
+  <p class="muted">Configuration/profile-based finding (no field-level evidence applicable).</p>
+  {% endif %}
+  <ul class="evidence">
+    {% for e in f.evidence %}
+    <li><code>{{ e.evidence_id }}</code> from <strong>{{ e.document_id }}</strong>
+        ({{ e.document_name or 'unnamed' }}):
+        raw <code>{{ e.raw_value }}</code> → normalized <code>{{ e.normalized_value }}</code>
+        {% if e.unit %} unit={{ e.unit }}{% endif %}{% if e.period %} period={{ e.period }}{% endif %}
+        <br><span class="muted">
+        {% if e.source_location.available %}
+          page={{ e.source_location.page }} sheet={{ e.source_location.sheet }}
+          row={{ e.source_location.row }} cell={{ e.source_location.cell }}
+        {% else %}
+          json_path={{ e.source_location.json_path }} (source provenance not supplied by input)
+        {% endif %}
+        </span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if f.related_finding_ids %}
+  <p><strong>Related findings:</strong>
+    {% for r in f.related_finding_ids %}<code>{{ r }}</code> {% endfor %}</p>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h3>Reviewer disposition</h3>
+  {% if f.disposition_history %}
+  <table>
+    <tr><th>When</th><th>Reviewer</th><th>Action</th><th>From → To</th><th>Rationale</th></tr>
+    {% for d in f.disposition_history %}
+    <tr><td>{{ d.timestamp }}</td><td>{{ d.reviewer_id }}</td><td>{{ d.action.value }}</td>
+        <td>{{ d.prior_status }} → {{ d.new_status }}</td><td>{{ d.rationale }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No dispositions recorded.</p>{% endif %}
+  <form class="inline" method="post" action="#" onsubmit="return submitDisposition(this)">
+    <select name="action">
+      {% for a in actions %}<option value="{{ a }}">{{ a }}</option>{% endfor %}
+    </select>
+    <input name="reviewer_id" placeholder="reviewer id" required>
+    <input name="rationale" placeholder="rationale (required)" required size="40">
+    <button type="submit">Record</button>
+  </form>
+  <p class="muted" id="dispo-result"></p>
+</div>
+<script>
+async function submitDisposition(form) {
+  const payload = {
+    action: form.action.value,
+    reviewer_id: form.reviewer_id.value,
+    rationale: form.rationale.value,
+  };
+  const res = await fetch("/api/v1/reviews/{{ run_id }}/findings/{{ f.finding_id }}/disposition", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload),
+  });
+  const el = document.getElementById("dispo-result");
+  if (res.ok) { el.textContent = "Recorded. Reloading…"; location.reload(); }
+  else { el.textContent = "Failed: " + res.status + " " + (await res.text()); }
+  return false;
+}
+</script>
+{% endblock %}

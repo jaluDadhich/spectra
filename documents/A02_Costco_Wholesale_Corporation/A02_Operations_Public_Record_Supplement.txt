@@ -1,0 +1,25 @@
+SUPPLEMENTAL OPERATIONS / PUBLIC-RECORD RECONCILIATION QUESTIONNAIRE
+Submission ID: SPX-A02-2026-1042
+Named entity anchor: Costco Wholesale Corporation
+Document status: SYNTHETIC TEST CONTENT - NOT A STATEMENT MADE BY THE REAL COMPANY
+
+1. Operations description from application:
+Warehouse retail, receiving, storage, membership sales and general merchandise distribution. The simulated schedule marks pharmacy, optical, gasoline and food-processing operations as not present at the named insured locations; confirm location-level scope.
+
+2. Broker narrative / follow-up:
+Broker states these three insured locations are conventional warehouse retail only. This is a synthetic representation designed for external-context verification and does not represent what Costco actually told an insurer.
+
+3. Public-source context:
+Costco describes a membership-warehouse business and states it is a Washington corporation with its home office in Issaquah, Washington. Official service pages describe pharmacy, optical, and fuel availability at some locations.
+
+4. Safety / establishment record:
+See External_Public_Research.xlsx. Record is site-specific, date-sensitive, and only a candidate match until exact legal entity, address, establishment, and underwriting relevance are established.
+
+5. Recommended Spectra action:
+- Resolve parent / subsidiary / operating company identity.
+- Match addresses and relevant period before comparing.
+- Distinguish corporate-wide public offerings from actual exposures at scheduled premises.
+- Do not infer a violation at a synthetic location from an OSHA record at a different address.
+- Route unresolved material differences to underwriter review.
+
+All public facts are cited by URL in External_Public_Research.xlsx. All submitted operations answers are synthetic.

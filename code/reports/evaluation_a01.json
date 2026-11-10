@@ -1,0 +1,120 @@
+{
+  "account": "A01",
+  "run_id": "RUN-72C677B687E9",
+  "case_status": "REVIEW",
+  "summary": {
+    "true_positives": 11,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "manifested_recall": 1.0,
+    "excluded_violations": [],
+    "duplicate_alert_rate": 0.0,
+    "evidence_citation_accuracy": 1.0
+  },
+  "per_family": {
+    "P2": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-334D5FD7DAEE",
+        "F-5824654F7477"
+      ],
+      "note": "SOV extra location vs application"
+    },
+    "P3": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-B81211799EEF",
+        "F-D68D3A4F3D58"
+      ],
+      "note": "WC payroll mismatch"
+    },
+    "P6": {
+      "detected": true,
+      "manifested": true,
+      "finding_ids": [
+        "F-23C594A0AF32"
+      ],
+      "note": "experience mod mismatch"
+    },
+    "N3": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-68A82277D27C"
+      ],
+      "note": ""
+    },
+    "N4": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-2072E4B470AC",
+        "F-3E281229ACA5"
+      ],
+      "note": ""
+    },
+    "N5": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-72E9D1F8C361"
+      ],
+      "note": ""
+    },
+    "N6": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-4BB63EE853EE"
+      ],
+      "note": ""
+    },
+    "N7": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-511E89D073E8"
+      ],
+      "note": ""
+    },
+    "N8": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-D546A625FCC8"
+      ],
+      "note": ""
+    },
+    "N14": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-F5ACE570433B"
+      ],
+      "note": ""
+    },
+    "N15": {
+      "detected": true,
+      "manifested": false,
+      "finding_ids": [
+        "F-8FA5833738B1"
+      ],
+      "note": ""
+    }
+  },
+  "false_positive_findings": [],
+  "undetected": [],
+  "token_usage": {
+    "calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_cost_usd": null,
+    "retries": 0,
+    "errors": 0
+  }
+}
