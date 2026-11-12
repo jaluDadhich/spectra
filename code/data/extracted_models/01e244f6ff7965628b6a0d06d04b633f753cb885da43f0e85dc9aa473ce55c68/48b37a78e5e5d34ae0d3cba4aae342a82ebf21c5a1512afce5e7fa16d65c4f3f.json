@@ -1,0 +1,793 @@
+{
+  "created_at": "2026-11-10T03:34:21.862545+00:00",
+  "documents": [
+    {
+      "content_hash": "3143af91737ddb1b85455098293926e58d7d294e53918c14b02544f725f88923",
+      "document_id": "A-ACORD125",
+      "document_name": "ACORD_125.pdf",
+      "document_type": "acord_125",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD125",
+              "document_name": "ACORD_125.pdf",
+              "evidence_id": "EV-A-ACORD125-0015",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 8000000.0,
+              "period": "annual",
+              "raw_value": 8000000,
+              "snippet": "8000000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "gross_sales",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-ACORD125",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-A-ACORD125-0015"
+            },
+            "location_id": null,
+            "period": "annual",
+            "record_id": "A-ACORD125#sales",
+            "unit": "USD",
+            "value": 8000000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD125",
+              "document_name": "ACORD_125.pdf",
+              "evidence_id": "EV-A-ACORD125-0016",
+              "extraction_confidence": null,
+              "field_path": "exposures[employees].full_time",
+              "normalized_value": 20.0,
+              "period": null,
+              "raw_value": 20,
+              "snippet": "20",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "employee_counts.full_time",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-ACORD125",
+            "exposure_type": "employees_full_time",
+            "field_evidence": {
+              "value": "EV-A-ACORD125-0016"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-ACORD125#emp_full_time",
+            "unit": "count",
+            "value": 20.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD125",
+              "document_name": "ACORD_125.pdf",
+              "evidence_id": "EV-A-ACORD125-0017",
+              "extraction_confidence": null,
+              "field_path": "exposures[employees].part_time",
+              "normalized_value": 5.0,
+              "period": null,
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "employee_counts.part_time",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-ACORD125",
+            "exposure_type": "employees_part_time",
+            "field_evidence": {
+              "value": "EV-A-ACORD125-0017"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-ACORD125#emp_part_time",
+            "unit": "count",
+            "value": 5.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "353dd34c76e3af6f081349ab50ae6271bc83c6812f1bb46bd4ac6af40acfb629",
+      "document_id": "A-ACORD126",
+      "document_name": "ACORD_126.pdf",
+      "document_type": "acord_126",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD126",
+              "document_name": "ACORD_126.pdf",
+              "evidence_id": "EV-A-ACORD126-0001",
+              "extraction_confidence": null,
+              "field_path": "exposures[S1].value",
+              "normalized_value": 5000000.0,
+              "period": null,
+              "raw_value": 5000000,
+              "snippet": "5000000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "sales_rows[0].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "warehousing",
+            "document_id": "A-ACORD126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A-ACORD126-0001"
+            },
+            "location_id": "LOC-1",
+            "period": null,
+            "record_id": "S1",
+            "unit": "USD",
+            "value": 5000000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD126",
+              "document_name": "ACORD_126.pdf",
+              "evidence_id": "EV-A-ACORD126-0002",
+              "extraction_confidence": null,
+              "field_path": "exposures[S2].value",
+              "normalized_value": 3000000.0,
+              "period": null,
+              "raw_value": 3000000,
+              "snippet": "3000000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "sales_rows[1].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "distribution",
+            "document_id": "A-ACORD126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A-ACORD126-0002"
+            },
+            "location_id": "LOC-2",
+            "period": null,
+            "record_id": "S2",
+            "unit": "USD",
+            "value": 3000000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD126",
+              "document_name": "ACORD_126.pdf",
+              "evidence_id": "EV-A-ACORD126-0003",
+              "extraction_confidence": null,
+              "field_path": "exposures[AR1].value",
+              "normalized_value": 40000.0,
+              "period": null,
+              "raw_value": 40000,
+              "snippet": "40000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "area_rows[0].square_footage",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "sqft"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-ACORD126",
+            "exposure_type": "area_rated",
+            "field_evidence": {
+              "value": "EV-A-ACORD126-0003"
+            },
+            "location_id": "LOC-1",
+            "period": null,
+            "record_id": "AR1",
+            "unit": "sqft",
+            "value": 40000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-ACORD126",
+              "document_name": "ACORD_126.pdf",
+              "evidence_id": "EV-A-ACORD126-0004",
+              "extraction_confidence": null,
+              "field_path": "exposures[AR2].value",
+              "normalized_value": 15000.0,
+              "period": null,
+              "raw_value": 15000,
+              "snippet": "15000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "area_rows[1].square_footage",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "sqft"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-ACORD126",
+            "exposure_type": "area_rated",
+            "field_evidence": {
+              "value": "EV-A-ACORD126-0004"
+            },
+            "location_id": "LOC-2",
+            "period": null,
+            "record_id": "AR2",
+            "unit": "sqft",
+            "value": 15000.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A-ACORD126",
+              "document_name": "ACORD_126.pdf",
+              "evidence_id": "EV-A-ACORD126-0005",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 1.0,
+              "period": "2025",
+              "raw_value": 1,
+              "snippet": "1",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[0].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "GL",
+            "document_id": "A-ACORD126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A-ACORD126-0005"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A-ACORD126#hist0",
+            "unit": "count",
+            "value": 1.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "660c930cd55c3273194fc1028386a83c31107ea0cd5fa6f13bbcb43254ac6c03",
+      "document_id": "A-ACORD130",
+      "document_name": "ACORD_130.pdf",
+      "document_type": "acord_130",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "3988a16b4f699a239946732d663bffd392759135f62024eaec79f5318c682cf9",
+      "document_id": "A-ACORD140",
+      "document_name": "ACORD_140.pdf",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "dceb9ef02e1c9917362fcf3590b68a24c0e527baa931804e516470e6efe5b06f",
+      "document_id": "A-CHECKLIST",
+      "document_name": "Checklist.xlsx",
+      "document_type": "submission_checklist",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "e64a8ad04febf194b651ee15a4c9bedd9d309664c1957b62df71d10fcb8ec306",
+      "document_id": "A-EMAIL",
+      "document_name": "Broker_Email.eml",
+      "document_type": "broker_email",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "c1bd67166dfd8c0c04591acac257a608191dbf1ea42182027fa0629bfc7e7845",
+      "document_id": "A-FLEET",
+      "document_name": "Fleet_Schedule.xlsx",
+      "document_type": "fleet_schedule",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "8180157e2988d04931a8db5c0d488f11f8e23f823c90f21d1f4b16ab598064b4",
+      "document_id": "A-LOSSRUN",
+      "document_name": "Loss_Run.pdf",
+      "document_type": "loss_run",
+      "exposures": [
+        {
+          "evidence": {
+            "claim_count": {
+              "document_id": "A-LOSSRUN",
+              "document_name": "Loss_Run.pdf",
+              "evidence_id": "EV-A-LOSSRUN-0014",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.claim_count",
+              "normalized_value": 2.0,
+              "period": "2026-10-01",
+              "raw_value": 2,
+              "snippet": "2",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "summary.claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            },
+            "total_incurred": {
+              "document_id": "A-LOSSRUN",
+              "document_name": "Loss_Run.pdf",
+              "evidence_id": "EV-A-LOSSRUN-0013",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.total_incurred",
+              "normalized_value": 85000.0,
+              "period": "2026-10-01",
+              "raw_value": 85000,
+              "snippet": "85000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "summary.total_incurred",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "declared_count=2",
+            "document_id": "A-LOSSRUN",
+            "exposure_type": "loss_summary",
+            "field_evidence": {
+              "claim_count": "EV-A-LOSSRUN-0014",
+              "total_incurred": "EV-A-LOSSRUN-0013"
+            },
+            "location_id": null,
+            "period": "2026-10-01",
+            "record_id": "A-LOSSRUN#summary",
+            "unit": "USD",
+            "value": 85000.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A-LOSSRUN",
+              "document_name": "Loss_Run.pdf",
+              "evidence_id": "EV-A-LOSSRUN-0015",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.annual_counts[2025].count",
+              "normalized_value": 2.0,
+              "period": "2025",
+              "raw_value": 2,
+              "snippet": "2",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "summary.annual_counts[0].count",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "",
+            "document_id": "A-LOSSRUN",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A-LOSSRUN-0015"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A-LOSSRUN#annual0",
+            "unit": "count",
+            "value": 2.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "02dc48dd83613b388db1bfaad1deb34d7d5aa5649780ea835021b8f948a1b8e3",
+      "document_id": "A-QUOTE",
+      "document_name": "Draft_Quote.pdf",
+      "document_type": "quote",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-QUOTE",
+              "document_name": "Draft_Quote.pdf",
+              "evidence_id": "EV-A-QUOTE-0014",
+              "extraction_confidence": null,
+              "field_path": "quote_rating.vehicle_count",
+              "normalized_value": 2.0,
+              "period": null,
+              "raw_value": 2,
+              "snippet": "2",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "rating_inputs.vehicle_count",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-QUOTE",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-A-QUOTE-0014"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-QUOTE#qveh",
+            "unit": "count",
+            "value": 2.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-QUOTE",
+              "document_name": "Draft_Quote.pdf",
+              "evidence_id": "EV-A-QUOTE-0015",
+              "extraction_confidence": null,
+              "field_path": "quote_rating.gross_sales",
+              "normalized_value": 8000000.0,
+              "period": null,
+              "raw_value": 8000000,
+              "snippet": "8000000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "rating_inputs.gross_sales",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-QUOTE",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-A-QUOTE-0015"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-QUOTE#qsales",
+            "unit": "USD",
+            "value": 8000000.0
+          }
+        },
+        {
+          "evidence": {
+            "description": {
+              "document_id": "A-QUOTE",
+              "document_name": "Draft_Quote.pdf",
+              "evidence_id": "EV-A-QUOTE-0018",
+              "extraction_confidence": null,
+              "field_path": "quote_operations[0]",
+              "normalized_value": "warehousing",
+              "period": null,
+              "raw_value": "warehousing",
+              "snippet": "warehousing",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "operations_described[0]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "warehousing",
+            "document_id": "A-QUOTE",
+            "exposure_type": "quote_operation",
+            "field_evidence": {
+              "description": "EV-A-QUOTE-0018"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-QUOTE#qop0",
+            "unit": null,
+            "value": null
+          }
+        },
+        {
+          "evidence": {
+            "description": {
+              "document_id": "A-QUOTE",
+              "document_name": "Draft_Quote.pdf",
+              "evidence_id": "EV-A-QUOTE-0019",
+              "extraction_confidence": null,
+              "field_path": "quote_operations[1]",
+              "normalized_value": "local delivery",
+              "period": null,
+              "raw_value": "local delivery",
+              "snippet": "local delivery",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "operations_described[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "local delivery",
+            "document_id": "A-QUOTE",
+            "exposure_type": "quote_operation",
+            "field_evidence": {
+              "description": "EV-A-QUOTE-0019"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-QUOTE#qop1",
+            "unit": null,
+            "value": null
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "3b0bfe13617eec677766530ac46190f1f7c325dd8ef450a42a787ce9da775a42",
+      "document_id": "A-ROSTER",
+      "document_name": "Driver_Roster.xlsx",
+      "document_type": "driver_roster",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "01706b825e7351891bf06b5852807381e7c419b29f5d220ac657165416afe135",
+      "document_id": "A-SOV",
+      "document_name": "SOV.xlsx",
+      "document_type": "sov",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "4df3710be90c308894f5eb8c8b3f70cdb7a72a54c00d399cbc20bc1d3e767050",
+      "document_id": "A-WCWB",
+      "document_name": "WC_Rating_Workbook.xlsx",
+      "document_type": "wc_rating_workbook",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A-WCWB",
+              "document_name": "WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-A-WCWB-0018",
+              "extraction_confidence": null,
+              "field_path": "wc_workbook.total_payroll",
+              "normalized_value": 2000000.0,
+              "period": null,
+              "raw_value": 2000000,
+              "snippet": "2000000",
+              "source_file": null,
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "declared_totals.total_payroll",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A-WCWB",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-A-WCWB-0018"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A-WCWB#total_payroll",
+            "unit": "USD",
+            "value": 2000000.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-EF1BDEB410CC",
+  "schema_version": "1.0",
+  "submission_id": "SPX-CLEAN-2026-0001"
+}

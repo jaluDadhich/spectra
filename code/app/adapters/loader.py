@@ -29,6 +29,7 @@ _REFERENCE_NAME_MARKERS = (
     "ground_truth", "expected_issues", "evaluation_reference",
 )
 _PLAIN_TEXT_EXTENSIONS = {".txt", ".md", ".eml"}
+_DIRECT_SOURCE_EXTENSIONS = {".pdf", ".xlsx", ".xlsm", ".xls"}
 
 
 def is_auxiliary_json(path: Path) -> bool:
@@ -43,13 +44,57 @@ def is_reference_artifact(path: Path) -> bool:
 
 
 def submission_input_paths(folder: Path) -> List[Path]:
-    """List extracted JSON inputs and directly readable text submission files."""
+    """List extracted inputs and source files that have no extracted sidecar.
+
+    A composite JSON can represent multiple physical PDFs. Those files already
+    participate through the extracted sections and are not loaded a second
+    time. Other PDFs/workbooks are included for direct text/cell extraction.
+    Evaluation references remain excluded to avoid answer leakage.
+    """
     paths = [p for p in folder.glob("*.json")
              if not is_auxiliary_json(p) and not is_reference_artifact(p)]
     paths.extend(p for p in folder.iterdir()
                  if p.is_file() and p.suffix.casefold() in _PLAIN_TEXT_EXTENSIONS
                  and not is_reference_artifact(p))
+    represented_sources: set[str] = set()
+    for json_path in paths:
+        if json_path.suffix.casefold() != ".json":
+            continue
+        data, _ = load_json_file(json_path)
+        if not isinstance(data, dict):
+            continue
+        document = data.get("document") if isinstance(data.get("document"), dict) else {}
+        metadata = document.get("source_metadata") if isinstance(document, dict) else {}
+        source_lists = []
+        if isinstance(metadata, dict):
+            source_lists.extend(metadata.get(key, []) for key in
+                                ("source_files", "source_documents"))
+        for source_files in source_lists:
+            if isinstance(source_files, list):
+                for item in source_files:
+                    name = item.get("source_file") if isinstance(item, dict) else item
+                    if isinstance(name, str) and name.strip():
+                        represented_sources.add(_source_stem_key(name))
+        provenance = data.get("provenance") if isinstance(data.get("provenance"), dict) else {}
+        source_file = provenance.get("source_file")
+        if isinstance(source_file, str) and source_file.strip():
+            represented_sources.add(_source_stem_key(source_file))
+        # A conventional per-document sidecar shares its stem with the source.
+        represented_sources.add(_source_stem_key(json_path.name))
+    paths = [path for path in paths
+             if path.suffix.casefold() not in _PLAIN_TEXT_EXTENSIONS
+             or _source_stem_key(path.name) not in represented_sources]
+    for path in folder.iterdir():
+        if (path.is_file() and path.suffix.casefold() in _DIRECT_SOURCE_EXTENSIONS
+                and not is_reference_artifact(path)
+                and _source_stem_key(path.name) not in represented_sources):
+            paths.append(path)
     return sorted(paths, key=lambda path: path.name.casefold())
+
+
+def _source_stem_key(name: str) -> str:
+    leaf = Path(name.split(" :: ", 1)[0].strip()).name
+    return re.sub(r"\(\d+\)$", "", Path(leaf).stem).casefold()
 
 
 class LoadedDocument:
@@ -69,6 +114,10 @@ def _candidate_source_names(doc: LoadedDocument) -> List[str]:
     source_files = env.document.source_metadata.get("source_files", [])
     if isinstance(source_files, list):
         names.extend(item.get("source_file") for item in source_files
+                     if isinstance(item, dict) and item.get("source_file"))
+    source_documents = env.document.source_metadata.get("source_documents", [])
+    if isinstance(source_documents, list):
+        names.extend(item.get("source_file") for item in source_documents
                      if isinstance(item, dict) and item.get("source_file"))
     if doc.source and not doc.source.startswith("<inline:"):
         names.append(Path(doc.source).stem)
@@ -130,6 +179,69 @@ def load_json_file(path: Path) -> Tuple[Optional[Dict[str, Any]], List[str]]:
     if not isinstance(data, dict):
         return None, [f"{path.name}: top-level JSON must be an object"]
     return data, errors
+
+
+def _load_pdf_content(path: Path) -> Dict[str, Any]:
+    """Extract page-addressable text from a PDF for GPT review and citations."""
+    import fitz
+
+    pages = []
+    with fitz.open(path) as pdf:
+        for index, page in enumerate(pdf):
+            text = page.get_text("text").strip()
+            if text:
+                pages.append({"page_number": index + 1, "full_text": text})
+    return {"pages": pages}
+
+
+def _load_workbook_content(path: Path) -> Dict[str, Any]:
+    """Extract every populated worksheet cell while retaining sheet/row refs."""
+    import openpyxl
+
+    formula_book = openpyxl.load_workbook(path, read_only=True, data_only=False)
+    value_book = openpyxl.load_workbook(path, read_only=True, data_only=True)
+    worksheets = []
+    try:
+        for formula_sheet in formula_book.worksheets:
+            value_sheet = value_book[formula_sheet.title]
+            rows = []
+            paired_rows = zip(formula_sheet.iter_rows(), value_sheet.iter_rows())
+            for row_number, (formula_row, value_row) in enumerate(paired_rows, start=1):
+                cells = {}
+                for formula_cell, value_cell in zip(formula_row, value_row):
+                    formula = formula_cell.value
+                    cached = value_cell.value
+                    if formula in (None, "") and cached in (None, ""):
+                        continue
+                    is_formula = isinstance(formula, str) and formula.startswith("=")
+                    value = cached if is_formula and cached is not None else formula
+                    cell_data = {"value": value}
+                    if is_formula:
+                        cell_data["formula"] = formula
+                    cells[formula_cell.column_letter] = cell_data
+                if cells:
+                    rows.append({"row_number": row_number, "cells": cells})
+            if rows:
+                worksheets.append({"name": formula_sheet.title, "rows": rows})
+    finally:
+        formula_book.close()
+        value_book.close()
+    return {"worksheets": worksheets}
+
+
+def load_source_file(path: Path) -> Tuple[Optional[Dict[str, Any]], Optional[str]]:
+    """Extract supported source formats directly when no JSON sidecar exists."""
+    suffix = path.suffix.casefold()
+    try:
+        if suffix == ".pdf":
+            return _load_pdf_content(path), None
+        if suffix in {".xlsx", ".xlsm", ".xls"}:
+            if suffix == ".xls":
+                return None, f"Legacy .xls extraction is unavailable for {path.name}"
+            return _load_workbook_content(path), None
+    except Exception as exc:
+        return None, f"Cannot extract {path.name}: {type(exc).__name__}: {exc}"
+    return None, f"Unsupported source format: {path.name}"
 
 
 def parse_envelope(data: Dict[str, Any], source: str) -> LoadedDocument:

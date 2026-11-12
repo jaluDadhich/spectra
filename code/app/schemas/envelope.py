@@ -38,6 +38,8 @@ class FieldProvenance(BaseModel):
     source_column: Optional[str] = None
     source_cell: Optional[str] = None
     source_page: Optional[int] = None
+    source_line_start: Optional[int] = None
+    source_line_end: Optional[int] = None
     source_span: Optional[str] = None
     extraction_confidence: Optional[float] = None
 
@@ -50,6 +52,7 @@ class FieldProvenance(BaseModel):
         aliases = {
             "page": "source_page", "sheet": "source_sheet", "row": "source_row",
             "column": "source_column", "cell": "source_cell",
+            "line_start": "source_line_start", "line_end": "source_line_end",
             "confidence": "extraction_confidence",
         }
         for alias, canonical in aliases.items():

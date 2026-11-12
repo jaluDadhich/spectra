@@ -504,13 +504,14 @@ class SemanticReviewer:
                            "per-request token limit" if not fits else ""),
             }
 
-        # Greedily pack up to four findings at a time while respecting the same
+        # Greedily pack up to three findings at a time while respecting the same
         # conservative token estimator and completion reserve as the gateway.
         # A finding and all of its citations always stay together.
-        # Scope decisions include long severity and calculation rationales. A
-        # four-finding cap leaves enough completion headroom despite variation
-        # in the model's structured response length.
-        batch_size = 4
+        # Scope decisions include long severity and calculation rationales.
+        # Smaller batches leave more completion room for strict structured
+        # outputs and reduce the chance that one large answer aborts the full
+        # adjudication. Token packing may still produce smaller batches.
+        batch_size = 3
         batch_specs: List[Dict[str, Any]] = []
         current: List[Finding] = []
         for finding in findings:
@@ -567,35 +568,93 @@ class SemanticReviewer:
             if not isinstance(decisions, list):
                 return [], [f"Scope batch {batch_index} returned no decisions list"]
             batch_decisions: Dict[str, Dict[str, Any]] = {}
-            for decision in decisions:
+
+            def validate_scope_decision(decision: Any, allowed_ids: set[str]
+                                        ) -> tuple[Optional[str], Optional[str]]:
                 fid = decision.get("finding_id") if isinstance(decision, dict) else None
-                if fid not in expected_ids or fid in batch_decisions:
-                    return [], [f"Scope batch {batch_index} returned unknown or duplicate finding IDs"]
+                if fid not in allowed_ids:
+                    return None, "unknown finding ID"
                 if decision.get("disposition") not in {"KEEP", "DROP"}:
-                    return [], [f"Scope adjudication returned invalid disposition for {fid}"]
+                    return None, f"invalid disposition for {fid}"
                 if decision.get("issue_id") not in issue_by_id | {"OUT_OF_SCOPE": None}:
-                    return [], [f"Scope adjudication used unknown issue ID for {fid}"]
+                    return None, f"unknown issue ID for {fid}"
                 if (decision.get("disposition") == "KEEP"
                         and decision.get("issue_id") == "OUT_OF_SCOPE"):
-                    return [], [f"Scope adjudication kept out-of-scope finding {fid}"]
+                    return None, f"out-of-scope finding kept for {fid}"
                 if decision.get("issue_nature") not in ISSUE_NATURES:
-                    return [], [f"Scope adjudication returned invalid issue nature for {fid}"]
+                    return None, f"invalid issue nature for {fid}"
                 if not _valid_issue_group(decision.get("issue_group_key"),
                                           decision.get("issue_group_title")):
-                    return [], [f"Scope adjudication returned invalid issue group for {fid}"]
+                    return None, f"invalid issue group for {fid}"
                 if decision.get("severity") not in SEVERITIES:
-                    return [], [f"Scope adjudication returned invalid severity for {fid}"]
+                    return None, f"invalid severity for {fid}"
                 if not str(decision.get("severity_rationale") or "").strip():
-                    return [], [f"Scope adjudication omitted severity rationale for {fid}"]
+                    return None, f"missing severity rationale for {fid}"
                 finding = candidate_by_id[fid]
                 calculation_rationale = str(decision.get("calculation_rationale") or "").strip()
                 if (finding.comparison and finding.comparison.calculation
                         and (not calculation_rationale
                              or calculation_rationale.casefold() == "not applicable")):
-                    return [], [f"Scope adjudication omitted experience-mod rationale for {fid}"]
+                    return None, f"missing experience-mod rationale for {fid}"
+                return fid, None
+
+            for decision in decisions:
+                fid, validation_error = validate_scope_decision(decision, expected_ids)
+                if validation_error:
+                    return [], [f"Scope adjudication batch {batch_index} {validation_error}"]
+                if fid in batch_decisions:
+                    return [], [f"Scope batch {batch_index} returned duplicate finding ID {fid}"]
                 batch_decisions[fid] = decision
-            if set(batch_decisions) != expected_ids:
-                return [], [f"Scope batch {batch_index} did not decide every candidate"]
+
+            missing_ids = expected_ids - set(batch_decisions)
+            repair_attempt = 0
+            max_repair_attempts = 3
+            while missing_ids and repair_attempt < max_repair_attempts:
+                repair_attempt += 1
+                missing_summary = sorted(missing_ids)
+                logger.warning(
+                    "event=scope_batch_retry_missing_decisions batch=%d attempt=%d missing=%d",
+                    batch_index, repair_attempt, len(missing_ids))
+                repair_prompt = batch_spec["user_prompt"] + (
+                    "\n\nREPAIR REQUEST: Your prior response omitted a required decision. "
+                    "Return a decision for every one of these missing finding_id values, "
+                    "and no others: " + json.dumps(missing_summary)
+                    + ". Re-evaluate only those candidates from the supplied evidence and "
+                      "issue catalog. Include every required field and rationale. "
+                      "Set additional_candidates to an empty array.")
+                try:
+                    self.tracker.check_budget()
+                    repair_response = self.gateway.complete_json(
+                        system_prompt=system_prompt,
+                        user_prompt=repair_prompt,
+                        json_schema=SCOPE_SCHEMA, schema_name="scope_adjudication")
+                    self.tracker.record(
+                        repair_response.input_tokens, repair_response.output_tokens,
+                        retries=repair_response.retries, model=repair_response.model,
+                        cost_tier="reasoning")
+                except Exception as exc:
+                    return [], [f"Scope adjudication repair {repair_attempt} for batch "
+                                f"{batch_index} unavailable: {exc}"]
+                repair_content = repair_response.content
+                repair_decisions = (repair_content.get("decisions")
+                                    if isinstance(repair_content, dict) else None)
+                if not isinstance(repair_decisions, list):
+                    return [], [f"Scope adjudication repair for batch {batch_index} "
+                                "returned no decisions list"]
+                for decision in repair_decisions:
+                    fid = decision.get("finding_id") if isinstance(decision, dict) else None
+                    if fid in batch_decisions:
+                        continue
+                    fid, validation_error = validate_scope_decision(decision, missing_ids)
+                    if validation_error:
+                        return [], [f"Scope adjudication repair for batch {batch_index} "
+                                    f"{validation_error}"]
+                    batch_decisions[fid] = decision
+                missing_ids = expected_ids - set(batch_decisions)
+            if missing_ids:
+                still_missing = sorted(missing_ids)
+                return [], [f"Scope batch {batch_index} still lacks decisions for "
+                            f"{still_missing} after {repair_attempt} repair attempt(s)"]
 
             batch_additions = content.get("additional_candidates", [])
             if not isinstance(batch_additions, list):

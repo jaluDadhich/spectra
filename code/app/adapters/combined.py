@@ -63,6 +63,29 @@ def _section_source(section_ranges: Any, source_files: Any, form: str,
     return None
 
 
+def _section_source_from_documents(source_documents: Any, form: str
+                                   ) -> Optional[Dict[str, Any]]:
+    """Resolve physical PDFs listed as source_documents in extraction metadata.
+
+    Some extractors describe one physical file with multiple form sections
+    instead of using the more granular ``source_files`` representation.
+    Attach that source to each contained form so citations still open the PDF.
+    """
+    if not isinstance(source_documents, list):
+        return None
+    form_label = form.replace("_", " ").casefold()
+    matches = []
+    for item in source_documents:
+        if not isinstance(item, dict) or not item.get("source_file"):
+            continue
+        sections = item.get("form_sections", [])
+        normalized = {str(section).replace("_", " ").casefold()
+                      for section in sections} if isinstance(sections, list) else set()
+        if form_label in normalized:
+            matches.append(item)
+    return matches[0] if len(matches) == 1 else None
+
+
 def _physical_source_name(source_dir: Any, source_name: str) -> Optional[Tuple[str, str]]:
     """Return (workspace-relative path, actual sibling name) for a source."""
     workspace_root = Path(__file__).resolve().parents[3]
@@ -108,6 +131,7 @@ class AcordCombinedAdapter(DocumentAdapter):
         source_dir = parent_meta.get("spectra_source_dir")
         section_ranges = parent_meta.get("section_page_ranges", {})
         source_files = parent_meta.get("source_files", [])
+        source_documents = parent_meta.get("source_documents", [])
         for key, section in data.items():
             if not isinstance(section, dict):
                 continue
@@ -119,6 +143,9 @@ class AcordCombinedAdapter(DocumentAdapter):
             for version_label, version_data in versions:
                 section_source = _section_source(
                     section_ranges, source_files, form, version_label)
+                if section_source is None:
+                    section_source = _section_source_from_documents(
+                        source_documents, form)
                 sub_meta = dict(parent_meta)
                 # A combined JSON may list several PDFs. Never let its parent
                 # source (often the ACORD 125) leak into every nested form.

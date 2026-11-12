@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A03-2026-1042",
+  "document": {
+    "document_id": "EXT-NCCI-EXPERIENCE-RATING-METHOD",
+    "document_type": "external_records",
+    "document_name": "NCCI Experience Rating Worksheet Overview",
+    "issuer": "National Council on Compensation Insurance",
+    "version": "public methodology reference",
+    "source_metadata": {
+      "source_kind": "external_methodology_reference",
+      "not_insured_specific": true
+    }
+  },
+  "data": {
+    "observations": [
+      {
+        "record_id": "NCCI-EXPERIENCE-RATING-FORMULA",
+        "source_name": "NCCI Experience Rating Plan methodology",
+        "record_type": "workers_comp_experience_mod_methodology",
+        "subject": "experience_rating_methodology",
+        "record_url": "https://www.ncci.com/Articles/Documents/UW_ABC_Exp_Rating.pdf#page=14",
+        "source_page": 14,
+        "retrieved_at": "2026-11-11",
+        "fields": {
+          "formula": "M = [AP + EE*(1-W) + B + W*AE] / [EP + EE*(1-W) + B + W*EE] = adjusted actual losses / adjusted expected losses.",
+          "formula_summary": "NCCI worksheet: actual total J = actual primary I + expected excess C*(1-W) + ballast G + actual excess F*W; expected total K = expected primary E + expected excess C*(1-W) + ballast G + expected excess C*W; experience modifier M = J/K.",
+          "variable_definitions": {
+            "AP": "Actual primary losses",
+            "AE": "Actual excess losses",
+            "EP": "Expected primary losses",
+            "EE": "Expected excess losses",
+            "W": "Weight applied to excess losses",
+            "B": "Ballast / stabilizing value"
+          },
+          "expected_loss_build": "Expected losses by classification = expected loss rate (ELR) * payroll / 100; expected primary losses = expected losses * D-ratio.",
+          "peer_basis": "The plan compares an employer's own loss experience with expected losses for similarly classified employers.",
+          "limitation": "This public methodology reference does not authenticate or calculate a specific insured's factor. A current jurisdiction- and effective-date-specific bureau worksheet and its rating parameters are required."
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "official_public_source_reference",
+    "source_file": "https://www.ncci.com/Articles/Documents/UW_ABC_Exp_Rating.pdf#page=14"
+  }
+}

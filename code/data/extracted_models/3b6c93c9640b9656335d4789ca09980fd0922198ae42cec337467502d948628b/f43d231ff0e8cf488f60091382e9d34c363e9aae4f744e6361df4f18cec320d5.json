@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-11-11T04:23:56.492112+00:00",
+  "documents": [
+    {
+      "content_hash": "5c965fbdc4336e87317e4207132de4299b20e254026932f5476a071478aa69ae",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A04_ACORD_125_126_130_140_Combined.json",
+      "document_type": "unsupported",
+      "exposures": [],
+      "extraction_status": "REJECTED_BY_JUDGE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "8d9ce15a8596c3510d90bcf6ea4343d66256755ad428417a2a574d9b55442881",
+      "document_id": "TEXT-A04_Broker_Email",
+      "document_name": "A04_Broker_Email.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "NO_EXPOSURES",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d3509f5b62601966bb7bd2283dd73f1aba075e8931c2d43a917b43e9a83a5e8b",
+      "document_id": "TEXT-A04_Operations_Public_Record_Supplement",
+      "document_name": "A04_Operations_Public_Record_Supplement.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "NO_EXPOSURES",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-308CFD411E5D",
+  "schema_version": "1.0",
+  "submission_id": "A04_United_Parcel_Service_Inc_UPS"
+}

@@ -371,6 +371,7 @@ def create_app(settings: Optional[Settings] = None,
                 if runs:
                     result = repository.get_run(runs[0]["run_id"])
                     if result is not None:
+                        _refresh_quality_score(result)
                         latest = {
                             "run_id": result.run_id,
                             "status": result.status.value,
@@ -623,17 +624,26 @@ def _decorate_finding_sources(payload: dict, result: ReviewResult, settings: Set
         document_id = source_info.get("document_id")
         if document_id in labels:
             source_info["document_name"] = labels[document_id]
-            source_info["label"] = labels[document_id]
+            if not source_info.get("label"):
+                source_info["label"] = labels[document_id]
 
 
 def _result_payload(result: ReviewResult, settings: Optional[Settings] = None,
                     workspace_root: Optional[Path] = None) -> dict:
+    _refresh_quality_score(result)
     payload = result.model_dump(mode="json")
     if settings is not None and workspace_root is not None:
         cache = {}
         for finding in payload.get("findings", []):
             _decorate_finding_sources(finding, result, settings, workspace_root, cache)
     return payload
+
+
+def _refresh_quality_score(result: ReviewResult) -> None:
+    """Recompute legacy run scores for display without rewriting stored history."""
+    if result.quality_score is None or not result.quality_score.dimensions:
+        from app.scoring import score_submission
+        result.quality_score = score_submission(result)
 
 
 app = create_app()

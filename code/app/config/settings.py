@@ -21,10 +21,11 @@ class Settings(BaseSettings):
     # --- OpenAI / LLM ---
     openai_api_key: Optional[SecretStr] = Field(default=None)
     openai_model: str = Field(default="gpt-6-luna")
-    # Low-cost model handles intake, line-agent discovery, explanations and
-    # quality points; the stronger model is reserved for final comparison/judgment.
+    # Low-cost Luna handles intake and specialist discovery; Terra handles
+    # final cross-document comparison and issue-scope judgment at lower cost
+    # than Sol while retaining a reasoning-oriented model for this workload.
     openai_fast_model: Optional[str] = Field(default="gpt-6-luna")
-    openai_reasoning_model: Optional[str] = Field(default="gpt-6.1-sol")
+    openai_reasoning_model: Optional[str] = Field(default="gpt-6.1-terra")
     openai_fast_reasoning_effort: str = Field(default="low")
     openai_reasoning_effort: str = Field(default="high")
     openai_base_url: Optional[str] = Field(default=None)
@@ -41,18 +42,18 @@ class Settings(BaseSettings):
 
     spectra_llm_enabled: bool = Field(default=False)
     spectra_llm_budget_usd_per_case: float = Field(default=1.00, ge=0)
-    spectra_max_llm_calls_per_case: int = Field(default=12, ge=0)
+    spectra_max_llm_calls_per_case: int = Field(default=64, ge=0)
     spectra_max_concurrent_llm_calls: int = Field(default=2, ge=1)
     spectra_max_evidence_payload_chars: int = Field(default=24_000, gt=0)
     # Maximum cited-evidence bundle for one token-packed scope-judge batch.
     spectra_scope_evidence_payload_chars: int = Field(default=42_000, gt=0)
 
-    # USD per 1K tokens at default Luna/6.1 Sol rates; override when models
+    # USD per 1K tokens at default Luna/6.1 Terra rates; override when models
     # or provider pricing change.
     spectra_price_input_per_1k: Optional[float] = Field(default=0.0001, ge=0)
     spectra_price_output_per_1k: Optional[float] = Field(default=0.0005, ge=0)
-    spectra_reasoning_price_input_per_1k: Optional[float] = Field(default=0.002, ge=0)
-    spectra_reasoning_price_output_per_1k: Optional[float] = Field(default=0.01, ge=0)
+    spectra_reasoning_price_input_per_1k: Optional[float] = Field(default=0.001, ge=0)
+    spectra_reasoning_price_output_per_1k: Optional[float] = Field(default=0.005, ge=0)
 
     # --- Runtime ---
     spectra_log_level: str = Field(default="INFO")

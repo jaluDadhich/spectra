@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A03-2026-1042",
+  "document": {
+    "document_id": "A03-WC-MOD-SUPPORT-EXTRACT",
+    "document_type": "wc_rating_workbook",
+    "document_name": "A03_WC_Rating_Workbook.xlsx",
+    "version": "synthetic training support",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    }
+  },
+  "data": {
+    "current_experience_mod": {
+      "factor": 1.07,
+      "effective_date": "2026-11-01",
+      "source": "current_support_workbook_synthetic_not_bureau_issued"
+    },
+    "experience_mod_history": [
+      {
+        "factor": 0.96,
+        "effective_date": "2024-11-01",
+        "source": "prior term worksheet"
+      },
+      {
+        "factor": 0.94,
+        "effective_date": "2025-11-01",
+        "source": "prior term worksheet"
+      }
+    ]
+  },
+  "provenance": {
+    "extraction_source": "verified_workbook_cells",
+    "fields": {
+      "current_experience_mod.factor": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 7,
+        "source_column": "B",
+        "source_cell": "B7"
+      },
+      "current_experience_mod.effective_date": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 7,
+        "source_column": "C",
+        "source_cell": "C7"
+      },
+      "experience_mod_history[0].factor": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 5,
+        "source_column": "B",
+        "source_cell": "B5"
+      },
+      "experience_mod_history[0].effective_date": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 5,
+        "source_column": "C",
+        "source_cell": "C5"
+      },
+      "experience_mod_history[1].factor": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 6,
+        "source_column": "B",
+        "source_cell": "B6"
+      },
+      "experience_mod_history[1].effective_date": {
+        "source_sheet": "Experience Mod History",
+        "source_row": 6,
+        "source_column": "C",
+        "source_cell": "C6"
+      }
+    }
+  }
+}

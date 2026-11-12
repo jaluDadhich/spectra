@@ -304,19 +304,33 @@ class ExternalRecordsAdapter(DocumentAdapter):
             if not isinstance(rec, dict):
                 continue
             rid = str(get_any(rec, "record_id", "id") or f"{doc_id}#ext{i}")
-            eid = ev.make(f"observations[{i}]", f"external[{rid}]", rec)
+            record_url = get_any(rec, "record_url", "url")
+            page_value = parse_number(get_any(rec, "source_page", "page"))
+            source_location = SourceLocation(
+                page=int(page_value) if page_value is not None else None,
+                url=str(record_url) if record_url else None,
+                json_path=f"observations[{i}]", available=bool(record_url))
+            eid = ev.make(f"observations[{i}]", f"external[{rid}]", rec,
+                          source_location_override=source_location)
+            nested_fields = rec.get("fields")
+            observation_fields = (dict(nested_fields)
+                                  if isinstance(nested_fields, dict) else {})
+            observation_fields.update({
+                key: value for key, value in rec.items()
+                if key not in {"record_id", "id", "fields"}
+            })
             out.external_observations.append(ExternalObservation(
                 record_id=rid, document_id=doc_id, field_evidence={"record": eid},
                 source_name=str(get_any(rec, "source_name", "source", default="supplied_external")),
                 outcome_state="POSSIBLE_MATCH",  # provisional; resolved by external checks
                 subject=get_any(rec, "subject", "record_type"),
                 record_identifier=get_any(rec, "record_identifier", "registration_number"),
-                record_url=get_any(rec, "record_url", "url"),
+                record_url=record_url,
                 retrieved_at=normalize_date(get_any(rec, "retrieved_at")),
                 record_date=normalize_date(get_any(rec, "record_date", "inspection_date")),
                 match_rationale=None,
                 limitations=["Supplied external record; identity not yet resolved"],
-                fields={k: v for k, v in rec.items() if k not in {"record_id", "id"}}))
+                fields=observation_fields))
 
 
 class GenericAdapter(DocumentAdapter):

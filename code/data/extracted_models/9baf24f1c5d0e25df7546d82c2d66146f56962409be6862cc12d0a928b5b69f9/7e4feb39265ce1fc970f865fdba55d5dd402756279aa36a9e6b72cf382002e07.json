@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-11-06T07:50:20.215784+00:00",
+  "documents": [
+    {
+      "content_hash": "59af76f1cc710bb6e293f05b3f06776997a2e40c5398e2183cfa6f51b5aa31c8",
+      "document_id": "M1",
+      "document_name": null,
+      "document_type": "unsupported",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-FE609E08F933",
+  "schema_version": "1.0",
+  "submission_id": "T-SEC4"
+}

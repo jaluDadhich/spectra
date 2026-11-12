@@ -1,0 +1,925 @@
+{
+  "created_at": "2026-11-11T16:20:30.009752+00:00",
+  "documents": [
+    {
+      "content_hash": "2017bd64cc1a795c93ceefc98b5478a73641aa6940a3d0df8d38340df8287bd9",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf",
+      "document_type": "acord_combined",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "63b6c658d9715e82f254b6fabf8c5bc6f8eec04fed416239c8cf8bb00e508dad",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_125",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_125",
+      "document_type": "acord_125",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_125",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_125-0001",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 127500000.0,
+              "period": "annual",
+              "raw_value": 127500000,
+              "snippet": "127500000",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "business_operations.annual_gross_sales",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_125-0001"
+            },
+            "location_id": null,
+            "period": "annual",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_125#sales",
+            "unit": "USD",
+            "value": 127500000.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "dc49154e11553ba26991ec364a34929b0237026161101ac0acf040509c71299c",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+      "document_type": "acord_126",
+      "exposures": [
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0001",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].count",
+              "normalized_value": 5.0,
+              "period": "2021",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[0].claim_count_all_lines",
+                "line_end": null,
+                "line_start": null,
+                "page": 8,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0001"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126#hist0",
+            "unit": "count",
+            "value": 5.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0002",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].count",
+              "normalized_value": 7.0,
+              "period": "2022",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[1].claim_count_all_lines",
+                "line_end": null,
+                "line_start": null,
+                "page": 8,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0002"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126#hist1",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0003",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].count",
+              "normalized_value": 8.0,
+              "period": "2023",
+              "raw_value": 8,
+              "snippet": "8",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[2].claim_count_all_lines",
+                "line_end": null,
+                "line_start": null,
+                "page": 8,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0003"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126#hist2",
+            "unit": "count",
+            "value": 8.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0004",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].count",
+              "normalized_value": 10.0,
+              "period": "2024",
+              "raw_value": 10,
+              "snippet": "10",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[3].claim_count_all_lines",
+                "line_end": null,
+                "line_start": null,
+                "page": 8,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0004"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126#hist3",
+            "unit": "count",
+            "value": 10.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_126",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0005",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 12.0,
+              "period": "2025",
+              "raw_value": 12,
+              "snippet": "12",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[4].claim_count_all_lines",
+                "line_end": null,
+                "line_start": null,
+                "page": 8,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_126-0005"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_126#hist4",
+            "unit": "count",
+            "value": 12.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d2ccccb4ec7e3749b5855651692a91be1a8b4a352054bb4d48247cf5bdb2e854",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+      "document_type": "acord_130",
+      "exposures": [
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0073",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].count",
+              "normalized_value": 9.0,
+              "period": "2021",
+              "raw_value": 9,
+              "snippet": "9",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_carrier_information_loss_history[0].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 3,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0073"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#hist0",
+            "unit": "count",
+            "value": 9.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0074",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].count",
+              "normalized_value": 9.0,
+              "period": "2022",
+              "raw_value": 9,
+              "snippet": "9",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_carrier_information_loss_history[1].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 3,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0074"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#hist1",
+            "unit": "count",
+            "value": 9.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0075",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].count",
+              "normalized_value": 9.0,
+              "period": "2023",
+              "raw_value": 9,
+              "snippet": "9",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_carrier_information_loss_history[2].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 3,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0075"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#hist2",
+            "unit": "count",
+            "value": 9.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0076",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].count",
+              "normalized_value": 9.0,
+              "period": "2024",
+              "raw_value": 9,
+              "snippet": "9",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_carrier_information_loss_history[3].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 3,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0076"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#hist3",
+            "unit": "count",
+            "value": 9.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0077",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 9.0,
+              "period": "2025",
+              "raw_value": 9,
+              "snippet": "9",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_carrier_information_loss_history[4].claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 3,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0077"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#hist4",
+            "unit": "count",
+            "value": 9.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_130",
+              "evidence_id": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0079",
+              "extraction_confidence": null,
+              "field_path": "wc_application.total_payroll",
+              "normalized_value": 22100000.0,
+              "period": null,
+              "raw_value": 22100000,
+              "snippet": "22100000",
+              "source_file": null,
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "experience_modification_premium_calculation.payroll_declared_on_application",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-A03-ACORD-125-126-130-140-COMBINED#acord_130-0079"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A03-ACORD-125-126-130-140-COMBINED#acord_130#declared_payroll",
+            "unit": "USD",
+            "value": 22100000.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "9f3bd556a4ba9322eb466a251a0b656333dee5152f2b1b6c04543af39f28dc37",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED#acord_140",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf :: ACORD_140",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "6933d0ff3c2fb22d13955ddfab71815c964a3f1412d9f58901a453e3e967bca7",
+      "document_id": "A03-DRAFT-QUOTE-EXTRACT",
+      "document_name": "A03_Draft_Quote.pdf",
+      "document_type": "quote",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "64842794b05405a5abbdb25d36914456074a9a15d89a3a7a97363400ebf3c65d",
+      "document_id": "A03-WC-MOD-SUPPORT-EXTRACT",
+      "document_name": "A03_WC_Rating_Workbook.xlsx",
+      "document_type": "wc_rating_workbook",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "8b478d4784f7dbd2464482e2fac3051e2966b5b9e0d3b1742747bf06abb733a2",
+      "document_id": "EXT-NCCI-EXPERIENCE-RATING-METHOD",
+      "document_name": "NCCI Experience Rating Worksheet Overview",
+      "document_type": "external_records",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "15c2c5f129fb62448e3af9a187eac23e8c2bc08049c4f594dd84879c79fc474b",
+      "document_id": "SOURCE-A03_Draft_Quote",
+      "document_name": "A03_Draft_Quote.pdf",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "b9c9791003ef7abd65b7a3520f9e96124e4cbc382f4ce8cebded523db2c920af",
+      "document_id": "SOURCE-A03_External_Public_Research",
+      "document_name": "A03_External_Public_Research.xlsx",
+      "document_type": "external_records",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "52b4c00a99a095bb318365bcd1f6213c7b313afbad8ae03e00ca963316158a69",
+      "document_id": "SOURCE-A03_Fleet_Schedule",
+      "document_name": "A03_Fleet_Schedule.xlsx",
+      "document_type": "fleet_schedule",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A03_Fleet_Schedule",
+              "document_name": "A03_Fleet_Schedule.xlsx",
+              "evidence_id": "EV-SOURCE-A03_Fleet_Schedule-2826",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 290.0,
+              "period": null,
+              "raw_value": 290,
+              "snippet": "290",
+              "source_file": "documents/A03_FedEx_Corporation/A03_Fleet_Schedule.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[1].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Unit Count Reconciliation",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Declared power units",
+            "document_id": "SOURCE-A03_Fleet_Schedule",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-SOURCE-A03_Fleet_Schedule-2826"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A03_Fleet_Schedule#vehicle_count",
+            "unit": "count",
+            "value": 290.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "1c139e6fde703b8e7fb3579d633f394e1378b30f410703c155c915f148d28dae",
+      "document_id": "SOURCE-A03_Loss_Runs",
+      "document_name": "A03_Loss_Runs.xlsx",
+      "document_type": "loss_run",
+      "exposures": [
+        {
+          "evidence": {
+            "claim_count": {
+              "document_id": "SOURCE-A03_Loss_Runs",
+              "document_name": "A03_Loss_Runs.xlsx",
+              "evidence_id": "EV-SOURCE-A03_Loss_Runs-0742",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.claim_count",
+              "normalized_value": 46.0,
+              "period": null,
+              "raw_value": 46,
+              "snippet": "46",
+              "source_file": "documents/A03_FedEx_Corporation/A03_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[1].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "count"
+            },
+            "total_incurred": {
+              "document_id": "SOURCE-A03_Loss_Runs",
+              "document_name": "A03_Loss_Runs.xlsx",
+              "evidence_id": "EV-SOURCE-A03_Loss_Runs-0741",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.total_incurred",
+              "normalized_value": 6926927.0,
+              "period": null,
+              "raw_value": 6926927,
+              "snippet": "6926927",
+              "source_file": "documents/A03_FedEx_Corporation/A03_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B9",
+                "column": "B",
+                "json_path": "worksheets[1].rows[7].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 9,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "declared_count=46",
+            "document_id": "SOURCE-A03_Loss_Runs",
+            "exposure_type": "loss_summary",
+            "field_evidence": {
+              "claim_count": "EV-SOURCE-A03_Loss_Runs-0742",
+              "total_incurred": "EV-SOURCE-A03_Loss_Runs-0741"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A03_Loss_Runs#summary",
+            "unit": "USD",
+            "value": 6926927.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "e7bfaae61dde513295abf6a7473248e366e9cbccaa969c143453435978759de0",
+      "document_id": "SOURCE-A03_Property_SOV",
+      "document_name": "A03_Property_SOV.xlsx",
+      "document_type": "sov",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "46e84dc76f09be557d570f0a5b9022fa4186001780d0182d0f1f62295373c25f",
+      "document_id": "SOURCE-A03_Submission_Checklist",
+      "document_name": "A03_Submission_Checklist.xlsx",
+      "document_type": "submission_checklist",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "1771ee58c98f91426538df66df5d07677507ed1c569767bf1bafa4030419b861",
+      "document_id": "SOURCE-A03_WC_Rating_Workbook",
+      "document_name": "A03_WC_Rating_Workbook.xlsx",
+      "document_type": "wc_rating_workbook",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A03_WC_Rating_Workbook",
+              "document_name": "A03_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A03_WC_Rating_Workbook-0271",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 127500000.0,
+              "period": null,
+              "raw_value": 127500000,
+              "snippet": "127500000",
+              "source_file": "documents/A03_FedEx_Corporation/A03_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[2].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Gross sales",
+            "document_id": "SOURCE-A03_WC_Rating_Workbook",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-SOURCE-A03_WC_Rating_Workbook-0271"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A03_WC_Rating_Workbook#sales",
+            "unit": "USD",
+            "value": 127500000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A03_WC_Rating_Workbook",
+              "document_name": "A03_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A03_WC_Rating_Workbook-0272",
+              "extraction_confidence": null,
+              "field_path": "exposures[declared_payroll_total].value",
+              "normalized_value": 22100000.0,
+              "period": null,
+              "raw_value": 22100000,
+              "snippet": "22100000",
+              "source_file": "documents/A03_FedEx_Corporation/A03_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B6",
+                "column": "B",
+                "json_path": "worksheets[2].rows[4].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 6,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "WC payroll",
+            "document_id": "SOURCE-A03_WC_Rating_Workbook",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-SOURCE-A03_WC_Rating_Workbook-0272"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A03_WC_Rating_Workbook#declared_payroll_total",
+            "unit": "USD",
+            "value": 22100000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A03_WC_Rating_Workbook",
+              "document_name": "A03_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A03_WC_Rating_Workbook-0273",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 312.0,
+              "period": null,
+              "raw_value": 312,
+              "snippet": "312",
+              "source_file": "documents/A03_FedEx_Corporation/A03_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B8",
+                "column": "B",
+                "json_path": "worksheets[2].rows[6].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 8,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Power units",
+            "document_id": "SOURCE-A03_WC_Rating_Workbook",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-SOURCE-A03_WC_Rating_Workbook-0273"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A03_WC_Rating_Workbook#vehicle_count",
+            "unit": "count",
+            "value": 312.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "9bb76d75c1469aa9e147ea3763baff7025a99dcf2e7a80a3e043989481609a34",
+      "document_id": "TEXT-A03_Broker_Email",
+      "document_name": "A03_Broker_Email.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "09b6e7723b97dd3eab2ea90798c1421d69e97561b834a1433c7d3f200495b854",
+      "document_id": "TEXT-A03_Operations_Public_Record_Supplement",
+      "document_name": "A03_Operations_Public_Record_Supplement.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-3AA71FE6214B",
+  "schema_version": "1.0",
+  "submission_id": "A03_FedEx_Corporation"
+}

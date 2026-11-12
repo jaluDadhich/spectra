@@ -156,7 +156,7 @@ def run_agent_graph(case: CanonicalCase, reviewer: SemanticReviewer,
             if repository and account_memory_key:
                 memory = repository.get_agent_memory(account_memory_key, agent_name)
             calls_before = reviewer.tracker.usage.calls
-            agent_question = question
+            intake: List[Dict[str, Any]] = []
             if agent_name in {"wc_agent", "gl_agent", "auto_agent", "property_agent"}:
                 relevant_doc_ids = set(specific_docs + unstructured_docs)
                 if "external_records" in relevant_types:
@@ -165,23 +165,51 @@ def run_agent_graph(case: CanonicalCase, reviewer: SemanticReviewer,
                         if dtype == "external_records")
                 intake = [{"title": f.get("title"), "evidence": [
                     e.get("evidence_id") for e in f.get("evidence", [])]}
-                          for f in state.get("findings", [])
-                          if any(e.get("document_id") in relevant_doc_ids
-                                 for e in f.get("evidence", []))]
-                if intake:
-                    agent_question += " Intake-agent observations to independently verify: " + \
-                        json.dumps(intake, default=str)
-            findings, notes = reviewer.review(
-                case=case,
-                task_id=agent_name,
-                question=agent_question,
-                allowed_families=_ALLOWED_ISSUE_FAMILIES.get(
-                    agent_name, [f"U{n:02d}" for n in range(1, 15)]),
-                evidence_ids=evidence_ids,
-                schema_name="document_triage" if fast else "spectra_candidates",
-                reviewer_memory=memory,
-            )
-            success = reviewer.last_call_succeeded
+                    for f in state.get("findings", [])
+                    if any(e.get("document_id") in relevant_doc_ids
+                           for e in f.get("evidence", []))]
+
+            allowed_families = _ALLOWED_ISSUE_FAMILIES.get(
+                agent_name, [f"U{n:02d}" for n in range(1, 15)])
+            schema_name = "document_triage" if fast else "spectra_candidates"
+
+            def review_batch(batch_ids: List[str], depth: int = 0
+                             ) -> tuple[List[Finding], List[str], bool]:
+                batch_question = question
+                batch_id_set = set(batch_ids)
+                batch_intake = [item for item in intake
+                                if batch_id_set.intersection(item.get("evidence", []))]
+                if batch_intake:
+                    batch_question += " Intake-agent observations to independently verify: " + \
+                        json.dumps(batch_intake, default=str)
+
+                batch_findings, batch_notes = reviewer.review(
+                    case=case,
+                    task_id=agent_name,
+                    question=batch_question,
+                    allowed_families=allowed_families,
+                    evidence_ids=batch_ids,
+                    schema_name=schema_name,
+                    reviewer_memory=memory,
+                )
+                batch_succeeded = reviewer.last_call_succeeded
+                token_budget_hit = (not batch_succeeded and any(
+                    "Estimated prompt exceeds the per-request token budget" in note
+                    for note in batch_notes))
+                if token_budget_hit and len(batch_ids) > 1:
+                    midpoint = len(batch_ids) // 2
+                    logger.info(
+                        "event=agent_evidence_batch_split run_id=%s agent=%s reason=token_budget evidence=%d depth=%d",
+                        run_id, agent_name, len(batch_ids), depth)
+                    left_findings, left_notes, left_ok = review_batch(
+                        batch_ids[:midpoint], depth + 1)
+                    right_findings, right_notes, right_ok = review_batch(
+                        batch_ids[midpoint:], depth + 1)
+                    return (left_findings + right_findings,
+                            left_notes + right_notes, left_ok and right_ok)
+                return batch_findings, batch_notes, batch_succeeded
+
+            findings, notes, success = review_batch(evidence_ids)
             event = {
                 "node": agent_name,
                 "status": "completed" if success else "failed",

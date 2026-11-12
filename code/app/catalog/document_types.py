@@ -52,6 +52,9 @@ _REGISTRY: Dict[str, Type[DocumentAdapter]] = {
 
 # Declared-type aliases seen in the wild.
 _ALIASES = {
+    "combined_acord_submission": "acord_combined",
+    "acord_combined_submission": "acord_combined",
+    "combined_acord_packet": "acord_combined",
     "acord125": "acord_125", "acord126": "acord_126", "acord130": "acord_130",
     "acord140": "acord_140", "application": "acord_125",
     "wc_workbook": "wc_rating_workbook", "wc_rating": "wc_rating_workbook",
@@ -74,11 +77,18 @@ class DocumentTypeRegistry:
     def adapter_for(self, declared_type: Optional[str], data: dict) -> DocumentAdapter:
         if declared_type:
             key = declared_type.strip().lower().replace(" ", "_").replace("-", "_")
-            if key.startswith("acord_combined"):
+            if (key.startswith(("acord_combined", "combined_acord"))
+                    or (key.startswith("acord_") and "combined" in key)):
                 return AcordCombinedAdapter()
             key = _ALIASES.get(key, key)
             if key in _REGISTRY:
                 return _REGISTRY[key]()
+            # Extractors use several account-agnostic names for packets that
+            # contain multiple ACORD sections. Prefer the actual payload shape
+            # over an unfamiliar declared label instead of degrading it to the
+            # generic adapter.
+            if is_combined_acord(data):
+                return AcordCombinedAdapter()
             return GenericAdapter()
         sniffed = self.sniff(data)
         return _REGISTRY[sniffed]() if sniffed else UnstructuredDocumentAdapter()

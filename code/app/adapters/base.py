@@ -88,6 +88,8 @@ class EvidenceFactory:
         elif prov is not None:
             location = SourceLocation(
                 page=prov.source_page,
+                line_start=prov.source_line_start,
+                line_end=prov.source_line_end,
                 sheet=prov.source_sheet,
                 row=prov.source_row,
                 column=prov.source_column,

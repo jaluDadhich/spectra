@@ -28,6 +28,8 @@ class CellValue:
     row: int              # 1-based worksheet row number
     row_index: int        # 0-based index into the sheet's row list
     cell_index: int       # 0-based index into the row's cell list
+    formula: Optional[str] = None
+    cached_value: Any = None
 
 
 @dataclass
@@ -80,16 +82,19 @@ def _iter_sheets(data: Dict[str, Any]) -> List[Tuple[int, str, Dict[str, Any], s
     return found
 
 
-def _parse_cells(row_obj: Dict[str, Any]) -> List[Tuple[str, str, Any, int]]:
-    """Normalize a row's cells to (column_letter, coordinate, value, cell_index)."""
+def _parse_cells(row_obj: Dict[str, Any]) -> List[Tuple[str, str, Any, int, Optional[str], Any]]:
+    """Normalize cells and preserve formula metadata for cited calculations."""
     cells = row_obj.get("cells")
-    out: List[Tuple[str, str, Any, int]] = []
+    out: List[Tuple[str, str, Any, int, Optional[str], Any]] = []
     if isinstance(cells, list):
         for idx, cell in enumerate(cells):
             if not isinstance(cell, dict):
                 continue
             value = cell.get("value")
-            if value is None or (isinstance(value, str) and not value.strip()):
+            cached_value = cell.get("cached_value")
+            if (value is None and cached_value is None) or (
+                    isinstance(value, str) and not value.strip()
+                    and cached_value is None):
                 continue
             column = str(cell.get("column") or "").strip().upper()
             coordinate = str(cell.get("coordinate") or "")
@@ -97,14 +102,25 @@ def _parse_cells(row_obj: Dict[str, Any]) -> List[Tuple[str, str, Any, int]]:
                 column = "".join(ch for ch in coordinate if ch.isalpha()).upper()
             if not column:
                 column = coordinate
-            out.append((column, coordinate or column, value, idx))
+            out.append((column, coordinate or column, value, idx,
+                        cell.get("formula"), cached_value))
     elif isinstance(cells, dict):
         for idx, (coord, cell) in enumerate(sorted(cells.items())):
             value = cell.get("value") if isinstance(cell, dict) else cell
-            if value is None or (isinstance(value, str) and not value.strip()):
+            cached_value = cell.get("cached_value") if isinstance(cell, dict) else None
+            if (value is None and cached_value is None) or (
+                    isinstance(value, str) and not value.strip()
+                    and cached_value is None):
                 continue
-            column = "".join(ch for ch in str(coord) if ch.isalpha()).upper()
-            out.append((column, str(coord), value, idx))
+            raw_coordinate = str(coord)
+            column = "".join(ch for ch in raw_coordinate if ch.isalpha()).upper()
+            # Direct workbook loading stores a row's cells as {"A": value}
+            # and carries the actual worksheet row on the row object.
+            # Expand that to A17 so citation links have a real cell address.
+            coordinate = (raw_coordinate if any(ch.isdigit() for ch in raw_coordinate)
+                          else f"{column}{row_obj.get('row', row_obj.get('row_number', ''))}")
+            formula = cell.get("formula") if isinstance(cell, dict) else None
+            out.append((column, coordinate, value, idx, formula, cached_value))
     return out
 
 
@@ -123,8 +139,10 @@ def parse_workbook(data: Dict[str, Any]) -> List[SheetGrid]:
                 row_number = row_index + 1
             cells = [
                 CellValue(column=col, coordinate=coord, value=val,
-                          row=row_number, row_index=row_index, cell_index=cell_idx)
-                for col, coord, val, cell_idx in _parse_cells(row_obj)
+                          row=row_number, row_index=row_index, cell_index=cell_idx,
+                          formula=formula, cached_value=cached_value)
+                for col, coord, val, cell_idx, formula, cached_value
+                in _parse_cells(row_obj)
             ]
             if cells:
                 grid.rows.append((row_number, row_index, cells))

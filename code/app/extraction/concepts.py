@@ -51,6 +51,8 @@ CONCEPTS: Tuple[Concept, ...] = (
             ConceptField("reserve_expense", ("reserve expense", "expense reserve", "alae reserve"), "money"),
             ConceptField("reserves", ("case reserve", "outstanding reserve", "total reserves", "reserves", "reserve", "outstanding"), "money"),
             ConceptField("incurred", ("reported incurred", "total incurred", "incurred"), "money"),
+            ConceptField("calculated_incurred", ("calculated incurred", "recalculated incurred"), "money"),
+            ConceptField("incurred_variance", ("incurred variance", "variance"), "money"),
             ConceptField("status", ("status", "claim status")),
         ),
         min_score=4,

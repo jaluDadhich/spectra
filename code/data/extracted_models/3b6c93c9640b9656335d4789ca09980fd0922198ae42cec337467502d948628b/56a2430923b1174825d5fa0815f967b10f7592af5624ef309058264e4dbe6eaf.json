@@ -1,0 +1,152 @@
+{
+  "created_at": "2026-11-11T06:27:43.029506+00:00",
+  "documents": [
+    {
+      "content_hash": "5c965fbdc4336e87317e4207132de4299b20e254026932f5476a071478aa69ae",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A04_ACORD_125_126_130_140_Combined.json",
+      "document_type": "acord_combined",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "a67b04e4e5e02e35dd9ecb4124a6a3828f87aa8f4ba4bf4a428542ebdb268173",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+      "document_name": "A04_ACORD_125_126_Combined(1).pdf :: ACORD_125",
+      "document_type": "acord_125",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "ef799042fe73eafebdad58d26891c3dd09120ab4b1466ebc68a414fee72c51c0",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+      "document_name": "A04_ACORD_125_126_Combined(1).pdf :: ACORD_126",
+      "document_type": "acord_126",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "0d354d1887a35a1274c89edc2a4b896cfb3b44268c66728b14f47e153ca73836",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+      "document_name": "A04_ACORD_130_140_Combined(1).pdf :: ACORD_130",
+      "document_type": "acord_130",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "2a3de99dbd6d065d3e97400d994d97218459324df0105974217244354e15c083",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_140",
+      "document_name": "A04_ACORD_130_140_Combined(1).pdf :: ACORD_140",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "723f722fb8d7b17f36af716d3f82ed59341c9542bf6d925e6e2b264d86fbbc98",
+      "document_id": "SOURCE-A04_Correction_Log",
+      "document_name": "A04_Correction_Log.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d20db26d2f3637fb710406b9eb62f92f2a49f8aad891d0c6b755db2785f6f758",
+      "document_id": "SOURCE-A04_Draft_Quote",
+      "document_name": "A04_Draft_Quote.pdf",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "a2760571267f915f07de61ef9ee7a5c89847e71252c87286a2b68758ea0c0f3f",
+      "document_id": "SOURCE-A04_Driver_Roster",
+      "document_name": "A04_Driver_Roster.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "5008ac7ca3356e983d3bf88e6c66481569d769daa0fa8cbbd2ddd0c90610d54f",
+      "document_id": "SOURCE-A04_External_Public_Research",
+      "document_name": "A04_External_Public_Research.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "ae2dcb096be9bae7bbf47771ef7917d0e6dc4eeb90ddfe80a8fa00d1543cd9f2",
+      "document_id": "SOURCE-A04_Fleet_Schedule",
+      "document_name": "A04_Fleet_Schedule.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "fa5eada3073cab52e4eb1d4e02e404ac35afff75c0956c2fb89cd0f38ba39256",
+      "document_id": "SOURCE-A04_Loss_Runs",
+      "document_name": "A04_Loss_Runs.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "513e5a72d9a8bf66b0018c960b62df4b1cf1792f61acf50a558433f4f535e4df",
+      "document_id": "SOURCE-A04_Property_SOV",
+      "document_name": "A04_Property_SOV.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "537b11f682361ee3a7347698cf471083ffd88373811c8c4fec35595874ccf785",
+      "document_id": "SOURCE-A04_Submission_Checklist",
+      "document_name": "A04_Submission_Checklist.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "511fe5e3f187924e3ee7a1a48fa2402254dc865314179e25511a4aebc11dadca",
+      "document_id": "SOURCE-A04_WC_Rating_Workbook",
+      "document_name": "A04_WC_Rating_Workbook.xlsx",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "8d9ce15a8596c3510d90bcf6ea4343d66256755ad428417a2a574d9b55442881",
+      "document_id": "TEXT-A04_Broker_Email",
+      "document_name": "A04_Broker_Email.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d3509f5b62601966bb7bd2283dd73f1aba075e8931c2d43a917b43e9a83a5e8b",
+      "document_id": "TEXT-A04_Operations_Public_Record_Supplement",
+      "document_name": "A04_Operations_Public_Record_Supplement.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-880041618C30",
+  "schema_version": "1.0",
+  "submission_id": "A04_United_Parcel_Service_Inc_UPS"
+}

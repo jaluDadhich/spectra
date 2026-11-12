@@ -1,25 +1,8 @@
 SUPPLEMENTAL OPERATIONS / PUBLIC-RECORD RECONCILIATION QUESTIONNAIRE
 Submission ID: SPX-A04-2026-1042
-Named entity anchor: United Parcel Service, Inc. (UPS)
-Document status: SYNTHETIC TEST CONTENT - NOT A STATEMENT MADE BY THE REAL COMPANY
+Status: synthetic training copy only; not a statement made by the real company.
 
-1. Operations description from application:
-Domestic parcel pickup/delivery, ground line-haul and standard logistics support; no temperature-controlled cargo or international freight forwarding is declared for this simulated policy scope.
-
-2. Broker narrative / follow-up:
-The scope, location schedule, vehicle list, payroll, loss history and quoted conditions are consistent within this synthetic control packet.
-
-3. Public-source context:
-UPS describes itself as a package delivery and supply-chain management company and lists its corporate office at 55 Glenlake Parkway NE, Atlanta, Georgia.
-
-4. Safety / establishment record:
-See External_Public_Research.xlsx. Record is site-specific, date-sensitive, and only a candidate match until exact legal entity, address, establishment, and underwriting relevance are established.
-
-5. Recommended Spectra action:
-- Resolve parent / subsidiary / operating company identity.
-- Match addresses and relevant period before comparing.
-- Distinguish corporate-wide public offerings from actual exposures at scheduled premises.
-- Do not infer a violation at a synthetic location from an OSHA record at a different address.
-- Route unresolved material differences to underwriter review.
-
-All public facts are cited by URL in External_Public_Research.xlsx. All submitted operations answers are synthetic.
+Declared operations: domestic parcel pickup/delivery, ground line-haul and standard logistics support. No temperature-controlled cargo or international freight forwarding is declared in this synthetic scope.
+Premises: three synthetic Atlanta, Georgia locations. Location uses are standardized as distribution warehouse, warehouse/distribution, and logistics warehouse. No cold-storage exposure is represented in the clean-control version.
+External public context: the McKinney, Texas OSHA record is at a different address from all synthetic premises. It is contextual only and must not be attributed to the synthetic locations.
+Do not infer actual legal entity, premises, employee, driver, claims, payroll or coverage facts from this training packet.

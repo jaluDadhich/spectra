@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-11-11T03:42:40.721097+00:00",
+  "documents": [
+    {
+      "content_hash": "9ecb64fe4379d94dafd15f454f6da7b68ed345570aa000307702406c08471ef8",
+      "document_id": "A03-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A03_ACORD130_Workers_Compensation.pdf",
+      "document_type": "unsupported",
+      "exposures": [],
+      "extraction_status": "REJECTED_BY_JUDGE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "9bb76d75c1469aa9e147ea3763baff7025a99dcf2e7a80a3e043989481609a34",
+      "document_id": "TEXT-A03_Broker_Email",
+      "document_name": "A03_Broker_Email.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "NO_EXPOSURES",
+      "source_hash": null
+    },
+    {
+      "content_hash": "09b6e7723b97dd3eab2ea90798c1421d69e97561b834a1433c7d3f200495b854",
+      "document_id": "TEXT-A03_Operations_Public_Record_Supplement",
+      "document_name": "A03_Operations_Public_Record_Supplement.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "NO_EXPOSURES",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-47CEEE8CFD70",
+  "schema_version": "1.0",
+  "submission_id": "A03_FedEx_Corporation"
+}

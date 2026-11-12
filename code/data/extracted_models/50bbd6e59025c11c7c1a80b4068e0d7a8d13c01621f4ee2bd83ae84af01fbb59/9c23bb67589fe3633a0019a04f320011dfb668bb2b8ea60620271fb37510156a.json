@@ -1,0 +1,1017 @@
+{
+  "created_at": "2026-11-09T04:19:23.224732+00:00",
+  "documents": [
+    {
+      "content_hash": "d0b2c8c835f865318f0d6c6c85ea69ab1fa6a0eb6fefc98f29478de0c03f3c17",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A02_ACORD125_Commercial_Application.pdf",
+      "document_type": "acord_combined",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": "2f916ac585db30a855743a3f02eb0843bd3408e34a3112d359b1e20a5e7cb16c"
+    },
+    {
+      "content_hash": "291d0d4b01701f9af457bd6d30ebffe9ba823e52c91243fb448b76db18dd05c1",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125",
+      "document_name": "A02_ACORD125_Commercial_Application(5).pdf :: ACORD_125",
+      "document_type": "acord_125",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A02_ACORD125_Commercial_Application(5).pdf :: ACORD_125",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_125-0015",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 96500000.0,
+              "period": "annual",
+              "raw_value": 96500000,
+              "snippet": "96500000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD125_Commercial_Application(5).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "business_operations.annual_gross_sales",
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_125-0015"
+            },
+            "location_id": null,
+            "period": "annual",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125#sales",
+            "unit": "USD",
+            "value": 96500000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A02_ACORD125_Commercial_Application(5).pdf :: ACORD_125",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_125-0016",
+              "extraction_confidence": null,
+              "field_path": "exposures[employees].full_time",
+              "normalized_value": 510.0,
+              "period": null,
+              "raw_value": 510.0,
+              "snippet": "derived: sum of per-location full_time_employees",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD125_Commercial_Application(5).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "locations",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "employees_full_time",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_125-0016"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_125#emp_full_time",
+            "unit": "count",
+            "value": 510.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "2f36da6291fa80bb18be1abe174fe46f51f18a7b8e28422c64e280ea67e0c858",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+      "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+      "document_type": "acord_126",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0001",
+              "extraction_confidence": null,
+              "field_path": "exposures[A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard0].value",
+              "normalized_value": 43425000.0,
+              "period": null,
+              "raw_value": 43425000,
+              "snippet": "43425000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "schedule_of_hazards[0].exposure",
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Warehouse / retail operations",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0001"
+            },
+            "location_id": "01",
+            "period": null,
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard0",
+            "unit": "USD",
+            "value": 43425000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0002",
+              "extraction_confidence": null,
+              "field_path": "exposures[A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard1].value",
+              "normalized_value": 450000.0,
+              "period": null,
+              "raw_value": 450000,
+              "snippet": "450000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "schedule_of_hazards[1].exposure",
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "sqft"
+            }
+          },
+          "record": {
+            "description": "Warehouse / storage operations",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "area_rated",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0002"
+            },
+            "location_id": "02",
+            "period": null,
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard1",
+            "unit": "sqft",
+            "value": 450000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0003",
+              "extraction_confidence": null,
+              "field_path": "exposures[A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard4].value",
+              "normalized_value": 21230000.0,
+              "period": null,
+              "raw_value": 21230000,
+              "snippet": "21230000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "schedule_of_hazards[4].exposure",
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Wholesale / distribution operations",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0003"
+            },
+            "location_id": "05",
+            "period": null,
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hazard4",
+            "unit": "USD",
+            "value": 21230000.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0004",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].count",
+              "normalized_value": 5.0,
+              "period": "2021",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[0].claim_count_all_lines",
+                "page": 4,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0004"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hist0",
+            "unit": "count",
+            "value": 5.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0005",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].count",
+              "normalized_value": 7.0,
+              "period": "2022",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[1].claim_count_all_lines",
+                "page": 4,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0005"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hist1",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0006",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].count",
+              "normalized_value": 8.0,
+              "period": "2023",
+              "raw_value": 8,
+              "snippet": "8",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[2].claim_count_all_lines",
+                "page": 4,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0006"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hist2",
+            "unit": "count",
+            "value": 8.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0007",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].count",
+              "normalized_value": 10.0,
+              "period": "2024",
+              "raw_value": 10,
+              "snippet": "10",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[3].claim_count_all_lines",
+                "page": 4,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0007"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hist3",
+            "unit": "count",
+            "value": 10.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A02_ACORD126_General_Liability(4).pdf :: ACORD_126",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0008",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 12.0,
+              "period": "2025",
+              "raw_value": 12,
+              "snippet": "12",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD126_General_Liability(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "prior_insurance_gl_loss_summary[4].claim_count_all_lines",
+                "page": 4,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_126-0008"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_126#hist4",
+            "unit": "count",
+            "value": 12.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "2b1b2f7b71bab03d26053cf182b1c897a42f04b5f17c3a9b760d6339ff03f075",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+      "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+      "document_type": "acord_130",
+      "exposures": [
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0061",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].count",
+              "normalized_value": 7.0,
+              "period": "2021",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[0].claim_count",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0061"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#hist0",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0062",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].count",
+              "normalized_value": 7.0,
+              "period": "2022",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[1].claim_count",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0062"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#hist1",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0063",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].count",
+              "normalized_value": 7.0,
+              "period": "2023",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[2].claim_count",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0063"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#hist2",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0064",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].count",
+              "normalized_value": 7.0,
+              "period": "2024",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[3].claim_count",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0064"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#hist3",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0065",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 7.0,
+              "period": "2025",
+              "raw_value": 7,
+              "snippet": "7",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_history[4].claim_count",
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0065"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#hist4",
+            "unit": "count",
+            "value": 7.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A02_ACORD130_Workers_Compensation(4).pdf :: ACORD_130",
+              "evidence_id": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0068",
+              "extraction_confidence": null,
+              "field_path": "wc_application.total_payroll",
+              "normalized_value": 17300000.0,
+              "period": null,
+              "raw_value": 17300000,
+              "snippet": "17300000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_ACORD130_Workers_Compensation(4).pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "experience_modification_premium_calculation.payroll_declared_on_application",
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-A02-ACORD-125-126-130-140-COMBINED#acord_130-0068"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A02-ACORD-125-126-130-140-COMBINED#acord_130#declared_payroll",
+            "unit": "USD",
+            "value": 17300000.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "403c18805441aa5f6c577fd6d65c5a5626b057c07b607efa4246bcd679f599e4",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_140#received",
+      "document_name": "A02_ACORD125_Commercial_Application.pdf :: ACORD_140",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "84c6918305d153868f5cd8eb745dde9cc5fb97f63346ddc2deb1102f7a3b43e6",
+      "document_id": "A02-ACORD-125-126-130-140-COMBINED#acord_140#resubmitted",
+      "document_name": "A02_ACORD125_Commercial_Application.pdf :: ACORD_140",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "985e9a5f2caf4e0ef79a1c10c15c2a4ef79dc21994791e75c3e9a9fdf40d3a1a",
+      "document_id": "GEN-A02_Driver_Roster.xlsx",
+      "document_name": "A02_Driver_Roster.xlsx",
+      "document_type": "driver_roster",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d5e758a9c001f31a1a0c2911ce359a2645f00f10982f188d30fff3839b2dd0b0",
+      "document_id": "GEN-A02_External_Public_Research.xlsx",
+      "document_name": "A02_External_Public_Research.xlsx",
+      "document_type": "external_records",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "e97ab503c21b6faf8337ad00581eb981728c3f712b2798df1024c7eba6868826",
+      "document_id": "GEN-A02_Fleet_Schedule.xlsx",
+      "document_name": "A02_Fleet_Schedule.xlsx",
+      "document_type": "fleet_schedule",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "GEN-A02_Fleet_Schedule.xlsx",
+              "document_name": "A02_Fleet_Schedule.xlsx",
+              "evidence_id": "EV-GEN-A02_Fleet_Schedule.xlsx-0672",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 74.0,
+              "period": null,
+              "raw_value": 74,
+              "snippet": "74",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_Fleet_Schedule.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "sheets[1].all_nonempty_rows[3].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Unit Count Reconciliation",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Declared power units",
+            "document_id": "GEN-A02_Fleet_Schedule.xlsx",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-GEN-A02_Fleet_Schedule.xlsx-0672"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "GEN-A02_Fleet_Schedule.xlsx#vehicle_count",
+            "unit": "count",
+            "value": 74.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "37b16b4b26d69ab6c1cb5ca3cb401c4e4effdd3f74aff58cca791f06c3836e91",
+      "document_id": "GEN-A02_Loss_Runs.xlsx",
+      "document_name": "A02_Loss_Runs.xlsx",
+      "document_type": "loss_run",
+      "exposures": [
+        {
+          "evidence": {
+            "claim_count": {
+              "document_id": "GEN-A02_Loss_Runs.xlsx",
+              "document_name": "A02_Loss_Runs.xlsx",
+              "evidence_id": "EV-GEN-A02_Loss_Runs.xlsx-0537",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.claim_count",
+              "normalized_value": 38.0,
+              "period": null,
+              "raw_value": 38,
+              "snippet": "38",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "sheets[1].all_nonempty_rows[3].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "count"
+            },
+            "total_incurred": {
+              "document_id": "GEN-A02_Loss_Runs.xlsx",
+              "document_name": "A02_Loss_Runs.xlsx",
+              "evidence_id": "EV-GEN-A02_Loss_Runs.xlsx-0536",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.total_incurred",
+              "normalized_value": 6193630.0,
+              "period": null,
+              "raw_value": 6193630,
+              "snippet": "6193630",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B9",
+                "column": "B",
+                "json_path": "sheets[1].all_nonempty_rows[7].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 9,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "declared_count=38",
+            "document_id": "GEN-A02_Loss_Runs.xlsx",
+            "exposure_type": "loss_summary",
+            "field_evidence": {
+              "claim_count": "EV-GEN-A02_Loss_Runs.xlsx-0537",
+              "total_incurred": "EV-GEN-A02_Loss_Runs.xlsx-0536"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "GEN-A02_Loss_Runs.xlsx#summary",
+            "unit": "USD",
+            "value": 6193630.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "3b033edd42ce947c066ef89d52170e56b714844604c6b4043d473e88f823e32b",
+      "document_id": "GEN-A02_Property_SOV.xlsx",
+      "document_name": "A02_Property_SOV.xlsx",
+      "document_type": "sov",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "76fd39a1de42bc522a91271fb23af315a3461883f424f3677eb6f655028d11af",
+      "document_id": "GEN-A02_Submission_Checklist.xlsx",
+      "document_name": "A02_Submission_Checklist.xlsx",
+      "document_type": "submission_checklist",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "3405072088bd20e24cade658dcda24de643d88a266b5ca677fab712a029e6d9d",
+      "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+      "document_name": "A02_WC_Rating_Workbook.xlsx",
+      "document_type": "wc_rating_workbook",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+              "document_name": "A02_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0200",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 96500000.0,
+              "period": null,
+              "raw_value": 96500000,
+              "snippet": "96500000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "sheets[2].all_nonempty_rows[3].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Gross sales",
+            "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0200"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "GEN-A02_WC_Rating_Workbook.xlsx#sales",
+            "unit": "USD",
+            "value": 96500000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+              "document_name": "A02_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0201",
+              "extraction_confidence": null,
+              "field_path": "exposures[declared_payroll_total].value",
+              "normalized_value": 17300000.0,
+              "period": null,
+              "raw_value": 17300000,
+              "snippet": "17300000",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B6",
+                "column": "B",
+                "json_path": "sheets[2].all_nonempty_rows[4].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 6,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "WC payroll",
+            "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0201"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "GEN-A02_WC_Rating_Workbook.xlsx#declared_payroll_total",
+            "unit": "USD",
+            "value": 17300000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+              "document_name": "A02_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0202",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 74.0,
+              "period": null,
+              "raw_value": 74,
+              "snippet": "74",
+              "source_file": "documents/A02_Costco_Wholesale_Corporation/A02_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B8",
+                "column": "B",
+                "json_path": "sheets[2].all_nonempty_rows[6].cells[1]",
+                "page": null,
+                "record_id": null,
+                "row": 8,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Power units",
+            "document_id": "GEN-A02_WC_Rating_Workbook.xlsx",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-GEN-A02_WC_Rating_Workbook.xlsx-0202"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "GEN-A02_WC_Rating_Workbook.xlsx#vehicle_count",
+            "unit": "count",
+            "value": 74.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-82276EF1861D",
+  "schema_version": "1.0",
+  "submission_id": "A02_Costco_Wholesale_Corporation"
+}

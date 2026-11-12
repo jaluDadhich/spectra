@@ -1,0 +1,2292 @@
+{
+  "created_at": "2026-11-11T15:00:31.690019+00:00",
+  "documents": [
+    {
+      "content_hash": "5c965fbdc4336e87317e4207132de4299b20e254026932f5476a071478aa69ae",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED",
+      "document_name": "A04_ACORD_125_126_Combined.pdf",
+      "document_type": "acord_combined",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "a67b04e4e5e02e35dd9ecb4124a6a3828f87aa8f4ba4bf4a428542ebdb268173",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+      "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_125",
+      "document_type": "acord_125",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_125",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0011",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 74200000.0,
+              "period": "annual",
+              "raw_value": "$74,200,000 (synthetic)",
+              "snippet": "$74,200,000 (synthetic)",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "applicant_operations.annual_gross_sales",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0011"
+            },
+            "location_id": null,
+            "period": "annual",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125#sales",
+            "unit": "USD",
+            "value": 74200000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_125",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0012",
+              "extraction_confidence": null,
+              "field_path": "exposures[employees].full_time",
+              "normalized_value": 405.0,
+              "period": null,
+              "raw_value": 405.0,
+              "snippet": "derived: sum of per-location full_time_employees",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": false,
+                "cell": null,
+                "column": null,
+                "json_path": "declared_premises",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "employees_full_time",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0012"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125#emp_full_time",
+            "unit": "count",
+            "value": 405.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_125",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0014",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 128.0,
+              "period": null,
+              "raw_value": "128 (synthetic)",
+              "snippet": "128 (synthetic)",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "applicant_operations.active_power_units",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_125-0014"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_125#vehicle_count",
+            "unit": "count",
+            "value": 128.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "ef799042fe73eafebdad58d26891c3dd09120ab4b1466ebc68a414fee72c51c0",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+      "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+      "document_type": "acord_126",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0001",
+              "extraction_confidence": null,
+              "field_path": "exposures[A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard0].value",
+              "normalized_value": 74200000.0,
+              "period": null,
+              "raw_value": "$74,200,000",
+              "snippet": "$74,200,000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "general_liability_rating_exposure_schedule[0].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Annual gross sales",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated_control",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0001"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard0",
+            "unit": "USD",
+            "value": 74200000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0002",
+              "extraction_confidence": null,
+              "field_path": "exposures[A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard1].value",
+              "normalized_value": 33390000.0,
+              "period": null,
+              "raw_value": "$33,390,000",
+              "snippet": "$33,390,000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "general_liability_rating_exposure_schedule[1].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Sales-rated class A",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0002"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard1",
+            "unit": "USD",
+            "value": 33390000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0003",
+              "extraction_confidence": null,
+              "field_path": "exposures[A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard2].value",
+              "normalized_value": 40810000.0,
+              "period": null,
+              "raw_value": "$40,810,000",
+              "snippet": "$40,810,000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "general_liability_rating_exposure_schedule[2].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Sales-rated class B",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0003"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard2",
+            "unit": "USD",
+            "value": 40810000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0004",
+              "extraction_confidence": null,
+              "field_path": "exposures[A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard3].value",
+              "normalized_value": 74200000.0,
+              "period": null,
+              "raw_value": "$74,200,000",
+              "snippet": "$74,200,000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "general_liability_rating_exposure_schedule[3].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Total sales-rated basis",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "sales_rated_control",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0004"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard3",
+            "unit": "USD",
+            "value": 74200000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0005",
+              "extraction_confidence": null,
+              "field_path": "exposures[A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard4].value",
+              "normalized_value": 330000.0,
+              "period": null,
+              "raw_value": "330,000 sq ft",
+              "snippet": "330,000 sq ft",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "general_liability_rating_exposure_schedule[4].amount",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "sqft"
+            }
+          },
+          "record": {
+            "description": "",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "area_rated",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0005"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hazard4",
+            "unit": "sqft",
+            "value": 330000.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0006",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].all lines.count",
+              "normalized_value": 6.0,
+              "period": "2021",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].loss_detail_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0006"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#all_lines",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0007",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].general liability.count",
+              "normalized_value": 6.0,
+              "period": "2021",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].gl",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "general liability",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0007"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#general_liability",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0008",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].workers compensation.count",
+              "normalized_value": 0.0,
+              "period": "2021",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].wc",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "workers compensation",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0008"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#workers_compensation",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0009",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].commercial auto.count",
+              "normalized_value": 0.0,
+              "period": "2021",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].auto",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "commercial auto",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0009"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#commercial_auto",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0010",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].property.count",
+              "normalized_value": 0.0,
+              "period": "2021",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].property",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "property",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0010"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#property",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0011",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].motor truck cargo.count",
+              "normalized_value": 0.0,
+              "period": "2021",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[0].cargo",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "motor truck cargo",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0011"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist0#motor_truck_cargo",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0012",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].all lines.count",
+              "normalized_value": 6.0,
+              "period": "2022",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].loss_detail_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0012"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#all_lines",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0013",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].general liability.count",
+              "normalized_value": 0.0,
+              "period": "2022",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].gl",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "general liability",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0013"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#general_liability",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0014",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].workers compensation.count",
+              "normalized_value": 6.0,
+              "period": "2022",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].wc",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "workers compensation",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0014"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#workers_compensation",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0015",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].commercial auto.count",
+              "normalized_value": 0.0,
+              "period": "2022",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].auto",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "commercial auto",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0015"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#commercial_auto",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0016",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].property.count",
+              "normalized_value": 0.0,
+              "period": "2022",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].property",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "property",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0016"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#property",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0017",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].motor truck cargo.count",
+              "normalized_value": 0.0,
+              "period": "2022",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[1].cargo",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "motor truck cargo",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0017"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist1#motor_truck_cargo",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0018",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].all lines.count",
+              "normalized_value": 6.0,
+              "period": "2023",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].loss_detail_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0018"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#all_lines",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0019",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].general liability.count",
+              "normalized_value": 0.0,
+              "period": "2023",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].gl",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "general liability",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0019"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#general_liability",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0020",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].workers compensation.count",
+              "normalized_value": 0.0,
+              "period": "2023",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].wc",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "workers compensation",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0020"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#workers_compensation",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0021",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].commercial auto.count",
+              "normalized_value": 6.0,
+              "period": "2023",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].auto",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "commercial auto",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0021"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#commercial_auto",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0022",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].property.count",
+              "normalized_value": 0.0,
+              "period": "2023",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].property",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "property",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0022"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#property",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0023",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].motor truck cargo.count",
+              "normalized_value": 0.0,
+              "period": "2023",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[2].cargo",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "motor truck cargo",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0023"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist2#motor_truck_cargo",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0024",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].all lines.count",
+              "normalized_value": 5.0,
+              "period": "2024",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].loss_detail_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0024"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#all_lines",
+            "unit": "count",
+            "value": 5.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0025",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].general liability.count",
+              "normalized_value": 0.0,
+              "period": "2024",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].gl",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "general liability",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0025"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#general_liability",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0026",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].workers compensation.count",
+              "normalized_value": 0.0,
+              "period": "2024",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].wc",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "workers compensation",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0026"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#workers_compensation",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0027",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].commercial auto.count",
+              "normalized_value": 0.0,
+              "period": "2024",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].auto",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "commercial auto",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0027"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#commercial_auto",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0028",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].property.count",
+              "normalized_value": 5.0,
+              "period": "2024",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].property",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "property",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0028"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#property",
+            "unit": "count",
+            "value": 5.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0029",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].motor truck cargo.count",
+              "normalized_value": 0.0,
+              "period": "2024",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[3].cargo",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "motor truck cargo",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0029"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist3#motor_truck_cargo",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0030",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].all lines.count",
+              "normalized_value": 5.0,
+              "period": "2025",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].loss_detail_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "all lines",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0030"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#all_lines",
+            "unit": "count",
+            "value": 5.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0031",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].general liability.count",
+              "normalized_value": 0.0,
+              "period": "2025",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].gl",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "general liability",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0031"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#general_liability",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0032",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].workers compensation.count",
+              "normalized_value": 0.0,
+              "period": "2025",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].wc",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "workers compensation",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0032"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#workers_compensation",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0033",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].commercial auto.count",
+              "normalized_value": 0.0,
+              "period": "2025",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].auto",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "commercial auto",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0033"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#commercial_auto",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0034",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].property.count",
+              "normalized_value": 0.0,
+              "period": "2025",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].property",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "property",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0034"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#property",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+              "document_name": "A04_ACORD_125_126_Combined.pdf :: ACORD_126",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0035",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].motor truck cargo.count",
+              "normalized_value": 5.0,
+              "period": "2025",
+              "raw_value": 5,
+              "snippet": "5",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_125_126_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "claims_experience_annual_counts[4].cargo",
+                "line_end": null,
+                "line_start": null,
+                "page": 2,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "motor truck cargo",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_126-0035"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_126#hist4#motor_truck_cargo",
+            "unit": "count",
+            "value": 5.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "0d354d1887a35a1274c89edc2a4b896cfb3b44268c66728b14f47e153ca73836",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+      "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+      "document_type": "acord_130",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0106",
+              "extraction_confidence": null,
+              "field_path": "wc_application.total_payroll",
+              "normalized_value": 14200000.0,
+              "period": null,
+              "raw_value": "$14,200,000",
+              "snippet": "$14,200,000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "workers_compensation_terms.estimated_payroll",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": null,
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0106"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#declared_payroll",
+            "unit": "USD",
+            "value": 14200000.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0107",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2021].count",
+              "normalized_value": 0.0,
+              "period": "2021",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "wc_claims_history[0].wc_claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0107"
+            },
+            "location_id": null,
+            "period": "2021",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#hist0",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0108",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2022].count",
+              "normalized_value": 6.0,
+              "period": "2022",
+              "raw_value": 6,
+              "snippet": "6",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "wc_claims_history[1].wc_claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0108"
+            },
+            "location_id": null,
+            "period": "2022",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#hist1",
+            "unit": "count",
+            "value": 6.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0109",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2023].count",
+              "normalized_value": 0.0,
+              "period": "2023",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "wc_claims_history[2].wc_claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0109"
+            },
+            "location_id": null,
+            "period": "2023",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#hist2",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0110",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2024].count",
+              "normalized_value": 0.0,
+              "period": "2024",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "wc_claims_history[3].wc_claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0110"
+            },
+            "location_id": null,
+            "period": "2024",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#hist3",
+            "unit": "count",
+            "value": 0.0
+          }
+        },
+        {
+          "evidence": {
+            "count": {
+              "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+              "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_130",
+              "evidence_id": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0111",
+              "extraction_confidence": null,
+              "field_path": "claims_history[2025].count",
+              "normalized_value": 0.0,
+              "period": "2025",
+              "raw_value": 0,
+              "snippet": "0",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_ACORD_130_140_Combined.pdf",
+              "source_location": {
+                "available": true,
+                "cell": null,
+                "column": null,
+                "json_path": "wc_claims_history[4].wc_claim_count",
+                "line_end": null,
+                "line_start": null,
+                "page": 1,
+                "record_id": null,
+                "row": null,
+                "sheet": null,
+                "url": null
+              },
+              "unit": null
+            }
+          },
+          "record": {
+            "description": "WC",
+            "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130",
+            "exposure_type": "annual_claim_count",
+            "field_evidence": {
+              "count": "EV-A04-ACORD-125-126-130-140-COMBINED#acord_130-0111"
+            },
+            "location_id": null,
+            "period": "2025",
+            "record_id": "A04-ACORD-125-126-130-140-COMBINED#acord_130#hist4",
+            "unit": "count",
+            "value": 0.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "2a3de99dbd6d065d3e97400d994d97218459324df0105974217244354e15c083",
+      "document_id": "A04-ACORD-125-126-130-140-COMBINED#acord_140",
+      "document_name": "A04_ACORD_130_140_Combined.pdf :: ACORD_140",
+      "document_type": "acord_140",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "723f722fb8d7b17f36af716d3f82ed59341c9542bf6d925e6e2b264d86fbbc98",
+      "document_id": "SOURCE-A04_Correction_Log",
+      "document_name": "A04_Correction_Log.xlsx",
+      "document_type": "excel_workbook",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d20db26d2f3637fb710406b9eb62f92f2a49f8aad891d0c6b755db2785f6f758",
+      "document_id": "SOURCE-A04_Draft_Quote",
+      "document_name": "A04_Draft_Quote.pdf",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "a2760571267f915f07de61ef9ee7a5c89847e71252c87286a2b68758ea0c0f3f",
+      "document_id": "SOURCE-A04_Driver_Roster",
+      "document_name": "A04_Driver_Roster.xlsx",
+      "document_type": "driver_roster",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "5008ac7ca3356e983d3bf88e6c66481569d769daa0fa8cbbd2ddd0c90610d54f",
+      "document_id": "SOURCE-A04_External_Public_Research",
+      "document_name": "A04_External_Public_Research.xlsx",
+      "document_type": "external_records",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "ae2dcb096be9bae7bbf47771ef7917d0e6dc4eeb90ddfe80a8fa00d1543cd9f2",
+      "document_id": "SOURCE-A04_Fleet_Schedule",
+      "document_name": "A04_Fleet_Schedule.xlsx",
+      "document_type": "fleet_schedule",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A04_Fleet_Schedule",
+              "document_name": "A04_Fleet_Schedule.xlsx",
+              "evidence_id": "EV-SOURCE-A04_Fleet_Schedule-1161",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 128.0,
+              "period": null,
+              "raw_value": 128,
+              "snippet": "128",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_Fleet_Schedule.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[1].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Unit Count Reconciliation",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Declared power units",
+            "document_id": "SOURCE-A04_Fleet_Schedule",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-SOURCE-A04_Fleet_Schedule-1161"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A04_Fleet_Schedule#vehicle_count",
+            "unit": "count",
+            "value": 128.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "fa5eada3073cab52e4eb1d4e02e404ac35afff75c0956c2fb89cd0f38ba39256",
+      "document_id": "SOURCE-A04_Loss_Runs",
+      "document_name": "A04_Loss_Runs.xlsx",
+      "document_type": "loss_run",
+      "exposures": [
+        {
+          "evidence": {
+            "claim_count": {
+              "document_id": "SOURCE-A04_Loss_Runs",
+              "document_name": "A04_Loss_Runs.xlsx",
+              "evidence_id": "EV-SOURCE-A04_Loss_Runs-0397",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.claim_count",
+              "normalized_value": 28.0,
+              "period": null,
+              "raw_value": 28,
+              "snippet": "28",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[1].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "count"
+            },
+            "total_incurred": {
+              "document_id": "SOURCE-A04_Loss_Runs",
+              "document_name": "A04_Loss_Runs.xlsx",
+              "evidence_id": "EV-SOURCE-A04_Loss_Runs-0396",
+              "extraction_confidence": null,
+              "field_path": "loss_summary.total_incurred",
+              "normalized_value": 4090659.0,
+              "period": null,
+              "raw_value": 4090659,
+              "snippet": "4090659",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_Loss_Runs.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B9",
+                "column": "B",
+                "json_path": "worksheets[1].rows[7].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 9,
+                "sheet": "Loss Summary",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "declared_count=28",
+            "document_id": "SOURCE-A04_Loss_Runs",
+            "exposure_type": "loss_summary",
+            "field_evidence": {
+              "claim_count": "EV-SOURCE-A04_Loss_Runs-0397",
+              "total_incurred": "EV-SOURCE-A04_Loss_Runs-0396"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A04_Loss_Runs#summary",
+            "unit": "USD",
+            "value": 4090659.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "513e5a72d9a8bf66b0018c960b62df4b1cf1792f61acf50a558433f4f535e4df",
+      "document_id": "SOURCE-A04_Property_SOV",
+      "document_name": "A04_Property_SOV.xlsx",
+      "document_type": "sov",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "537b11f682361ee3a7347698cf471083ffd88373811c8c4fec35595874ccf785",
+      "document_id": "SOURCE-A04_Submission_Checklist",
+      "document_name": "A04_Submission_Checklist.xlsx",
+      "document_type": "submission_checklist",
+      "exposures": [],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "511fe5e3f187924e3ee7a1a48fa2402254dc865314179e25511a4aebc11dadca",
+      "document_id": "SOURCE-A04_WC_Rating_Workbook",
+      "document_name": "A04_WC_Rating_Workbook.xlsx",
+      "document_type": "wc_rating_workbook",
+      "exposures": [
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A04_WC_Rating_Workbook",
+              "document_name": "A04_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A04_WC_Rating_Workbook-0170",
+              "extraction_confidence": null,
+              "field_path": "exposures[sales].value",
+              "normalized_value": 74200000.0,
+              "period": null,
+              "raw_value": 74200000,
+              "snippet": "74200000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B5",
+                "column": "B",
+                "json_path": "worksheets[2].rows[3].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 5,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "Gross sales",
+            "document_id": "SOURCE-A04_WC_Rating_Workbook",
+            "exposure_type": "sales",
+            "field_evidence": {
+              "value": "EV-SOURCE-A04_WC_Rating_Workbook-0170"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A04_WC_Rating_Workbook#sales",
+            "unit": "USD",
+            "value": 74200000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A04_WC_Rating_Workbook",
+              "document_name": "A04_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A04_WC_Rating_Workbook-0171",
+              "extraction_confidence": null,
+              "field_path": "exposures[declared_payroll_total].value",
+              "normalized_value": 14200000.0,
+              "period": null,
+              "raw_value": 14200000,
+              "snippet": "14200000",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B6",
+                "column": "B",
+                "json_path": "worksheets[2].rows[4].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 6,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "USD"
+            }
+          },
+          "record": {
+            "description": "WC payroll",
+            "document_id": "SOURCE-A04_WC_Rating_Workbook",
+            "exposure_type": "declared_payroll_total",
+            "field_evidence": {
+              "value": "EV-SOURCE-A04_WC_Rating_Workbook-0171"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A04_WC_Rating_Workbook#declared_payroll_total",
+            "unit": "USD",
+            "value": 14200000.0
+          }
+        },
+        {
+          "evidence": {
+            "value": {
+              "document_id": "SOURCE-A04_WC_Rating_Workbook",
+              "document_name": "A04_WC_Rating_Workbook.xlsx",
+              "evidence_id": "EV-SOURCE-A04_WC_Rating_Workbook-0172",
+              "extraction_confidence": null,
+              "field_path": "exposures[vehicle_count].value",
+              "normalized_value": 128.0,
+              "period": null,
+              "raw_value": 128,
+              "snippet": "128",
+              "source_file": "documents/A04_United_Parcel_Service_Inc_UPS/A04_WC_Rating_Workbook.xlsx",
+              "source_location": {
+                "available": true,
+                "cell": "B8",
+                "column": "B",
+                "json_path": "worksheets[2].rows[6].cells[1]",
+                "line_end": null,
+                "line_start": null,
+                "page": null,
+                "record_id": null,
+                "row": 8,
+                "sheet": "Rating Inputs",
+                "url": null
+              },
+              "unit": "count"
+            }
+          },
+          "record": {
+            "description": "Power units",
+            "document_id": "SOURCE-A04_WC_Rating_Workbook",
+            "exposure_type": "vehicle_count",
+            "field_evidence": {
+              "value": "EV-SOURCE-A04_WC_Rating_Workbook-0172"
+            },
+            "location_id": null,
+            "period": null,
+            "record_id": "SOURCE-A04_WC_Rating_Workbook#vehicle_count",
+            "unit": "count",
+            "value": 128.0
+          }
+        }
+      ],
+      "extraction_status": "DETERMINISTIC",
+      "source_hash": null
+    },
+    {
+      "content_hash": "8d9ce15a8596c3510d90bcf6ea4343d66256755ad428417a2a574d9b55442881",
+      "document_id": "TEXT-A04_Broker_Email",
+      "document_name": "A04_Broker_Email.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    },
+    {
+      "content_hash": "d3509f5b62601966bb7bd2283dd73f1aba075e8931c2d43a917b43e9a83a5e8b",
+      "document_id": "TEXT-A04_Operations_Public_Record_Supplement",
+      "document_name": "A04_Operations_Public_Record_Supplement.txt",
+      "document_type": "unstructured_document",
+      "exposures": [],
+      "extraction_status": "INCOMPLETE",
+      "source_hash": null
+    }
+  ],
+  "run_id": "RUN-85E14D59B286",
+  "schema_version": "1.0",
+  "submission_id": "A04_United_Parcel_Service_Inc_UPS"
+}

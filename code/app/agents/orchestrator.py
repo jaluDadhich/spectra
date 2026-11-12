@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from app.adapters.loader import (
-    LoadedDocument, build_case, load_json_file, parse_envelope,
+    LoadedDocument, build_case, load_json_file, load_source_file, parse_envelope,
     submission_input_paths,
 )
 from app.catalog.profiles import DocumentProfile, load_profile
@@ -23,7 +23,7 @@ from app.llm import CostTracker, MockGateway, SemanticReviewer, get_gateway
 from app.llm.gateway import ModelGateway
 from app.llm.tasks import PROMPT_VERSION
 from app.logging_config import configure_logging
-from app.normalization import normalize_entity_name
+from app.normalization import normalize_date, normalize_entity_name
 from app.rules import RuleEngine, load_registry
 from app.schemas.findings import CaseStatus, Finding
 from app.schemas.envelope import InputEnvelope
@@ -320,11 +320,27 @@ class Orchestrator:
                 result.errors.append("Invalid inputs and allow_partial=false")
                 return None, tracker
             stage.status = StageStatus.INCOMPLETE
+        effective_date = request.effective_date
+        if not effective_date:
+            # Use an unambiguous period start supplied by the submission
+            # envelope. This keeps date-sensitive modifier checks aligned to
+            # the proposed policy term when the run request omits the date.
+            envelope_dates = {
+                normalize_date(doc.envelope.document.effective_period.start)
+                for doc in loaded
+                if doc.envelope.document.effective_period
+                and doc.envelope.document.effective_period.start
+            }
+            envelope_dates.discard(None)
+            if len(envelope_dates) == 1:
+                effective_date = next(iter(envelope_dates))
+                logger.info("event=effective_date_inferred run_id=%s effective_date=%s source=document_envelope",
+                            run_id, effective_date)
         case = build_case(
             submission_id=request.submission_id, run_id=run_id, loaded=loaded,
             line_of_business=request.line_of_business,
             jurisdiction=request.jurisdiction,
-            effective_date=request.effective_date, review_date=request.review_date)
+            effective_date=effective_date, review_date=request.review_date)
         unsupported_documents = [doc for doc in case.documents if not doc.recognized]
         if unsupported_documents:
             names = ", ".join(
@@ -604,20 +620,13 @@ class Orchestrator:
                 a.issue_id: a.status.value for a in result.category_assessments}
         result.status = compute_case_status(result.findings, result.checks)
         from app.scoring import score_submission
-        issue_severity_points = None
-        scoring_calls_before = tracker.usage.calls if tracker is not None else 0
-        if semantic_review_completed and self._review_gateway is not None and tracker is not None:
-            scorer = SemanticReviewer(self._review_gateway, self.settings, tracker)
-            issue_severity_points, notes = scorer.score_issue_severity(result.findings)
-            stage.metrics["issue_severity_scoring"] = {
-                "model_tier": "fast",
-                "status": "completed" if issue_severity_points is not None else "fallback",
-                "unique_issue_groups": len(issue_severity_points or {}),
-                "calls": tracker.usage.calls - scoring_calls_before,
-                "notes": notes[:2],
-            }
-        result.quality_score = score_submission(
-            result, issue_severity_points=issue_severity_points)
+        # Quality pillars use fixed deterministic rules. Severity adjudication
+        # may inform findings, but must not make the displayed score stochastic.
+        stage.metrics["quality_scoring"] = {
+            "method": "deterministic weighted pillars",
+            "model_calls": 0,
+        }
+        result.quality_score = score_submission(result)
         stage.metrics["quality_score"] = result.quality_score.score
         stage.metrics["quality_grade"] = result.quality_score.grade
         stage.status = StageStatus.COMPLETED
@@ -659,6 +668,34 @@ class Orchestrator:
                     continue
                 parsed = parse_envelope(data, str(path.resolve()))
                 loaded.append(parsed)
+                continue
+
+            if path.suffix.casefold() in {".pdf", ".xlsx", ".xlsm", ".xls"}:
+                extracted, extraction_error = load_source_file(path)
+                if extraction_error:
+                    errors.append(extraction_error)
+                    continue
+                if not extracted or not any(extracted.values()):
+                    errors.append(
+                        f"No machine-readable text or populated cells extracted from {path.name}")
+                    continue
+                envelope = InputEnvelope(
+                    submission_id=request.submission_id,
+                    document={
+                        "document_id": f"SOURCE-{path.stem}",
+                        # Workbook payloads use the shared cell-grid parser;
+                        # marking them as unstructured text bypasses typed
+                        # table recognition and silently loses rows.
+                        "document_type": ("excel_workbook" if path.suffix.casefold()
+                                          in {".xlsx", ".xlsm", ".xls"}
+                                          else "unstructured_document"),
+                        "document_name": path.name,
+                    },
+                    data=extracted,
+                    provenance={"extraction_source": "direct_source_file",
+                                "source_file": path.name},
+                )
+                loaded.append(LoadedDocument(envelope, str(path.resolve()), len(loaded)))
                 continue
 
             # Plain narrative files often accompany extracted PDFs/workbooks

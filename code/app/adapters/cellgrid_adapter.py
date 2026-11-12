@@ -109,8 +109,11 @@ class CellGridWorkbookAdapter(DocumentAdapter):
                  canonical_field: str, raw: Any, normalized: Any = None,
                  unit: Optional[str] = None, period: Optional[str] = None) -> str:
         json_path = table.cell_json_path(cell.row_index, cell.cell_index)
+        snippet = (f"Formula {cell.formula}; cached result {raw}"
+                   if cell.formula and raw is not None else None)
         return ev.make(json_path, canonical_field, raw,
                        normalized_value=normalized, unit=unit, period=period,
+                       snippet=snippet,
                        source_location_override=self._loc(cell, table, json_path))
 
     def _row_values(self, table: GridTable, concept: Concept, mapping: Dict[str, str],
@@ -123,10 +126,13 @@ class CellGridWorkbookAdapter(DocumentAdapter):
             if cell is None:
                 continue
             kind = fields_by_name[fname].kind
-            converted = _convert(cell.value, kind)
+            raw_value = (cell.cached_value
+                         if cell.formula and cell.cached_value is not None
+                         else cell.value)
+            converted = _convert(raw_value, kind)
             if converted is None or converted == "":
                 continue
-            out[fname] = (cell, cell.value, converted)
+            out[fname] = (cell, raw_value, converted)
         return out
 
     # ------------------------------------------------------------------
@@ -190,7 +196,8 @@ class CellGridWorkbookAdapter(DocumentAdapter):
             for fname, (cell, raw, conv) in values.items():
                 unit = "USD" if fname in {"paid", "paid_indemnity", "paid_expense",
                                           "reserve_indemnity", "reserve_expense",
-                                          "reserves", "incurred"} else None
+                                          "reserves", "incurred", "calculated_incurred",
+                                          "incurred_variance"} else None
                 fe[fname] = self._cell_ev(ev, table, cell, f"claims[{rid}].{fname}", raw, conv,
                                           unit=unit, period=valuation)
             out.claims.append(ClaimRecord(

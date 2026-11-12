@@ -50,8 +50,8 @@ python -m app.cli.main review --submission-id SPX-A03-2026-1042 `
     --effective-date 2026-11-15 --review-date 2026-10-28 --deterministic-only
 
 # API + UI
-python -m uvicorn app.api.main:app --port 8000
-# UI:  http://127.0.0.1:8000/          API docs: http://127.0.0.1:8000/docs
+python -m uvicorn app.api.main:app --host 127.0.0.1 --port 8765
+# UI:  http://127.0.0.1:8765/         API docs: http://127.0.0.1:8765/docs
 
 # Tests (no API key needed)
 python -m pytest
@@ -74,7 +74,7 @@ Copy `.env.example` to `.env` in the `code/` directory and set
 whole-submission GPT review first; the deterministic rules run when GPT is
 disabled, unavailable, or its review response cannot be validated.
 `OPENAI_FAST_MODEL` defaults to `gpt-6-luna` for short explanation tasks and
-`OPENAI_REASONING_MODEL` defaults to `gpt-6.1-sol` for cross-document review.
+`OPENAI_REASONING_MODEL` defaults to `gpt-6.1-terra` for cross-document review.
 Reasoning effort defaults to low for fast tasks and high for comparisons.
 All are configurable, with `OPENAI_MODEL` retained as a legacy fallback. Key
 settings also include budgets

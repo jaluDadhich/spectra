@@ -915,11 +915,8 @@
       ],
       "experience_modification_premium_calculation": {
         "experience_modification_shown_on_application": 1.07,
-        "prior_policy_factor": 0.94,
         "effective_date": "11/01/2026",
-        "factor_used_in_draft_quote": 0.94,
-        "current_supporting_source": "Synthetic mod worksheet / see Rating Workbook",
-        "variance_status": "MISMATCH",
+        "current_supporting_source": "A03_WC_Rating_Workbook.xlsx, Experience Mod History row 7",
         "payroll_declared_on_application": 22100000,
         "payroll_in_supporting_class_schedule": 22100000,
         "payroll_variance": 0
@@ -6855,15 +6852,6 @@
         "method": "native_pdf_text_with_rendered_page_review",
         "verification_status": "source_verified"
       },
-      "data.acord_130.experience_modification_premium_calculation.prior_policy_factor": {
-        "source_file": "A03_ACORD130_Workers_Compensation(2).pdf",
-        "page": 2,
-        "field_label_or_context": "prior_policy_factor",
-        "source_text": "0.94",
-        "extracted_value": 0.94,
-        "method": "native_pdf_text_with_rendered_page_review",
-        "verification_status": "source_verified"
-      },
       "data.acord_130.experience_modification_premium_calculation.effective_date": {
         "source_file": "A03_ACORD130_Workers_Compensation(2).pdf",
         "page": 2,
@@ -6873,31 +6861,13 @@
         "method": "native_pdf_text_with_rendered_page_review",
         "verification_status": "source_verified"
       },
-      "data.acord_130.experience_modification_premium_calculation.factor_used_in_draft_quote": {
-        "source_file": "A03_ACORD130_Workers_Compensation(2).pdf",
-        "page": 2,
-        "field_label_or_context": "factor_used_in_draft_quote",
-        "source_text": "0.94",
-        "extracted_value": 0.94,
-        "method": "native_pdf_text_with_rendered_page_review",
-        "verification_status": "source_verified"
-      },
       "data.acord_130.experience_modification_premium_calculation.current_supporting_source": {
-        "source_file": "A03_ACORD130_Workers_Compensation(2).pdf",
+        "source_file": "A03_ACORD130_Workers_Compensation.pdf",
         "page": 2,
-        "field_label_or_context": "current_supporting_source",
-        "source_text": "Synthetic mod worksheet / see Rating Workbook",
-        "extracted_value": "Synthetic mod worksheet / see Rating Workbook",
-        "method": "native_pdf_text_with_rendered_page_review",
-        "verification_status": "source_verified"
-      },
-      "data.acord_130.experience_modification_premium_calculation.variance_status": {
-        "source_file": "A03_ACORD130_Workers_Compensation(2).pdf",
-        "page": 2,
-        "field_label_or_context": "variance_status",
-        "source_text": "MISMATCH",
-        "extracted_value": "MISMATCH",
-        "method": "native_pdf_text_with_rendered_page_review",
+        "field_label_or_context": "supporting schedule",
+        "source_text": "A03_WC_Rating_Workbook.xlsx, Experience Mod History row 7",
+        "extracted_value": "A03_WC_Rating_Workbook.xlsx, Experience Mod History row 7",
+        "method": "verified_source_reference",
         "verification_status": "source_verified"
       },
       "data.acord_130.experience_modification_premium_calculation.payroll_declared_on_application": {

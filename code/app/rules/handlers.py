@@ -234,6 +234,30 @@ def _location_count_evidence(case: CanonicalCase,
     return evidence
 
 
+def _addresses_compatible(left: Optional[str], right: Optional[str]) -> bool:
+    """Treat a street-only address as compatible with the same full address.
+
+    Missing city/state/ZIP detail is an evidence-completeness gap, not itself
+    proof that two scheduled locations conflict. Any contradictory supplied
+    address tokens still make the pair conflict.
+    """
+    if not left or not right:
+        return True
+    def tokens(value: str) -> set[str]:
+        normalized = normalize_address(value) or ""
+        return {normalize_state(token) or token for token in normalized.split()}
+    left_parts = [part.strip() for part in left.split(",") if part.strip()]
+    right_parts = [part.strip() for part in right.split(",") if part.strip()]
+    if not left_parts or not right_parts:
+        return tokens(left).issubset(tokens(right)) or tokens(right).issubset(tokens(left))
+    left_street, right_street = tokens(left_parts[0]), tokens(right_parts[0])
+    if left_street != right_street:
+        return False
+    left_tail = set().union(*(tokens(part) for part in left_parts[1:])) if len(left_parts) > 1 else set()
+    right_tail = set().union(*(tokens(part) for part in right_parts[1:])) if len(right_parts) > 1 else set()
+    return left_tail.issubset(right_tail) or right_tail.issubset(left_tail)
+
+
 def p2_location_reconciliation(ctx: RuleContext) -> List[FindingDraft]:
     case = ctx.case
     drafts: List[FindingDraft] = []
@@ -260,13 +284,14 @@ def p2_location_reconciliation(ctx: RuleContext) -> List[FindingDraft]:
             by_doc[member.document_id].append(member)
         if len(by_doc) < 2:
             continue
-        addresses = {
-            doc_id: sorted({normalize_address(m.address) or m.address or ""
-                            for m in doc_members})
-            for doc_id, doc_members in by_doc.items()
-        }
-        all_addresses = {address for values in addresses.values() for address in values if address}
-        if len(all_addresses) < 2:
+        address_conflict = any(
+            not _addresses_compatible(left.address, right.address)
+            for left_doc, left_members in by_doc.items()
+            for right_doc, right_members in by_doc.items()
+            if left_doc < right_doc
+            for left in left_members for right in right_members
+        )
+        if not address_conflict:
             continue
         conflicting_location_ids.add(location_id)
         source_comparisons = []
@@ -422,41 +447,59 @@ def p2_location_reconciliation(ctx: RuleContext) -> List[FindingDraft]:
                 recommended_action="Confirm the authoritative location count with the insured",
                 deduplication_key=f"P2:count:{doc_id}:{ref_doc}"))
 
-    # Value conflicts for matched locations: one finding per premises,
-    # listing every distinct scheduled value across documents.
+    # Compare like with like at each matched premises. A building-only ACORD
+    # value must not be compared with a schedule's total (building plus
+    # contents/other property); only compare TIV when each document supplies
+    # an explicit total or both building and contents components.
     for idx, cluster in enumerate(clusters):
         by_doc: Dict[str, LocationRecord] = {}
         for member in cluster["members"]:
             by_doc.setdefault(member.document_id, member)
-        values = {d: m.tiv for d, m in by_doc.items() if m.tiv is not None}
-        if len(values) < 2:
-            continue
-        vals = list(values.items())
-        base_val = min(v for _, v in vals)
-        max_val = max(v for _, v in vals)
-        delta = max_val - base_val
-        if ctx.within_tolerance(delta, base_val):
-            continue
+        value_fields = (
+            ("building_value", "building value"),
+            ("contents_value", "contents value"),
+        )
+        comparable_totals = {
+            doc_id: member.tiv for doc_id, member in by_doc.items()
+            if member.tiv is not None and (
+                "tiv" in member.field_evidence
+                or (member.building_value is not None and member.contents_value is not None))
+        }
+        if len(comparable_totals) > 1:
+            value_fields += (("tiv", "total insured value"),)
         rep = cluster["rep"]
-        evidence: List[str] = []
-        for doc_id, member in by_doc.items():
-            if member.tiv is not None:
-                evidence.extend(_ev(member, "tiv", "building_value", "contents_value"))
-        detail = "; ".join(f"{d}: {v:,.0f}" for d, v in vals)
-        drafts.append(_draft(
-            ctx, finding_type="PROPERTY_VALUE_CONFLICT",
-            title=f"Property value conflict at {rep.address or rep.location_id}",
-            classification=FindingClassification.NON_MANIFESTED_DISCOVERY,
-            conclusion_state=ConclusionState.CONFIRMED_DATA_CONFLICT,
-            evidence_ids=evidence,
-            comparison=ctx.comparison(
-                [v for _, v in vals], delta=delta, base=base_val,
-                formula=f"max {max_val} - min {base_val} across documents",
-                entity_alignment="MATCHED", period_alignment="UNRESOLVED"),
-            possible_consequence=f"Insured values differ between documents for the same "
-                                 f"premises: {detail}",
-            recommended_action="Request corrected schedule of values; confirm valuation basis and date",
-            deduplication_key=f"P2:val:{rep.location_id or rep.address}"))
+        for field_name, label in value_fields:
+            values = {doc_id: getattr(member, field_name)
+                      for doc_id, member in by_doc.items()
+                      if getattr(member, field_name) is not None}
+            if field_name == "tiv":
+                values = comparable_totals
+            if len(values) < 2:
+                continue
+            vals = list(values.items())
+            base_val = min(value for _, value in vals)
+            max_val = max(value for _, value in vals)
+            delta = max_val - base_val
+            if ctx.within_tolerance(delta, base_val):
+                continue
+            evidence: List[str] = []
+            for doc_id, _ in vals:
+                member = by_doc[doc_id]
+                evidence.extend(_ev(member, field_name))
+            detail = "; ".join(f"{doc_id}: {value:,.0f}" for doc_id, value in vals)
+            drafts.append(_draft(
+                ctx, finding_type="PROPERTY_VALUE_CONFLICT",
+                title=f"Property {label} conflict at {rep.address or rep.location_id}",
+                classification=FindingClassification.NON_MANIFESTED_DISCOVERY,
+                conclusion_state=ConclusionState.CONFIRMED_DATA_CONFLICT,
+                evidence_ids=evidence,
+                comparison=ctx.comparison(
+                    [value for _, value in vals], delta=delta, base=base_val,
+                    formula=f"max {max_val} - min {base_val} for {label}",
+                    entity_alignment="MATCHED", period_alignment="UNRESOLVED"),
+                possible_consequence=f"Like-for-like {label} values differ between documents: {detail}",
+                recommended_action="Request a corrected schedule of values; confirm valuation basis and date",
+                deduplication_key=f"P2:val:{field_name}:{rep.location_id or rep.address}"))
     return drafts
 
 
@@ -679,6 +722,8 @@ def _claim_reconciliation_evidence(claim, *fields: str) -> List[str]:
         "reserves": ("reserves", "reserve", "outstanding",
                      "reserve_indemnity", "reserve_expense"),
         "incurred": ("incurred", "total_incurred"),
+        "calculated_incurred": ("calculated_incurred",),
+        "incurred_variance": ("incurred_variance",),
         "claim_id": ("claim_id",),
         "status": ("status",),
     }
@@ -732,17 +777,147 @@ def p5_claims_reconciliation(ctx: RuleContext) -> List[FindingDraft]:
         delta = c.incurred_reported - expected
         if ctx.within_tolerance(delta, expected):
             continue
+        def component(field: str, label: str):
+            evidence_id = c.field_evidence.get(field)
+            item = case.evidence_store.get(evidence_id) if evidence_id else None
+            if item is None:
+                return None
+            value = (item.normalized_value if item.normalized_value is not None
+                     else item.raw_value)
+            if not isinstance(value, (int, float)):
+                return None
+            return CalculationInput(label=label, value=value,
+                                    evidence_ids=[evidence_id])
+
+        paid_parts = [item for item in (
+            component("paid_indemnity", "Paid indemnity"),
+            component("paid_expense", "Paid expense"),
+        ) if item is not None]
+        reserve_parts = [item for item in (
+            component("reserve_indemnity", "Reserve indemnity"),
+            component("reserve_expense", "Reserve expense"),
+        ) if item is not None]
+        paid_evidence = list(dict.fromkeys(
+            eid for item in paid_parts for eid in item.evidence_ids
+        )) or _claim_reconciliation_evidence(c, "paid")
+        reserve_evidence = list(dict.fromkeys(
+            eid for item in reserve_parts for eid in item.evidence_ids
+        )) or _claim_reconciliation_evidence(c, "reserves")
+        reported_evidence = _claim_reconciliation_evidence(c, "incurred")
+        calculated_cell_evidence = _claim_reconciliation_evidence(
+            c, "calculated_incurred")
+        variance_cell_evidence = _claim_reconciliation_evidence(
+            c, "incurred_variance")
+        calculated_evidence = list(dict.fromkeys(
+            paid_evidence + reserve_evidence + calculated_cell_evidence))
+        inputs = list(paid_parts)
+        inputs.append(CalculationInput(
+            label="Total paid", value=c.paid, evidence_ids=paid_evidence))
+        inputs.extend(reserve_parts)
+        inputs.extend([
+            CalculationInput(label="Total reserves", value=c.reserves,
+                             evidence_ids=reserve_evidence),
+            CalculationInput(label="Calculated incurred · paid + reserves",
+                             value=expected, evidence_ids=calculated_evidence),
+            CalculationInput(label="Reported incurred", value=c.incurred_reported,
+                             evidence_ids=reported_evidence),
+            CalculationInput(label="Variance · reported − calculated",
+                             value=delta,
+                             evidence_ids=list(dict.fromkeys(
+                                 reported_evidence + calculated_evidence
+                                 + variance_cell_evidence)),
+            ),
+        ])
+        if calculated_cell_evidence:
+            calculated_item = case.evidence_store.get(calculated_cell_evidence[0])
+            if calculated_item is not None:
+                inputs.append(CalculationInput(
+                    label="Workbook calculated incurred", value=(
+                        calculated_item.normalized_value
+                        if calculated_item.normalized_value is not None
+                        else calculated_item.raw_value),
+                    evidence_ids=calculated_cell_evidence))
+        if variance_cell_evidence:
+            variance_item = case.evidence_store.get(variance_cell_evidence[0])
+            if variance_item is not None:
+                inputs.append(CalculationInput(
+                    label="Workbook variance", value=(
+                        variance_item.normalized_value
+                        if variance_item.normalized_value is not None
+                        else variance_item.raw_value),
+                    evidence_ids=variance_cell_evidence))
+        comparison_sources = [
+            ComparisonSource(
+                document_id=c.document_id,
+                document_name=_doc_label(case, c.document_id),
+                label="Reported incurred", value=c.incurred_reported,
+                status="CONFLICTING", evidence_ids=reported_evidence),
+            ComparisonSource(
+                document_id=c.document_id,
+                document_name=_doc_label(case, c.document_id),
+                label="Calculated incurred · paid + reserves", value=expected,
+                status="CALCULATED", evidence_ids=calculated_evidence),
+        ]
+        if variance_cell_evidence:
+            comparison_sources.append(ComparisonSource(
+                document_id=c.document_id,
+                document_name=_doc_label(case, c.document_id),
+                label="Workbook-reported variance", value=delta,
+                status="CONFLICTING", evidence_ids=variance_cell_evidence))
+        paid_indemnity = next((item.value for item in paid_parts
+                               if item.label == "Paid indemnity"), None)
+        paid_expense = next((item.value for item in paid_parts
+                             if item.label == "Paid expense"), None)
+        reserve_indemnity = next((item.value for item in reserve_parts
+                                  if item.label == "Reserve indemnity"), None)
+        reserve_expense = next((item.value for item in reserve_parts
+                                if item.label == "Reserve expense"), None)
+        formula = ("Total paid = paid indemnity + paid expense; "
+                   "total reserves = reserve indemnity + reserve expense; "
+                   "calculated incurred = total paid + total reserves; "
+                   "variance = reported incurred − calculated incurred.")
+        rationale_parts = []
+        if paid_indemnity is not None and paid_expense is not None:
+            rationale_parts.append(
+                f"Paid: {paid_indemnity:,.2f} + {paid_expense:,.2f} = {c.paid:,.2f}")
+        else:
+            rationale_parts.append(f"Total paid: {c.paid:,.2f}")
+        if reserve_indemnity is not None and reserve_expense is not None:
+            rationale_parts.append(
+                f"Reserves: {reserve_indemnity:,.2f} + {reserve_expense:,.2f} = "
+                f"{c.reserves:,.2f}")
+        else:
+            rationale_parts.append(f"Total reserves: {c.reserves:,.2f}")
+        rationale_parts.append(
+            f"Calculated incurred: {c.paid:,.2f} + {c.reserves:,.2f} = {expected:,.2f}")
+        rationale_parts.append(
+            f"Reported incurred: {c.incurred_reported:,.2f}; variance: "
+            f"{c.incurred_reported:,.2f} − {expected:,.2f} = {delta:,.2f}")
+        calculation = CalculationDetail(
+            label="Claim incurred reconciliation", formula=formula,
+            result=expected, rationale=". ".join(rationale_parts) + ".",
+            inputs=inputs)
         drafts.append(_draft(
             ctx, finding_type="INCURRED_CALC_MISMATCH", taxonomy_id="P5",
             title=f"Claim {c.claim_id}: reported incurred does not equal paid + reserves",
             classification=FindingClassification.NON_MANIFESTED_DISCOVERY,
             conclusion_state=ConclusionState.CONFIRMED_DATA_CONFLICT,
             evidence_ids=_claim_reconciliation_evidence(
-                c, "claim_id", "paid", "reserves", "incurred"),
+                c, "claim_id", "paid", "reserves", "incurred",
+                "calculated_incurred", "incurred_variance"),
             comparison=ctx.comparison(
                 [c.incurred_reported, expected], delta=delta, base=expected,
-                formula=f"reported {c.incurred_reported} - (paid {c.paid} + reserves {c.reserves})",
-                entity_alignment="MATCHED", period_alignment="MATCHED"),
+                formula=(f"Reported incurred {c.incurred_reported:,.2f} − "
+                         f"(paid {c.paid:,.2f} + reserves {c.reserves:,.2f}) "
+                         f"= {delta:,.2f}"),
+                entity_alignment="MATCHED", period_alignment="MATCHED").model_copy(
+                    update={"sources": comparison_sources,
+                            "calculation": calculation}),
+            uncertainty_reason=(
+                f"On the cited loss-detail row, paid totals {c.paid:,.2f} and reserves "
+                f"total {c.reserves:,.2f}, giving calculated incurred of {expected:,.2f}. "
+                f"Reported incurred is {c.incurred_reported:,.2f}, a difference of "
+                f"{delta:,.2f}. Confirm the financial basis with the loss-run source."),
             possible_consequence="Reported loss totals may be unreliable",
             recommended_action="Verify claim financials with the loss-run source system",
             deduplication_key=f"P5:calc:{c.claim_id}"))
@@ -817,12 +992,20 @@ def p6_experience_mod(ctx: RuleContext) -> List[FindingDraft]:
 
     eligible_current = [f for f in factors
                         if f.factor_type == "experience_mod" and current_at_effective_date(f)]
-    eligible_dates = [normalize_date(f.effective_date) for f in eligible_current
+    quote_current = [f for f in eligible_current
+                     if (f.source_authority or "").casefold() == "quote"]
+    support_current = [f for f in eligible_current if f not in quote_current]
+    eligible_dates = [normalize_date(f.effective_date) for f in support_current
                       if normalize_date(f.effective_date)]
     comparison_date = max(eligible_dates) if eligible_dates else None
-    current = [f for f in eligible_current
-               if not comparison_date or not normalize_date(f.effective_date)
-               or normalize_date(f.effective_date) == comparison_date]
+    current_support = [f for f in support_current
+                       if not comparison_date or not normalize_date(f.effective_date)
+                       or normalize_date(f.effective_date) == comparison_date]
+    # The quote's policy effective date is not the effective date of its
+    # underlying rating factor. Keep it in the comparison without allowing it
+    # to displace a dated application/support value when choosing the current
+    # experience period.
+    current = current_support + quote_current
     if len({round(f.value, 4) for f in current}) < 2:
         return []
 
@@ -856,6 +1039,12 @@ def p6_experience_mod(ctx: RuleContext) -> List[FindingDraft]:
         calculation_issue = "No current bureau or approved supporting factor is available for the policy effective date."
 
     observed = current
+    methodology = next((obs for obs in case.external_observations
+                        if str(obs.subject or "").casefold()
+                        == "experience_rating_methodology"
+                        and isinstance(obs.fields.get("formula"), str)
+                        and obs.fields.get("formula")), None)
+    methodology_evidence = list(methodology.field_evidence.values()) if methodology else []
     evidence: List[str] = []
     sources: List[ComparisonSource] = []
     calculation_inputs: List[CalculationInput] = []
@@ -898,6 +1087,12 @@ def p6_experience_mod(ctx: RuleContext) -> List[FindingDraft]:
                             and round(selected.value, 4) not in quote_values)
     mismatches_other_current = bool(selected and application_values
                                     and round(selected.value, 4) not in application_values)
+    provisional_values = {round(f.value, 4) for f in current_support}
+    support_quote_mismatch = bool(provisional_values and quote_values
+                                  and not (provisional_values & quote_values))
+    prior_values = {round(f.value, 4) for f in factors
+                    if f.factor_type == "experience_mod_history"}
+    quote_matches_prior = bool(quote_values & prior_values)
     if selected and (mismatches_quote or mismatches_other_current):
         conclusion = ConclusionState.POSSIBLE_MISMATCH
         uncertainty = ("The source identifies a current effective-date factor, but its authority "
@@ -907,37 +1102,73 @@ def p6_experience_mod(ctx: RuleContext) -> List[FindingDraft]:
         uncertainty = calculation_issue or (
             "Observed current factor values differ, but the submission does not establish a single applicable value.")
 
-    formula = (
-        f"Policy effective date = {eff or 'not supplied'}. Select the value from the current "
-        "bureau/approved source with the latest effective date on or before that date; compare "
-        "the draft quote and application factors to the selected value."
-    )
+    formula = (str(methodology.fields["formula"]) if methodology else
+               "Experience modification = adjusted actual losses / adjusted expected losses "
+               "under the applicable bureau plan; the jurisdiction-specific worksheet parameters "
+               "are required to reproduce the factor.")
     if not eff:
-        formula += " Policy effective date is missing, so date eligibility is unresolved."
+        formula += " Policy effective date is not supplied, so term eligibility is unresolved."
+    support_factor = (next(iter(provisional_values)) if len(provisional_values) == 1 else None)
+    quote_factor = (next(iter(quote_values)) if len(quote_values) == 1 else None)
+    factor_delta = (round(support_factor - quote_factor, 4)
+                    if support_factor is not None and quote_factor is not None else None)
+    if methodology_evidence:
+        evidence.extend(methodology_evidence)
+        formula_input = CalculationInput(
+            label=f"External method reference · {methodology.source_name} · page 13",
+            value=methodology.fields.get("formula_summary") or methodology.fields["formula"],
+            evidence_ids=methodology_evidence)
+        calculation_inputs.append(formula_input)
     calculation = CalculationDetail(
-        label="Experience modification factor validation",
+        label="Experience modification calculation and source reconciliation",
         formula=formula,
-        result=selected.value if selected else None,
-        rationale=("The effective-date selection checks for a stale prior-term factor in the quote. "
-                   "An experience modifier changes the workers’ compensation premium input. "
-                   "The factor itself is bureau-calculated; this review only validates the submitted "
-                   "factor against the date-qualified supporting value."),
+        result=None,
+        rationale=(
+            (f"The dated application/support values agree at {support_factor:.2f}; the draft quote "
+             f"uses {quote_factor:.2f}, a {factor_delta:.2f}-point difference. "
+             if factor_delta is not None else "The submitted factor values differ. ")
+            + ("The quoted value also matches a prior-term value in the rating history. "
+               if quote_matches_prior else "")
+            + "The NCCI formula compares actual losses with expected losses for similarly classified "
+              "risks. The submitted loss/payroll data do not include a complete, validated bureau "
+              "worksheet with the effective-period, expected loss rates, D-ratios, claim limits, "
+              "weight, ballast, and other state-plan inputs needed to independently calculate M. "
+              "Therefore this is a cross-document factor conflict, not a recalculated official mod."),
         inputs=calculation_inputs,
         limitations=[
-            "No actuarial experience-mod formula was reconstructed from loss history.",
-            "A source described as current/approved is not independently authenticated by this calculation.",
+            "No official experience modifier was reconstructed from the submitted loss history.",
+            "The included NCCI material explains the method; it does not authenticate this insured's factor.",
+            "The rating workbook labels its factors as synthetic test values; obtain the bureau-issued worksheet.",
         ] + ([calculation_issue] if calculation_issue else []),
     )
     if selected:
         sources.append(ComparisonSource(
             document_id="CALCULATED-EMOD",
             document_name="Effective-date factor calculation",
-            label="Calculated expected factor", value=selected.value,
-            status="CALCULATED", evidence_ids=evidence_for(selected)))
+            label="Selected verified factor", value=selected.value,
+            status="VERIFIED", evidence_ids=evidence_for(selected)))
+    if methodology and methodology_evidence:
+        sources.append(ComparisonSource(
+            document_id=methodology.document_id,
+            document_name=methodology.source_name,
+            label="External rating methodology",
+            value=methodology.fields.get("formula_summary") or methodology.fields["formula"],
+            status="REFERENCE", evidence_ids=methodology_evidence))
+    if factor_delta is not None:
+        factor_delta_pct = round(factor_delta / support_factor * 100, 2) if support_factor else None
+        delta_formula = (f"{support_factor:.2f} current submitted factor - "
+                         f"{quote_factor:.2f} quoted factor = {factor_delta:.2f}; "
+                         f"quote is {factor_delta_pct:.2f}% below current submitted factor"
+                         if factor_delta_pct is not None else None)
+    else:
+        factor_delta_pct = None
+        delta_formula = None
     return [_draft(
         ctx, finding_type="EXPERIENCE_MOD_MISMATCH", taxonomy_id="P6",
-        title=("Quoted experience modification factor differs from the current effective factor"
-               if selected and mismatches_quote else
+        title=("Draft quote applies the prior-term experience factor"
+               if support_quote_mismatch and quote_matches_prior else
+               "Quoted experience modification differs from current supporting value"
+               if support_quote_mismatch else
                "Experience modification values differ; applicable factor needs validation"),
         classification=FindingClassification.NON_MANIFESTED_DISCOVERY,
         conclusion_state=conclusion,
@@ -945,8 +1176,9 @@ def p6_experience_mod(ctx: RuleContext) -> List[FindingDraft]:
         materiality_rationale="Experience mod directly multiplies WC premium",
         evidence_ids=evidence,
         comparison=ctx.comparison(
-            [f.value for f in factors], entity_alignment="MATCHED",
-            period_alignment="MATCHED" if eff else "UNRESOLVED").model_copy(
+            [f.value for f in observed], entity_alignment="MATCHED",
+            period_alignment="MATCHED" if eff else "UNRESOLVED",
+            delta=factor_delta, formula=delta_formula, base=support_factor).model_copy(
                 update={"sources": sources, "calculation": calculation}),
         uncertainty_reason=(uncertainty + " The observed factor comparison requires validation."
                             if uncertainty else "The observed factor comparison requires validation."),
@@ -1446,9 +1678,11 @@ def n6_gl_bases(ctx: RuleContext) -> List[FindingDraft]:
     doc126 = {d.document_id for d in case.documents_of_type("acord_126")}
     doc125 = {d.document_id for d in case.documents_of_type("acord_125")}
     quote_ids = {d.document_id for d in case.documents_of_type("quote")}
-    sales_125 = [e for e in case.exposures if e.exposure_type == "sales" and e.document_id in doc125]
+    sales_125 = [e for e in case.exposures if e.exposure_type == "sales"
+                 and e.document_id in doc125 and e.value is not None]
     sales_rows_126 = [e for e in case.exposures if e.exposure_type == "sales_rated" and e.document_id in doc126]
-    sales_quote = [e for e in case.exposures if e.exposure_type == "sales" and e.document_id in quote_ids]
+    sales_quote = [e for e in case.exposures if e.exposure_type == "sales"
+                  and e.document_id in quote_ids and e.value is not None]
     if sales_125 and sales_rows_126:
         declared = float(sales_125[0].value)
         summed = sum(float(e.value) for e in sales_rows_126 if e.value is not None)
@@ -1656,11 +1890,28 @@ def n14_external_record_match(ctx: RuleContext) -> List[FindingDraft]:
                                  insured.legal_name if insured else None)
         loc_state = None
         obs_addr = obs.fields.get("address")
+        summary_text = " ".join(str(value) for value in
+                                (obs.fields.get("services") or []) if value)
+        address_match = re.search(
+            r"\b\d{1,7}\s+[^,;]+,\s*[^,;]+,\s*([A-Z]{2})\s+\d{5}(?:-\d{4})?\b",
+            summary_text, re.IGNORECASE)
+        if not obs_addr and address_match:
+            obs_addr = address_match.group(0).strip().rstrip(".;")
+        obs_state = normalize_state(obs.fields.get("state"))
+        if not obs_state and address_match:
+            obs_state = normalize_state(address_match.group(1))
+        scheduled_states = {normalize_state(location.state) for location in case.locations
+                            if location.state and normalize_state(location.state)}
+        # A same-name public record at a known, different state is not evidence
+        # about any of this submission's scheduled premises. Retain it as
+        # source context, but don't emit a premises-level finding.
+        if obs_state and scheduled_states and obs_state not in scheduled_states:
+            continue
         if obs_addr:
             candidate = LocationRecord(record_id="ext", document_id=obs.document_id,
                                        address=obs_addr,
                                        city=obs.fields.get("city"),
-                                       state=normalize_state(obs.fields.get("state")),
+                                       state=obs_state,
                                        postal_code=obs.fields.get("zip"))
             rank = {"MATCHED": 2, "PARTIAL": 1, "UNRESOLVED": 0}
             results = [match_locations(candidate, l) for l in case.locations]

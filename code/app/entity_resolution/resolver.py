@@ -9,11 +9,12 @@ Principles:
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from typing import List, Optional
 
-from app.normalization import normalize_address, normalize_entity_name
+from app.normalization import normalize_address, normalize_entity_name, normalize_state
 from app.schemas.canonical import LocationRecord
 
 
@@ -58,13 +59,36 @@ def match_locations(a: LocationRecord, b: LocationRecord) -> AlignmentResult:
         # A repeated row/location number is useful for alignment, but it
         # cannot make two visibly different street addresses the same site.
         # Let the reconciliation rule surface that disagreement explicitly.
-        street_a = normalize_address(a.address)
-        street_b = normalize_address(b.address)
+        def components(location: LocationRecord):
+            parts = [part.strip() for part in (location.address or "").split(",")]
+            street = normalize_address(parts[0]) if parts else None
+            city = location.city or (parts[1] if len(parts) > 1 else None)
+            state = normalize_state(location.state) if location.state else None
+            postal = location.postal_code
+            for part in parts[1:]:
+                state_match = re.search(r"\b([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\b",
+                                        part, re.IGNORECASE)
+                if state_match:
+                    state = state or normalize_state(state_match.group(1))
+                    postal = postal or state_match.group(2)
+            return street, normalize_address(city), state, str(postal) if postal else None
+
+        street_a, city_a, state_a, postal_a = components(a)
+        street_b, city_b, state_b, postal_b = components(b)
         if street_a and street_b and street_a != street_b:
             return AlignmentResult(
                 "UNRESOLVED", "Identical location_id but street addresses conflict",
                 ["location_id", "address"],
             )
+        if city_a and city_b and city_a != city_b:
+            return AlignmentResult("UNRESOLVED", "Identical location_id but cities conflict",
+                                   ["location_id", "city"])
+        if state_a and state_b and state_a != state_b:
+            return AlignmentResult("UNRESOLVED", "Identical location_id but states conflict",
+                                   ["location_id", "state"])
+        if postal_a and postal_b and postal_a != postal_b:
+            return AlignmentResult("UNRESOLVED", "Identical location_id but postal codes conflict",
+                                   ["location_id", "postal_code"])
         return AlignmentResult("MATCHED", "Identical location_id with no street conflict", ["location_id"])
     addr_a = normalize_address(" ".join(filter(None, [a.address, a.city, a.state, a.postal_code])))
     addr_b = normalize_address(" ".join(filter(None, [b.address, b.city, b.state, b.postal_code])))

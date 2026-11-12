@@ -1,9 +1,7 @@
 """Submission-quality scoring schema.
 
-The score describes the quality/completeness of the submitted data and the
-reliability of the review — it is decision support, not a bind/decline
-signal. Most components are deterministic; issue-severity points are LLM
-scored by unique group with a deterministic fallback and an explicit source.
+Quality is presented as five deterministic underwriting pillars. Each pillar
+has a 0–100 score and contributes to the weighted overall score.
 """
 from __future__ import annotations
 
@@ -19,9 +17,23 @@ class ScoreComponent(BaseModel):
     source: str = "deterministic"
 
 
+class QualityDimension(BaseModel):
+    key: str
+    title: str
+    score: float = Field(ge=0, le=100)
+    weight_pct: float = Field(ge=0, le=100)
+    points_lost: float = Field(ge=0, le=100)
+    issue_count: int = Field(ge=0)
+    finding_count: int = Field(ge=0)
+    detail: str = ""
+
+
 class QualityScore(BaseModel):
     score: float = Field(ge=0, le=100)
     grade: str  # A | B | C | D | F
+    dimensions: List[QualityDimension] = Field(default_factory=list)
     components: List[ScoreComponent] = Field(default_factory=list)
+    formula: str = ""
+    deduction_policy: str = ""
     computed_at: str = ""
-    method: str = "spectra-quality-score@2.0.0"
+    method: str = "spectra-underwriting-quality@3.0.0"

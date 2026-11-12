@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "submission_id": "SPX-A03-2026-1042",
+  "document": {
+    "document_id": "A03-DRAFT-QUOTE-EXTRACT",
+    "document_type": "quote",
+    "document_name": "A03_Draft_Quote.pdf",
+    "version": "draft",
+    "effective_period": {
+      "start": "2026-11-15",
+      "end": "2027-11-15"
+    }
+  },
+  "data": {
+    "rating_inputs": {
+      "experience_mod": {
+        "factor": 0.94,
+        "effective_date": "2026-11-15",
+          "source_note": "The quote displays 0.94 for the proposed term; the authority for the factor is not shown."
+      }
+    }
+  },
+  "provenance": {
+    "extraction_source": "verified_pdf_text",
+    "fields": {
+      "rating_inputs.experience_mod.factor": {
+        "source_page": 1,
+        "source_span": "WC EXPERIENCE MODIFIER APPLIED: 0.94; Subject to bureau verification"
+      },
+      "rating_inputs.experience_mod.effective_date": {
+        "source_page": 1,
+        "source_span": "QUOTE EFFECTIVE: 11/15/2026"
+      }
+    }
+  }
+}
